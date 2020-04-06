@@ -6,8 +6,6 @@ const passwordRegister = document.getElementById("passwordRegister");
 const confirmPasswordRegister = document.getElementById("confirmPasswordRegister");
 const registerSubmit = document.getElementById("registerSubmit");
 let usersArray;
-var correctAudio = new Audio('../sounds/243701__ertfelda__correct.wav');
-var wrongAudio = new Audio('../sounds/331912__kevinvg207__wrong-buzzer.wav');
 var firstNameCheck = false;
 var lastNameCheck = false;
 var emailCheck = false;
@@ -29,11 +27,9 @@ usersArray = [stefan, petar];
 function ValidateName(inputText, checker) {
     if (inputText.value.trim().length < 2 || inputText.value.trim.length > 20) {
         inputText.style.border = "Solid red 1px";
-        wrongAudio.play();
         checker = false;
     } else {
         inputText.style.border = "Solid green 1px";
-        correctAudio.play();
         checker = true;
     }
 }
@@ -43,12 +39,10 @@ function ValidateEmail(inputText, checker) {
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (inputText.value.match(mailformat)) {
         inputText.style.border = "Solid green 1px";
-        correctAudio.play();
         checker = true;
     } else {
         alert("You have entered an invalid email address!");
         inputText.style.border = "Solid red 1px";
-        wrongAudio.play();
         checker = false;
     }
 }
@@ -56,11 +50,9 @@ function ValidateEmail(inputText, checker) {
 function ValidateConfirmPassword(input1, input2, checker) {
     if (input1.value === input2.value) {
         input2.style.border = "Solid green 1px";
-        correctAudio.play();
         checker = true;
     } else {
         input2.style.border = "Solid red 1px";
-        wrongAudio.play();
         checker = false;
     }
 }
