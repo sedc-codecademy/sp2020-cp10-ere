@@ -1,3 +1,5 @@
+
+/* HEADER ========================== */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script:500&display=swap');
 
@@ -18,7 +20,7 @@ body {
 }
 
 .header {
-    background-image: linear-gradient(rgba(37, 37, 37, 0.6), rgba(32, 32, 32, 0.6)),url(../assets/logo-wallpaper/header-wallpaper.jpg);
+    background-image: linear-gradient(rgba(37, 37, 37, 0.6), rgba(63, 61, 61, 0.6)),url(../assets/logo-wallpaper/header-wallpaper.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -75,7 +77,6 @@ body {
 
 
 .headline {
-    /* background-color: rgb(187, 236, 236); */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -146,10 +147,27 @@ h4 {
     margin-top:10px;
 }
 
+/* FOOTER ========================== */
 
-footer {
-    background: red;
-    padding: 10px 20px
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
 }
 
+.nav-bottom li a{
+    font-size: 40px;
+}
+
+.footer {
+    height: 230px;
+    background-image: linear-gradient(rgba(37, 37, 37, 0.6), rgba(94, 91, 91, 0.6)),url(../assets/logo-wallpaper/footer.jpg);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+}
+
+.rights p {
+    text-align: center;
+}
 
