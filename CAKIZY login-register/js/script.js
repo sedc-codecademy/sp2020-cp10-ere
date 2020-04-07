@@ -12,18 +12,6 @@ var emailCheck = false;
 var passwordCheck = false;
 var confirmPasswordCheck = false;
 
-function Person(fname, email, mobile, password) {
-    this.firstName = fname;
-    this.email = email;
-    this.mobile = mobile;
-    this.password = password;
-}
-
-var stefan = new Person("Stefan", "test123@gmail.com", "075400258", "ovaepassword");
-var petar = new Person("Petar", "testz@gmail.com", "074293632", "petarH4ker");
-
-usersArray = [stefan, petar];
-
 function ValidateName(inputText, checker) {
     if (inputText.value.trim().length < 2 || inputText.value.trim.length > 20) {
         inputText.style.border = "Solid red 1px";
@@ -34,15 +22,24 @@ function ValidateName(inputText, checker) {
     }
 }
 
-
 function ValidateEmail(inputText, checker) {
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (inputText.value.match(mailformat)) {
         inputText.style.border = "Solid green 1px";
         checker = true;
     } else {
-        alert("You have entered an invalid email address!");
         inputText.style.border = "Solid red 1px";
+        checker = false;
+    }
+}
+
+function ValidatePassword(input1, checker) {
+    var decimal = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+    if (input1.value.match(decimal)) {
+        input1.style.border = "Solid green 1px";
+        checker = true;
+    } else {
+        input1.style.border = "Solid red 1px";
         checker = false;
     }
 }
@@ -67,6 +64,10 @@ lastNameRegister.addEventListener("focusout", function() {
 emailRegister.addEventListener("focusout", function() {
     ValidateEmail(emailRegister, emailCheck);
 });
+
+passwordRegister.addEventListener("focusout", function() {
+    ValidatePassword(passwordRegister, passwordCheck);
+})
 
 confirmPasswordRegister.addEventListener("focusout", function() {
     ValidateConfirmPassword(passwordRegister, confirmPasswordRegister, passwordCheck);
