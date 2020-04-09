@@ -10,6 +10,7 @@ let drinks = document.querySelector("#drinks");
 var column = 3;
 let counter = 0;
 let dataJSON;
+const currentLocation = window.location.href.split("pages/")[1];
 
 let itemsArr = [];
 
@@ -19,15 +20,15 @@ let desertArr = [];
 let drinksArr = [];
 
 function printCategoryAndView() {
-    if (window.location.href.split("pages/")[1] === "menu.html") {
+    if (currentLocation === "menu.html") {
         printItems(itemsArr[0].results, listItems, column);
-    } else if (window.location.href.split("pages/")[1] === "breakfast.html") {
+    } else if (currentLocation === "breakfast.html") {
         printItems(breakfastArr, listItems, column);
-    } else if (window.location.href.split("pages/")[1] === "lunch.html") {
+    } else if (currentLocation === "lunch.html") {
         printItems(lunchArr, listItems, column);
-    } else if (window.location.href.split("pages/")[1] === "desert.html") {
+    } else if (currentLocation === "desert.html") {
         printItems(desertArr, listItems, column);
-    } else if (window.location.href.split("pages/")[1] === "drinks.html") {
+    } else if (currentLocation === "drinks.html") {
         printItems(drinksArr, listItems, column);
     } else {
         listItems.innerHTML = "OOPS... SOMETHING WENT WRONG!"
