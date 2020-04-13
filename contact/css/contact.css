@@ -29,24 +29,17 @@ body {
 
 .communication_tools a {
     text-decoration: none;
-    color:rgb(176, 180, 113);
-
-
+    color:rgb(165, 152, 94);
 }
 
 .inline_block{
     display: inline-block;
     padding: 10px;
-    color:rgb(176, 180, 113);
-
-  
-
+    color:rgb(165, 152, 94);
 }
 
 .mail{
     cursor: pointer;
-   
-
 }
 
 
@@ -89,7 +82,7 @@ body {
 
 .navbar li a {
     font-size: 60px;
-    color:rgb(176, 180, 113);
+    color:rgb(165, 152, 94);
     text-decoration: none;
     font-family: 'Dancing Script', cursive;
 }
@@ -101,7 +94,6 @@ body {
 .navbar li {
     display: inline-block;
     padding: 0px 30px;
-    
 }
 
 
@@ -163,7 +155,6 @@ body {
 }
 
 .mail_form{
-    margin:5px;
     text-align: center;
 }
 
@@ -232,14 +223,13 @@ body {
     padding: 3px;
     font-size: 25px;
     border-radius: 30px;
-    color: rgb(155, 156, 138);
     background-color: rgba(71, 71, 64, 0.5);
     cursor: pointer;
     border: none;
     width: 10%;
     text-decoration: none;
     color: rgb(8, 8, 7);
-    color:rgb(176, 180, 113);
+    color:rgb(165, 152, 94);
     font-family: 'Dancing Script', cursive;
 }
 
