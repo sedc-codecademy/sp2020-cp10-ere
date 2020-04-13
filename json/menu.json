@@ -7,6 +7,7 @@
             "secondCategory": "Omelets",
             "itemImg": "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2017/09/omelette.jpg?itok=7K3AxA-w",
             "ingredients": ["Eggs", "Oil", "Butter", "Bacon"],
+            "allergens": ["Eggs"],
             "price": 60.00,
             "extras": [
                 {
@@ -44,6 +45,7 @@
             "secondCategory": "Omelets",
             "itemImg": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/12/9/0/FNK_French-Omelet_s4x3.jpg.rend.hgtvcom.826.620.suffix/1386784369204.jpeg",
             "ingredients": ["Eggs", "Milk", "Butter", "Salt and Pepper", "Grated cheese(Gruyere, Goat, Cheddar or Feta cheese)"],
+            "allergens": ["Eggs", "Milk"],
             "price": 70.00,
             "extras": [
                 {
@@ -81,6 +83,7 @@
             "secondCategory": "Omelets",
             "itemImg": "https://www.landolakes.com/RecipeManagementSystem/media/Recipe-Media-Files/Recipes/Retail/x17/18712-italian-omelet-600x600.jpg?ext=.jpg",
             "ingredients": ["Eggs", "Butter", "Garlic", "Milk or water", "Salt and Pepper", "Mozzarella cheese", "Parmesan cheese"],
+            "allergens": ["Eggs", "Milk"],
             "price": 110.00,
             "extras": [
                 {
@@ -118,6 +121,7 @@
             "secondCategory": "Benedicts",
             "itemImg": "https://realhousemoms.com/wp-content/uploads/Eggs-Benedict-IG.jpg",
             "ingredients": ["Canadian bacon", "Homemade Hollandaise(Yolk, Butter, Lemon)"],
+            "allergens": ["Eggs"],
             "price": 70.00,
             "extras": [
                 {
@@ -155,6 +159,7 @@
             "secondCategory": "Benedicts",
             "itemImg": "https://i.pinimg.com/originals/de/fd/26/defd26026b756760bcba3de380c4639f.jpg",
             "ingredients": ["Grilled fillet", "Roasted peppers", "Bearnaise(Egg yolk, Clarified butter, White vinegar)"],
+            "allergens": ["Eggs"],
             "price": 100.00,
             "extras": [
                 {
@@ -192,6 +197,7 @@
             "secondCategory": "Sandwiches",
             "itemImg": "https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--653594_11.jpg?itok=9trM5bYp",
             "ingredients": ["Bacon", "White bread", "Mayonnaise", "Hard-boiled egg", "Tomato", "Chicken breasts","Salad leaves"],
+            "allergens": ["Eggs"],
             "price": 100.00,
             "extras": [
                 {
@@ -229,6 +235,7 @@
             "secondCategory": "Pizzas",
             "itemImg": "https://pizzajakomo.com/images/products/capri.png",
             "ingredients": ["Ketchup","Cheese", "Ham", "Mushrooms", "Oregano"],
+            "allergens": ["Eggs", "Wheat", "Hot"],
             "price": 150.00,
             "extras": [
                 {
@@ -255,6 +262,7 @@
             "secondCategory": "Pizzas",
             "itemImg": "https://pizzajakomo.com/images/products/pepperoni.png",
             "ingredients": ["Ketchup","Cheese", "Salami", "Oregano"],
+            "allergens": ["Eggs", "Wheat", "Hot"],
             "price": 170.00,
             "extras": [
                 {
@@ -281,6 +289,7 @@
             "secondCategory": "Pizzas",
             "itemImg": "https://pizzajakomo.com/images/products/margherita.png",
             "ingredients": ["Ketchup","Cheese", "Oregano"],
+            "allergens": ["Eggs", "Wheat", "Hot"],
             "price": 130.00,
             "extras": [
                 {
@@ -307,6 +316,7 @@
             "secondCategory": "Burgers",
             "itemImg": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/beyond-burger-nutrition-and-ingredients-1569351590.jpg?crop=1.00xw:0.669xh;0,0.147xh&resize=1200:*",
             "ingredients": ["Bread", "Beef", "Mayonnaise", "Ketchup", "Tomatoes", "Lettuce", "Onions" ],
+            "allergens": ["Wheat", "Hot"],
             "price": 130.00,
             "extras": [
                 {
@@ -341,6 +351,7 @@
             "secondCategory": "Burgers",
             "itemImg": "https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/master/pass/Smashburger-recipe-120219.jpg",
             "ingredients": ["Bread", "Beef", "Mayonnaise", "Ketchup", "Cheese", "Tomatoes", "Lettuce", "Onions" ],
+            "allergens": ["Wheat", "Hot"],
             "price": 130.00,
             "extras": [
                 {
@@ -374,6 +385,7 @@
             "mainCategory": "Desert",
             "itemImg": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Chocolate_Fondant.jpg",
             "ingredients": [ "Butter", "Egg", "Sugar", "Chocolate"],
+            "allergens": ["Eggs", "Milk", "Hot"],
             "price": 90.00,
             "extras": [
                 {
@@ -399,6 +411,7 @@
             "mainCategory": "Desert",
             "itemImg": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/7/11/0/FNK_the-best-pancakes_H_s4x3.jpg.rend.hgtvcom.826.620.suffix/1562853903667.jpeg",
             "ingredients": ["Flour", "Eggs", "Milk", "Butter", "Baking powder", "Sugar"],
+            "allergens": ["Eggs", "Milk", "Wheat", "Hot"],
             "pirce": 80.00,
             "extras": [
                 {
@@ -428,6 +441,7 @@
             "mainCategory": "Desert",
             "itemImg": "https://www.tasteofhome.com/wp-content/uploads/2017/10/Pecan-Wheat-Waffles_EXPS_HCK19_18573_B08_24_1b-696x696.jpg",
             "ingredients": ["Flour", "Salt", "Eggs", "Milk", "Butter", "Vanilla", "Baking powder", "Sugar"],
+            "allergens": ["Eggs", "Milk", "Wheat", "Hot"],
             "pirce": 80.00,
             "extras": [
                 {

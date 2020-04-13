@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;1,900&display=swap');
+* {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+.menu-items {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #98C1D9;
+}
+
+.just-bg-color {
+    margin: 0;
+    color: black;
+    background-color: #98C1D9;
+}
+
+.btn-info {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    width: 100px;
+}
+
+.selected {
+    box-shadow: black 0px 0px 6px;
+    background-color: rgb(196, 83, 83);
+    outline: none;
+}
+
+.selected:hover {
+    outline: none;
+    box-shadow: black 0px 0px 6px;
+    background-color: rgb(196, 83, 83);
+}
+
+.inline {
+    color: black;
+}
+
+.list-items li {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    font-size: 13px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 40px;
+    padding-top: 10px;
+}
+
+.block-click {
+    margin: 5px;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.block-click:hover {
+    box-shadow: black 0px 0px 5px;
+    background-color: rgba(88, 174, 223, 0.432);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.price-class {
+    color: green;
+    font-weight: 900;
+}
+
+.dropdown-design {
+    margin-left: 9px;
+    margin-bottom: 9px;
+}
+
+p.inline_block {
+    color: black;
+}
+
+header {
+    padding-top: 10px;
+}
+
+div.buttons>ul li {
+    width: 110px;
+    margin-left: 10px;
+}
+
+.view-design {
+    font-family: 'Source Code Pro', monospace;
+    padding: 4px 4px;
+}
+
+.view-design:hover {
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.view-bg-color {
+    background-color: rgb(177, 222, 248);
+}
+
+.food-decoration:hover {
+    text-decoration: none;
+}
