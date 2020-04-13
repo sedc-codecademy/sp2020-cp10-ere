@@ -228,14 +228,13 @@ body {
     border: none;
     width: 10%;
     text-decoration: none;
-    color: rgb(8, 8, 7);
     color:rgb(165, 152, 94);
     font-family: 'Dancing Script', cursive;
 }
 
 
 .copyrights p {
-    color:rgb(118, 121, 84);
+    color:rgb(165, 152, 94, 0.7);
     text-align: center;
     padding: 2px;
 }
