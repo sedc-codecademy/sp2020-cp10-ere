@@ -72,21 +72,6 @@ function productSectionElements(el) {
             localStorage.removeItem('productsArr');
         }
         displayInCart();
-        // for (let i = 0; i < productsArr.length; i++) {
-        //     if (productsArr[i].id === parseInt(el.id)) {
-        //         productsArr.splice(i, 1)
-        //         localStorage.setItem("productsArr", JSON.stringify(productsArr));
-        //         cartProducts--;
-        //         localStorage.setItem('productInCart', parseInt(localStorage.getItem('productInCart')) - 1);
-        //         if (cartProducts === 0) {
-        //             localStorage.removeItem('productInCart');
-        //             localStorage.removeItem('productsArr');
-        //         }
-        //         displayInCart();
-        //         return;
-        //         // location.reload(); <------------------------------------------------------- Sorry bro mislam deka nema potreba od ova mnogu e napadno :/
-        //     }
-        // }
     } else if (el.classList.contains('addQuantity')) {
         let currentQuantity = parseInt(el.nextElementSibling.innerText);
         if (currentQuantity === 10) {
@@ -97,15 +82,6 @@ function productSectionElements(el) {
             productsArr[productsArr.findIndex(elemenet => elemenet.id === parseInt(el.parentElement.parentElement.firstElementChild.id))].itemQuantity = currentQuantity;
             localStorage.setItem("productsArr", JSON.stringify(productsArr));
             displayInCart();
-            // for (let i = 0; i < productsArr.length; i++) {
-            //     if (productsArr[i].id === parseInt(el.parentElement.parentElement.firstElementChild.id)) {
-            //         productsArr[i].itemQuantity = currentQuantity;
-            //         localStorage.setItem("productsArr", JSON.stringify(productsArr));
-            //         displayInCart();
-            //         return;
-            //         // location.reload(); <------------------------------------------------------- Sorry bro mislam deka nema potreba od ova mnogu e napadno :/
-            //     }
-            // }
         }
     } else if (el.classList.contains('subtractQuantity')) {
         let currentQuantity = parseInt(el.previousElementSibling.innerText);
@@ -117,20 +93,10 @@ function productSectionElements(el) {
             productsArr[productsArr.findIndex(elemenet => elemenet.id === parseInt(el.parentElement.parentElement.firstElementChild.id))].itemQuantity = currentQuantity;
             localStorage.setItem("productsArr", JSON.stringify(productsArr));
             displayInCart();
-            // for (let i = 0; i < productsArr.length; i++) {
-            //     if (productsArr[i].id === parseInt(el.parentElement.parentElement.firstElementChild.id)) {
-            //         productsArr[i].itemQuantity = currentQuantity;
-            //         localStorage.setItem("productsArr", JSON.stringify(productsArr));
-            //         displayInCart();
-            //         return;
-            //         // location.reload(); <------------------------------------------------------- Sorry bro mislam deka nema potreba od ova mnogu e napadno :/
-            //     }
-            // }
         }
     } else if (el.classList.contains('candelOrder')) {
         if (confirm(`Are you sure you want to cancel order?`)) {
             productsArr = "";
-            // localStorage.setItem("productInCart", "");
             localStorage.removeItem("productInCart");
             localStorage.removeItem("productsArr");
             displayInCart();
@@ -142,10 +108,12 @@ displayInCart();
 productSectionElementsListener()
 
 function productSectionElementsListener() {
-    document.querySelector(".products_section").addEventListener('click', (e) => {
-        console.log(e.target);
-        productSectionElements(e.target);
-    });
+    if (cartProducts != null) {
+        document.querySelector(".products_section").addEventListener('click', (e) => {
+            console.log(e.target);
+            productSectionElements(e.target);
+        });
+    }
 }
 let objectPassedToCard = {};
 

@@ -822,10 +822,9 @@ label.form-invalid:after {
     border-width: 6px;
 }
 
-
-/* label.form-invalid:active {
+label.form-invalid:active {
     display: none;
-} */
+}
 
 
 /*=== 7. Form - Main Message ===*/

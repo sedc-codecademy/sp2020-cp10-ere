@@ -88,7 +88,6 @@ let foodModal = `
 </div>`;
 
 
-
 if (!localStorage.getItem('productInCart')) {
     document.querySelector('.cart_counter').textContent = '';
 } else {
@@ -180,11 +179,6 @@ function filteredVegetarianArrFunction() {
         return e.mainCategory === "Vegetarian";
     });
 };
-
-
-
-
-
 
 function counterFunc() {
     counter++
@@ -389,7 +383,7 @@ const loginFormModal = `<form id="login-form" class="text-left">
             <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
         </div>
         <div class="form-group login-group-checkbox">
-            <input class="checkbox" id="lg_remember" name="lg_remember">
+            <input type="checkbox" class="checkbox" id="lg_remember" name="lg_remember">
             <label for="lg_remember">remember</label>
         </div>
     </div>
@@ -473,7 +467,7 @@ function showLoginModal(params, param2, param3) {
             </div>
             <div class="modal-body">
                 <div class="login-form-1">
-                    ${param3}
+                ${param3}
                 </div>
             </div>
         </div>

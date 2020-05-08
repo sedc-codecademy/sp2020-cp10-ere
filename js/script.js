@@ -131,9 +131,9 @@ function printProducts(data, element) {
 
 
 $('#exampleModal').on('show.bs.modal', function(event) {
-    let button = $(event.relatedTarget); // Button that triggered the modal
+    let button = $(event.relatedTarget);
     $('#foodModal').html(foodModal);
-    let parsedNum = parseInt(button.data('text')); // Extract info from data-* attributes
+    let parsedNum = parseInt(button.data('text'));
     let modal = $(this);
     let modalImage = modal.find(`#modalImage`);
     let checkboxes = modal.find(`#checkboxes`);
@@ -184,12 +184,11 @@ $('#exampleModal').on('show.bs.modal', function(event) {
     })
 
     minusItem.addEventListener(`click`, function() {
-            if (currentItemQuantity >= 2) {
-                currentItemQuantity -= 1;
-                itemQuantity.innerHTML = currentItemQuantity;
-            }
-        })
-        // addToCartBtn.addEventListener(`click`, addProduct())
+        if (currentItemQuantity >= 2) {
+            currentItemQuantity -= 1;
+            itemQuantity.innerHTML = currentItemQuantity;
+        }
+    })
     addToCartBtn.addEventListener(`click`, function() {
         itemsCounterOrCreateInLocal();
         setItemsInLocalStorage(mostOrderedProducts[parsedNum], itemQuantity, parseInt((`#itemPrice`)));
