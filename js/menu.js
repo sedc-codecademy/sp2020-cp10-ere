@@ -245,7 +245,7 @@ function printItems(data, htmlItem, column) {
 
 $('#exampleModal').on('show.bs.modal', function(event) {
     let button = $(event.relatedTarget); // Button that triggered the modal
-    $('#foodModalz').html(foodModal);
+    $('#foodModal').html(foodModal);
     let parsedNum = parseInt(button.data('text')); // Extract info from data-* attributes
     let modal = $(this);
     let modalImage = modal.find(`#modalImage`);
