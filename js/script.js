@@ -32,7 +32,7 @@ let foodModal = `
     <div class="modal-body">
         <div class="row">
             <div class="col-md modal-padding">
-                <img src="../assets/logo-wallpaper/logo_transparent.png" onerror="this.src = '../assets/images/no-image.png'" alt="Image" id="modalImage" width="150px" height="150px">
+                <img src="../assets/logo-wallpaper/logo_transparent.png" onerror="this.src = './assets/images/no-image.png'" alt="Image" id="modalImage" width="150px" height="150px">
             </div>
             <div class="col-md" id="checkboxes">
             </div>
