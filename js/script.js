@@ -218,13 +218,12 @@ function checkCheckBox(thisItem, price) {
 // Add to cart
 
 let objectPassedToCard = {};
-let productsArr = [];
+
 
 if (!localStorage.getItem('productInCart')) {
     document.querySelector('.cart_counter').textContent = '';
 } else {
     document.querySelector('.cart_counter').textContent = localStorage.getItem('productInCart');
-
 }
 
 
@@ -248,6 +247,7 @@ function setItemsInLocalStorage(data) {
         }
     }
     if (!localStorage.getItem('productsArr')) {
+        let productsArr = []
         let itemON = parseInt(localStorage.getItem('productInCart'));
         objectPassedToCard.id = itemON;
         objectPassedToCard.extras = extrasArrayChecked;
@@ -257,6 +257,7 @@ function setItemsInLocalStorage(data) {
         productsArr.push(objectPassedToCard);
         localStorage.setItem("productsArr", JSON.stringify(productsArr));
     } else {
+        let productsArr = JSON.parse(localStorage.getItem('productsArr'));
         let itemON = parseInt(localStorage.getItem('productInCart'));
         objectPassedToCard.id = itemON;
         objectPassedToCard.extras = extrasArrayChecked;
