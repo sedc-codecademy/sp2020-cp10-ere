@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/logo-wallpaper/icon2.png" />
+
+    <title>E-Restaurant</title>
+
+</head>
+
+<body>
+    <!-- HEADER ============================== -->
+
+    <header class="header headerPadding">
+        <div class="info_on_top">
+            <div class="communication_tools">
+                <a class="inline_block mail" href="mailto: e-restaurant@seavus.com"><i class='fa fa-comments' style='font-size:18px'></i></i> e-restaurant@seavus.com</a>
+                <p class="inline_block"><i class="fa fa-phone" style="font-size:18px"></i>+389 70 123 456</p>
+            </div>
+            <div class="shopping_tools">
+                <button class="login_button  button_tools">LOG IN</button>
+                <a href="./cart.html"><button class="cart_button button_tools"><i class="fa fa-shopping-cart" style="font-size:28px"></i><span class="cart_counter"></span></button></a>
+            </div>
+        </div>
+        <div class="main_menu">
+            <a href="../index.html"><img class="logo" src="../assets/logo-wallpaper/logo_transparent.png" alt="E-Restaurant Logo" width="270px"></a>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./menu.html">Menu</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <!-- MENU ============================ -->
+
+    <div class="products_container" id="productContainer">
+        <div class="products_main_title">
+            <h4>Products in Cart</h4>
+        </div>
+        <div class="product_header">
+            <h4 class="product_title">PRODUCT</h4>
+            <h4 class="product_price">PRICE</h4>
+            <h4 class="product_quantity">QUANTITY</h4>
+            <h4 class="product_total">TOTAL</h4>
+        </div>
+
+        <div class="products_section" id="productSection"></div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="accountForm" tabindex="-1" role="dialog" aria-labelledby="titleFormLabel" aria-hidden="true">
+    </div>
+
+
+
+    <!-- FOOTER ================================ -->
+
+    <footer class="footerMain">
+        <div class="copyrightsMain">
+            <p><i class="fa fa-copyright"></i>SEAVUS REASTAURANT | ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+
+</html>
