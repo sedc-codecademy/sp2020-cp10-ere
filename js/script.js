@@ -145,7 +145,7 @@ $('#exampleModal').on('show.bs.modal', function(event) {
     let minusItem = document.getElementById("minusItem");
     let addToCartBtn = document.getElementById("cartBtn");
 
-    priceItem = dataForModal[parsedNum].price;
+    priceItem = mostOrderedProducts[parsedNum].price;
     checkboxes[0].innerHTML = "";
     ingredients[0].innerHTML = "";
     allergens[0].innerHTML = "";
@@ -192,7 +192,7 @@ $('#exampleModal').on('show.bs.modal', function(event) {
         // addToCartBtn.addEventListener(`click`, addProduct())
     addToCartBtn.addEventListener(`click`, function() {
         itemsCounterOrCreateInLocal();
-        setItemsInLocalStorage(dataForModal[parsedNum], itemQuantity, parseInt((`#itemPrice`)));
+        setItemsInLocalStorage(mostOrderedProducts[parsedNum], itemQuantity, parseInt((`#itemPrice`)));
     })
 
 
