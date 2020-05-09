@@ -461,22 +461,22 @@ body {
     -o-border-radius: 0px 50px 0px 0px;
 }
 
-.row1 .block-click:hover:first-child {
+#row1 .oneColumnFirstElement:hover {
     background-color: rgba(173, 147, 147, 0.4);
-    border-radius: 50px 0px 0px 0px;
-    -webkit-border-radius: 50px 0px 0px 0px;
-    -moz-border-radius: 50px 0px 0px 0px;
-    -ms-border-radius: 50px 0px 0px 0px;
-    -o-border-radius: 50px 0px 0px 0px;
+    border-radius: 50px 50px 0px 0px !important;
+    -webkit-border-radius: 50px 50px 0px 0px !important;
+    -moz-border-radius: 50px 50px 0px 0px !important;
+    -ms-border-radius: 50px 50px 0px 0px !important;
+    -o-border-radius: 50px 50px 0px 0px !important;
 }
 
-.row1 .block-click:hover:last-child {
+.last-row .block-click:hover:first-child {
     background-color: rgba(173, 147, 147, 0.4);
-    border-radius: 0px 50px 0px 0px;
-    -webkit-border-radius: 0px 50px 0px 0px;
-    -moz-border-radius: 0px 50px 0px 0px;
-    -ms-border-radius: 0px 50px 0px 0px;
-    -o-border-radius: 0px 50px 0px 0px;
+    border-radius: 0px 0px 0px 50px;
+    -webkit-border-radius: 0px 0px 0px 50px;
+    -moz-border-radius: 0px 0px 0px 50px;
+    -ms-border-radius: 0px 0px 0px 50px;
+    -o-border-radius: 0px 0px 0px 50px;
 }
 
 .last-row .block-click:hover:last-child {
@@ -488,13 +488,13 @@ body {
     -o-border-radius: 0px 0px 50px 0px;
 }
 
-.last-row .block-click:hover:first-child {
+.last-row .oneColumnLastElement:hover:last-child {
     background-color: rgba(173, 147, 147, 0.4);
-    border-radius: 0px 0px 0px 50px;
-    -webkit-border-radius: 0px 0px 0px 50px;
-    -moz-border-radius: 0px 0px 0px 50px;
-    -ms-border-radius: 0px 0px 0px 50px;
-    -o-border-radius: 0px 0px 0px 50px;
+    border-radius: 0px 0px 50px 50px;
+    -webkit-border-radius: 0px 0px 50px 50px;
+    -moz-border-radius: 0px 0px 50px 50px;
+    -ms-border-radius: 0px 0px 50px 50px;
+    -o-border-radius: 0px 0px 50px 50px;
 }
 
 #row1 {

@@ -235,6 +235,13 @@ function printItems(data, htmlItem, column) {
     }
     let lastRow = $(`#row${counter}`);
     lastRow[0].classList.add("last-row");
+    if (column === 1) {
+        let firstElementInColumn = document.getElementById(`row1`)
+        firstElementInColumn.firstElementChild.classList.add("oneColumnFirstElement");
+    }
+    if (column === 1 || data.length % 2 === 1 || data.length % 3 === 1) {
+        lastRow[0].firstElementChild.classList.add("oneColumnLastElement")
+    }
 };
 
 $('#exampleModal').on('show.bs.modal', function(event) {
