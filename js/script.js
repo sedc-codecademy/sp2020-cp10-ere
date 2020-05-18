@@ -192,6 +192,7 @@ $('#exampleModal').on('show.bs.modal', function(event) {
     addToCartBtn.addEventListener(`click`, function() {
         itemsCounterOrCreateInLocal();
         setItemsInLocalStorage(mostOrderedProducts[parsedNum], itemQuantity, parseInt((`#itemPrice`)));
+        $('#exampleModal').modal('hide');
     })
 
 

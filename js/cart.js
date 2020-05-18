@@ -4,6 +4,56 @@ let productsArr = JSON.parse(localStorage.getItem('productsArr'));
 
 let cartProducts = localStorage.getItem('productInCart');
 
+let foodModal = `
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Item Name</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+</button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md modal-padding">
+                <img src="../assets/logo-wallpaper/logo_transparent.png" onerror="this.src = '../assets/images/no-image.png'" alt="Image" id="modalImage" width="150px" height="150px">
+            </div>
+            <div class="col-md" id="checkboxes">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <p>Ingredients:</p>
+                <ul id="ingredients">
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <p>Allergens:</p>
+                <ul id="allergens">
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Note:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <p id="itemPrice">150 мкд</p>
+        <div class="quantity">
+            <p id="quantity-label">Quantity: </p>
+            <p id="itemQuantity">1</p>
+            <button class="quantityButtons" id="plusItem">+</button>
+            <button class="quantityButtons" id="minusItem">-</button>
+        </div>
+        <button type="button" class="btn btn-secondary btn-close" data-dismiss="modal">Close</button>
+        <button type="button btn-add-to-cart" class="btn btn-primary" id="save">SAVE</button>
+    </div>
+</div>`;
+
 function displayInCart() {
     if (!localStorage.getItem('productInCart')) {
         document.querySelector('.cart_counter').textContent = '';
@@ -14,24 +64,23 @@ function displayInCart() {
     cartProducts = localStorage.getItem('productInCart');
     let productsSection = document.getElementById('productSection');
     let productsContainer = document.getElementById('productContainer');
-    let counter = 1;
     if (cartProducts != null) {
         productsSection.innerHTML = '';
         priceForAll = 0;
-        for (const product of productsArr) {
-            priceForAll += product.itemQuantity * product.fullPrice;
-            productsSection.innerHTML += `<div class="product">
-                <ion-icon name="close-circle-outline" class="deleteBtn" id="${product.id}"></ion-icon>
-                <img src="${product.dataForObject.itemImg}"width="200px" height="150px" alt="${product.dataForObject.itemName}" onerror="this.src = '../assets/images/no-image.png'" />
-                <span class="product_name">${product.dataForObject.itemName}</span>
-                <div class="product_price">${product.fullPrice},00 мкд </div>
+        for (let i = 0; i < productsArr.length; i++) {
+            priceForAll += productsArr[i].itemQuantity * productsArr[i].fullPrice;
+            productsSection.innerHTML += `<div class="product block-click" data-toggle="modal" data-target="#exampleModal" data-text="${[i]}">
+                <ion-icon name="close-circle-outline" class="deleteBtn" id="${productsArr[i].id}"></ion-icon>
+                <img src="${productsArr[i].dataForObject.itemImg}"width="200px" height="150px" alt="${productsArr[i].dataForObject.itemName}" onerror="this.src = '../assets/images/no-image.png'" />
+                <span class="product_name">${productsArr[i].dataForObject.itemName}</span>
+                <div class="product_price">${productsArr[i].fullPrice},00 мкд </div>
                     <div class="product_quantity"> 
                         <ion-icon class="addQuantity" name="add-circle-outline"></ion-icon>
-                        <span>${product.itemQuantity}</span>
+                        <span>${productsArr[i].itemQuantity}</span>
                         <ion-icon class="subtractQuantity" name="remove-circle-outline"></ion-icon>  
                     </div>
             <div class="product_total">
-               ${product.itemQuantity * product.fullPrice},00 мкд
+               ${productsArr[i].itemQuantity * productsArr[i].fullPrice},00 мкд
             </div> 
             </div>`;
         }
@@ -57,7 +106,6 @@ function displayInCart() {
         <div class="main_section_empty_cart"></div>`;
     }
 }
-
 
 
 function productSectionElements(el) {
@@ -124,6 +172,116 @@ if (!localStorage.getItem('productInCart')) {
 }
 
 
+$('#exampleModal').on('show.bs.modal', function(event) {
+    productsArr = JSON.parse(localStorage.getItem('productsArr'));
+    let button = $(event.relatedTarget); // Button that triggered the modal
+    $('#foodModal').html(foodModal);
+    let parsedNum = parseInt(button.data('text')); // Extract info from data-* attributes
+    let modal = $(this);
+    let modalImage = modal.find(`#modalImage`);
+    let checkboxes = modal.find(`#checkboxes`);
+    let ingredients = modal.find(`#ingredients`);
+    let allergens = modal.find(`#allergens`);
+    let itemPrice = modal.find(`#itemPrice`);
+    let itemQuantity = document.getElementById("itemQuantity");
+    let plusItem = document.getElementById("plusItem");
+    let minusItem = document.getElementById("minusItem");
+    let saveBtn = document.getElementById("save");
+
+    priceItem = productsArr[parsedNum].fullPrice;
+    checkboxes[0].innerHTML = "";
+    ingredients[0].innerHTML = "";
+    allergens[0].innerHTML = "";
+    currentItemQuantity = productsArr[parsedNum].itemQuantity;
+    itemQuantity.innerHTML = currentItemQuantity;
+    modal.find('.modal-title').text(productsArr[parsedNum].dataForObject.itemName);
+    modalImage[0].src = productsArr[parsedNum].dataForObject.itemImg;
+    modalImage[0].alt = productsArr[parsedNum].dataForObject.itemName;
+
+    if (productsArr[parsedNum].extras != null) {
+        for (const item of productsArr[parsedNum].dataForObject.extras) {
+            let dada = productsArr[parsedNum].extras.indexOf(item.extrasName)
+            if (dada != -1) {
+                checkboxes[0].innerHTML += `<input type="checkbox" checked class="checkbox" id="${item.extrasName}" name="${item.extrasName}" onclick="checkCheckBox(this,'${item.price}')" />
+                    <label class="extras-design" style="color:green;" for="${item.extrasName}">${item.extrasName} <span  class="extras-price-color">${item.price} мкд</span></label><br>`
+            } else {
+                checkboxes[0].innerHTML += `<input type="checkbox" class="checkbox" id="${item.extrasName}" name="${item.extrasName}" onclick="checkCheckBox(this,'${item.price}')" />
+                    <label class="extras-design" for="${item.extrasName}">${item.extrasName} <span class="extras-price-color">${item.price} мкд</span></label><br>`
+            }
+        }
+    }
+    if (productsArr[parsedNum].dataForObject.ingredients != null) {
+        for (const ingredient of productsArr[parsedNum].dataForObject.ingredients) {
+            ingredients[0].innerHTML += `<li>${ingredient}</li>`
+        }
+    }
+    if (productsArr[parsedNum].dataForObject.allergens != null) {
+        for (const allergen of productsArr[parsedNum].dataForObject.allergens) {
+            allergens[0].innerHTML += `<li>${allergen}</li>`
+        }
+    }
+    itemPrice[0].innerHTML = `${priceItem} мкд`;
+
+
+    plusItem.addEventListener(`click`, function() {
+        if (currentItemQuantity < 10) {
+            currentItemQuantity += 1
+            itemQuantity.innerHTML = currentItemQuantity;
+        } else {
+            alert("You can't order more then 10 items!(current items: 10)");
+        }
+    })
+
+    minusItem.addEventListener(`click`, function() {
+            if (currentItemQuantity >= 2) {
+                currentItemQuantity -= 1;
+                itemQuantity.innerHTML = currentItemQuantity;
+            }
+        })
+        // addToCartBtn.addEventListener(`click`, addProduct())
+    saveBtn.addEventListener(`click`, function() {
+        $('#exampleModal').modal('hide');
+        setItemsInLocalStorage(parsedNum);
+        displayInCart();
+        // itemsCounterOrCreateInLocal();
+        // setItemsInLocalStorage(dataForModal[parsedNum], itemQuantity, parseInt((`#itemPrice`)));
+    })
+
+
+
+})
+
+function setItemsInLocalStorage(item) {
+    let extrasArrayChecked = [];
+    let objectPassedToCard = {};
+    var x = document.querySelectorAll(".checkbox");
+    for (const item of x) {
+        if (item.checked) {
+            extrasArrayChecked.push(item.name);
+        }
+    }
+    let productsArr = JSON.parse(localStorage.getItem('productsArr'));
+    let itemON = parseInt(localStorage.getItem('productInCart'));
+    productsArr[item].extras = extrasArrayChecked;
+    productsArr[item].fullPrice = priceItem;
+    productsArr[item].itemQuantity = currentItemQuantity;
+    localStorage.setItem("productsArr", JSON.stringify(productsArr));
+
+}
+
+function checkCheckBox(thisItem, price) {
+    priceItem = parseInt(priceItem);
+    let parsingPrice = parseInt(price);
+    if (thisItem.checked === true) {
+        priceItem += parsingPrice;
+        itemPrice.innerHTML = `${priceItem} мкд`;
+        thisItem.nextElementSibling.style.color = "green";
+    } else if (thisItem.checked === false) {
+        priceItem -= parsingPrice;
+        itemPrice.innerHTML = `${priceItem} мкд`;
+        thisItem.nextElementSibling.style.color = "unset";
+    }
+};
 // LOGIN --------------------------------------------------------------------
 
 let oneday;
