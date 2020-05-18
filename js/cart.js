@@ -110,7 +110,6 @@ function displayInCart() {
 
 function productSectionElements(el, e) {
     if (el.classList.contains('deleteBtn')) {
-        e.preventDefault();
         e.stopPropagation();
         let currentQuantity = parseInt(el.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.nextElementSibling.innerText);
         productsArr.splice(productsArr.findIndex(elemenet => elemenet.id === parseInt(el.id)), 1);
@@ -124,7 +123,6 @@ function productSectionElements(el, e) {
         }
         displayInCart();
     } else if (el.classList.contains('addQuantity')) {
-        e.preventDefault();
         e.stopPropagation();
         let currentQuantity = parseInt(el.nextElementSibling.innerText);
         if (currentQuantity === 10) {
@@ -139,7 +137,6 @@ function productSectionElements(el, e) {
             displayInCart();
         }
     } else if (el.classList.contains('subtractQuantity')) {
-        e.preventDefault();
         e.stopPropagation();
         let currentQuantity = parseInt(el.previousElementSibling.innerText);
         if (currentQuantity === 1) {
@@ -154,7 +151,6 @@ function productSectionElements(el, e) {
             displayInCart();
         }
     } else if (el.classList.contains('candelOrder')) {
-        e.preventDefault();
         e.stopPropagation();
         if (confirm(`Are you sure you want to cancel order?`)) {
             productsArr = "";
