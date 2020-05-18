@@ -69,9 +69,9 @@ function displayInCart() {
         priceForAll = 0;
         for (let i = 0; i < productsArr.length; i++) {
             priceForAll += productsArr[i].itemQuantity * productsArr[i].fullPrice;
-            productsSection.innerHTML += `<div class="product block-click-cart block-click">
+            productsSection.innerHTML += `<div class="product block-click-cart block-click" data-toggle="modal" data-target="#exampleModal" data-text="${[i]}" >
                 <ion-icon name="close-circle-outline" class="deleteBtn" id="${productsArr[i].id}"></ion-icon>
-                <img src="${productsArr[i].dataForObject.itemImg}"width="200px" height="150px" data-toggle="modal" data-target="#exampleModal" data-text="${[i]}" alt="${productsArr[i].dataForObject.itemName}" onerror="this.src = '../assets/images/no-image.png'" />
+                <img src="${productsArr[i].dataForObject.itemImg}"width="200px" height="150px" alt="${productsArr[i].dataForObject.itemName}" onerror="this.src = '../assets/images/no-image.png'" />
                 <span class="product_name">${productsArr[i].dataForObject.itemName}</span>
                 <div class="product_price">${productsArr[i].fullPrice},00 мкд </div>
                     <div class="product_quantity"> 
