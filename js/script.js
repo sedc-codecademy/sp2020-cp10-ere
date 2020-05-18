@@ -4,8 +4,6 @@ let mostOrderedProducts = [];
 let mainSectionOne = document.getElementById("main-section-one");
 let mainSectionTwo = document.getElementById("main-section-two");
 
-
-
 let currentItemQuantity = 1;
 let column = 3;
 let counter = 0;
@@ -80,11 +78,9 @@ fetch(url)
         printProducts(mostOrderedProducts, mainSectionOne);
         printProducts(mostOrderedProducts, mainSectionTwo);
         dataForModal = data.results;
-
     })
     .catch(function(error) {
         console.log(error);
-
     });
 
 function getMostOrdered(data) {
@@ -95,7 +91,6 @@ function getMostOrdered(data) {
     }
 
 }
-
 
 function printProducts(data, element) {
     counter = 0;
@@ -126,9 +121,6 @@ function printProducts(data, element) {
         }
     }
 }
-
-
-
 
 $('#exampleModal').on('show.bs.modal', function(event) {
     let button = $(event.relatedTarget);
@@ -194,8 +186,6 @@ $('#exampleModal').on('show.bs.modal', function(event) {
         setItemsInLocalStorage(mostOrderedProducts[parsedNum], itemQuantity, parseInt((`#itemPrice`)));
         $('#exampleModal').modal('hide');
     })
-
-
 })
 
 function checkCheckBox(thisItem, price) {
@@ -214,27 +204,21 @@ function checkCheckBox(thisItem, price) {
 
 };
 
-
 // Add to cart
 
 let objectPassedToCard = {};
-
-
 if (!localStorage.getItem('productInCart')) {
     document.querySelector('.cart_counter').textContent = '';
 } else {
     document.querySelector('.cart_counter').textContent = localStorage.getItem('productInCart');
 }
 
-
 function itemsCounterOrCreateInLocal() {
     if (!localStorage.getItem('productInCart')) {
-        localStorage.setItem('productInCart', 1);
-        document.querySelector('.cart_counter').textContent = 1;
-    } else {
-        localStorage.setItem('productInCart', parseInt(localStorage.getItem('productInCart')) + 1);
-        document.querySelector('.cart_counter').textContent = parseInt(localStorage.getItem('productInCart'));
+        localStorage.setItem('productInCart', 0);
     }
+    localStorage.setItem('productInCart', parseInt(localStorage.getItem('productInCart')) + currentItemQuantity);
+    document.querySelector('.cart_counter').textContent = parseInt(localStorage.getItem('productInCart'));
 }
 
 function setItemsInLocalStorage(data) {

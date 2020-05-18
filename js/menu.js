@@ -315,14 +315,11 @@ $('#exampleModal').on('show.bs.modal', function(event) {
 
 function itemsCounterOrCreateInLocal() {
     if (!localStorage.getItem('productInCart')) {
-        localStorage.setItem('productInCart', 1);
-        document.querySelector('.cart_counter').textContent = 1;
-    } else {
-        localStorage.setItem('productInCart', parseInt(localStorage.getItem('productInCart')) + 1);
-        document.querySelector('.cart_counter').textContent = parseInt(localStorage.getItem('productInCart'));
+        localStorage.setItem('productInCart', 0);
     }
+    localStorage.setItem('productInCart', parseInt(localStorage.getItem('productInCart')) + currentItemQuantity);
+    document.querySelector('.cart_counter').textContent = parseInt(localStorage.getItem('productInCart'));
 }
-
 
 function setItemsInLocalStorage(data) {
     let extrasArrayChecked = [];

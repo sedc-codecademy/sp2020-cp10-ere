@@ -447,6 +447,15 @@ textarea {
     background-color: rgba(173, 147, 147, 0.4);
 }
 
+.block-click-cart:hover:first-child {
+    background-color: rgba(173, 147, 147, 0.4);
+    border-radius: 50px 0px 0px 0px;
+    -webkit-border-radius: 50px 0px 0px 0px;
+    -moz-border-radius: 50px 0px 0px 0px;
+    -ms-border-radius: 50px 0px 0px 0px;
+    -o-border-radius: 50px 0px 0px 0px;
+}
+
 #row1 .block-click:hover:first-child {
     background-color: rgba(173, 147, 147, 0.4);
     border-radius: 50px 0px 0px 0px;

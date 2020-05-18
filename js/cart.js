@@ -69,14 +69,14 @@ function displayInCart() {
         priceForAll = 0;
         for (let i = 0; i < productsArr.length; i++) {
             priceForAll += productsArr[i].itemQuantity * productsArr[i].fullPrice;
-            productsSection.innerHTML += `<div class="product block-click" data-toggle="modal" data-target="#exampleModal" data-text="${[i]}">
+            productsSection.innerHTML += `<div class="product block-click-cart block-click">
                 <ion-icon name="close-circle-outline" class="deleteBtn" id="${productsArr[i].id}"></ion-icon>
-                <img src="${productsArr[i].dataForObject.itemImg}"width="200px" height="150px" alt="${productsArr[i].dataForObject.itemName}" onerror="this.src = '../assets/images/no-image.png'" />
+                <img src="${productsArr[i].dataForObject.itemImg}"width="200px" height="150px" data-toggle="modal" data-target="#exampleModal" data-text="${[i]}" alt="${productsArr[i].dataForObject.itemName}" onerror="this.src = '../assets/images/no-image.png'" />
                 <span class="product_name">${productsArr[i].dataForObject.itemName}</span>
                 <div class="product_price">${productsArr[i].fullPrice},00 мкд </div>
                     <div class="product_quantity"> 
                         <ion-icon class="addQuantity" name="add-circle-outline"></ion-icon>
-                        <span>${productsArr[i].itemQuantity}</span>
+                        <span id="productItemQuantity">${productsArr[i].itemQuantity}</span>
                         <ion-icon class="subtractQuantity" name="remove-circle-outline"></ion-icon>  
                     </div>
             <div class="product_total">
@@ -110,11 +110,12 @@ function displayInCart() {
 
 function productSectionElements(el) {
     if (el.classList.contains('deleteBtn')) {
-        el.parentElement.remove();
-        productsArr.splice(productsArr.findIndex(elemenet => elemenet.id === parseInt(el.id)), 1)
+        let currentQuantity = parseInt(el.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.nextElementSibling.innerText);
+        productsArr.splice(productsArr.findIndex(elemenet => elemenet.id === parseInt(el.id)), 1);
         localStorage.setItem("productsArr", JSON.stringify(productsArr));
-        cartProducts--;
-        localStorage.setItem('productInCart', parseInt(localStorage.getItem('productInCart')) - 1);
+        localStorage.setItem('productInCart', parseInt(localStorage.getItem('productInCart')) - currentQuantity);
+        cartProducts = cartProducts - currentQuantity;
+        el.parentElement.remove();
         if (cartProducts === 0) {
             localStorage.removeItem('productInCart');
             localStorage.removeItem('productsArr');
@@ -129,6 +130,8 @@ function productSectionElements(el) {
             el.nextElementSibling.innerText = currentQuantity;
             productsArr[productsArr.findIndex(elemenet => elemenet.id === parseInt(el.parentElement.parentElement.firstElementChild.id))].itemQuantity = currentQuantity;
             localStorage.setItem("productsArr", JSON.stringify(productsArr));
+            localStorage.setItem('productInCart', parseInt(localStorage.getItem('productInCart')) + 1);
+            document.querySelector('.cart_counter').textContent = parseInt(localStorage.getItem('productInCart'));
             displayInCart();
         }
     } else if (el.classList.contains('subtractQuantity')) {
@@ -140,6 +143,8 @@ function productSectionElements(el) {
             el.previousElementSibling.innerText = currentQuantity;
             productsArr[productsArr.findIndex(elemenet => elemenet.id === parseInt(el.parentElement.parentElement.firstElementChild.id))].itemQuantity = currentQuantity;
             localStorage.setItem("productsArr", JSON.stringify(productsArr));
+            localStorage.setItem('productInCart', parseInt(localStorage.getItem('productInCart')) - 1);
+            document.querySelector('.cart_counter').textContent = parseInt(localStorage.getItem('productInCart'));
             displayInCart();
         }
     } else if (el.classList.contains('candelOrder')) {
