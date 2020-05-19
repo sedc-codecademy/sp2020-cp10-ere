@@ -70,6 +70,10 @@ let foodModal = `
                         <label for="message-text" class="col-form-label">Note:</label>
                         <textarea class="form-control" id="message-text"></textarea>
                     </div>
+                    <input type="radio" id="pickUp" name="pickOrEat" value="pickUp">
+                    <label for="pickUp">Pick Up</label><br>
+                    <input type="radio" id="eatAtTheRestaurant" name="pickOrEat" value="eatAtTheRestaurant">
+                    <label for="eatAtTheRestaurant">Eat at the Restaurant</label><br>
                 </form>
             </div>
         </div>
@@ -305,9 +309,13 @@ $('#exampleModal').on('show.bs.modal', function(event) {
         })
         // addToCartBtn.addEventListener(`click`, addProduct())
     addToCartBtn.addEventListener(`click`, function() {
-        itemsCounterOrCreateInLocal();
-        setItemsInLocalStorage(dataForModal[parsedNum], itemQuantity, parseInt((`#itemPrice`)));
-        $('#exampleModal').modal('hide');
+        if (!$("input[name='pickOrEat']:checked").val()) {
+            alert("Please select whether you want to eat at the restaurant or you want pick up!")
+        } else {
+            itemsCounterOrCreateInLocal();
+            setItemsInLocalStorage(dataForModal[parsedNum]);
+            $('#exampleModal').modal('hide');
+        }
     })
 
 
@@ -338,6 +346,7 @@ function setItemsInLocalStorage(data) {
         objectPassedToCard.dataForObject = data;
         objectPassedToCard.fullPrice = priceItem;
         objectPassedToCard.itemQuantity = currentItemQuantity;
+        objectPassedToCard.pickOrEat = $("input[name='pickOrEat']:checked").val()
         productsArr.push(objectPassedToCard);
         localStorage.setItem("productsArr", JSON.stringify(productsArr));
     } else {
@@ -348,6 +357,7 @@ function setItemsInLocalStorage(data) {
         objectPassedToCard.dataForObject = data;
         objectPassedToCard.fullPrice = priceItem;
         objectPassedToCard.itemQuantity = currentItemQuantity;
+        objectPassedToCard.pickOrEat = $("input[name='pickOrEat']:checked").val()
         productsArr.push(objectPassedToCard);
         localStorage.setItem("productsArr", JSON.stringify(productsArr));
     }

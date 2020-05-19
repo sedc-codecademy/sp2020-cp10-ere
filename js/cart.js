@@ -37,6 +37,10 @@ let foodModal = `
                         <label for="message-text" class="col-form-label">Note:</label>
                         <textarea class="form-control" id="message-text"></textarea>
                     </div>
+                    <input type="radio" id="pickUp" name="pickOrEat" value="pickUp">
+                    <label for="pickUp">Pick Up</label><br>
+                    <input type="radio" id="eatAtTheRestaurant" name="pickOrEat" value="eatAtTheRestaurant">
+                    <label for="eatAtTheRestaurant">Eat at the Restaurant</label><br>
                 </form>
             </div>
         </div>
@@ -106,7 +110,6 @@ function displayInCart() {
         <div class="main_section_empty_cart"></div>`;
     }
 }
-
 
 function productSectionElements(el, e) {
     if (el.classList.contains('deleteBtn')) {
@@ -208,8 +211,8 @@ $('#exampleModal').on('show.bs.modal', function(event) {
 
     if (productsArr[parsedNum].extras != null) {
         for (const item of productsArr[parsedNum].dataForObject.extras) {
-            let dada = productsArr[parsedNum].extras.indexOf(item.extrasName)
-            if (dada != -1) {
+            let indexOfExtras = productsArr[parsedNum].extras.indexOf(item.extrasName)
+            if (indexOfExtras != -1) {
                 checkboxes[0].innerHTML += `<input type="checkbox" checked class="checkbox" id="${item.extrasName}" name="${item.extrasName}" onclick="checkCheckBox(this,'${item.price}')" />
                     <label class="extras-design" style="color:green;" for="${item.extrasName}">${item.extrasName} <span  class="extras-price-color">${item.price} мкд</span></label><br>`
             } else {
@@ -230,6 +233,7 @@ $('#exampleModal').on('show.bs.modal', function(event) {
     }
     itemPrice[0].innerHTML = `${priceItem} мкд`;
 
+    $('[name="pickOrEat"]').val([productsArr[parsedNum].pickOrEat]);
 
     plusItem.addEventListener(`click`, function() {
         if (currentItemQuantity < 10) {
@@ -241,24 +245,20 @@ $('#exampleModal').on('show.bs.modal', function(event) {
     })
 
     minusItem.addEventListener(`click`, function() {
-            if (currentItemQuantity >= 2) {
-                currentItemQuantity -= 1;
-                itemQuantity.innerHTML = currentItemQuantity;
-            }
-        })
-        // addToCartBtn.addEventListener(`click`, addProduct())
+        if (currentItemQuantity >= 2) {
+            currentItemQuantity -= 1;
+            itemQuantity.innerHTML = currentItemQuantity;
+        }
+    })
     saveBtn.addEventListener(`click`, function() {
         $('#exampleModal').modal('hide');
         setItemsInLocalStorage(parsedNum);
         displayInCart();
-        // itemsCounterOrCreateInLocal();
-        // setItemsInLocalStorage(dataForModal[parsedNum], itemQuantity, parseInt((`#itemPrice`)));
     })
 })
 
 function setItemsInLocalStorage(item) {
     let extrasArrayChecked = [];
-    let objectPassedToCard = {};
     var x = document.querySelectorAll(".checkbox");
     for (const item of x) {
         if (item.checked) {
@@ -266,10 +266,11 @@ function setItemsInLocalStorage(item) {
         }
     }
     let productsArr = JSON.parse(localStorage.getItem('productsArr'));
-    let itemON = parseInt(localStorage.getItem('productInCart'));
     productsArr[item].extras = extrasArrayChecked;
     productsArr[item].fullPrice = priceItem;
+    let beforeItemQuantity = productsArr[item].itemQuantity
     productsArr[item].itemQuantity = currentItemQuantity;
+    localStorage.setItem('productInCart', parseInt(localStorage.getItem('productInCart')) + productsArr[item].itemQuantity - beforeItemQuantity);
     localStorage.setItem("productsArr", JSON.stringify(productsArr));
 
 }
@@ -624,9 +625,6 @@ function loginFunction() {
 }
 
 
-
-
-
 if (localStorage.loggedUser === "true") {
     loggedUser = true
 }
@@ -637,8 +635,6 @@ if (loggedUser === true) {
 showLoginModalDialog.on(`click`, function() {
     loginFunction();
 })
-
-
 
 // if (window.localStorage.length != 0) {
 //     let dateNow = new Date;
