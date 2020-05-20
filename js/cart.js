@@ -1,7 +1,7 @@
 let priceForAll = 0;
 
 let productsArr = JSON.parse(localStorage.getItem('productsArr'));
-
+productsArr = productsArr.sort((a, b) => (a.pickOrEat > b.pickOrEat) ? 1 : (a.pickOrEat === b.pickOrEat) ? 1 : -1);
 let cartProducts = localStorage.getItem('productInCart');
 
 let foodModal = `
@@ -64,11 +64,12 @@ function displayInCart() {
     } else {
         document.querySelector('.cart_counter').textContent = localStorage.getItem('productInCart');
     }
-    productsArr = JSON.parse(localStorage.getItem('productsArr'));
     cartProducts = localStorage.getItem('productInCart');
     let productsSection = document.getElementById('productSection');
     let productsContainer = document.getElementById('productContainer');
     if (cartProducts != null) {
+        productsArr = JSON.parse(localStorage.getItem('productsArr'));
+        productsArr = productsArr.sort((a, b) => (a.pickOrEat > b.pickOrEat) ? 1 : (a.pickOrEat === b.pickOrEat) ? 1 : -1);
         productsSection.innerHTML = '';
         priceForAll = 0;
         for (let i = 0; i < productsArr.length; i++) {
@@ -185,6 +186,7 @@ if (!localStorage.getItem('productInCart')) {
 
 $('#exampleModal').on('show.bs.modal', function(event) {
     productsArr = JSON.parse(localStorage.getItem('productsArr'));
+    productsArr = productsArr.sort((a, b) => (a.pickOrEat > b.pickOrEat) ? 1 : (a.pickOrEat === b.pickOrEat) ? 1 : -1);
     let button = $(event.relatedTarget); // Button that triggered the modal
     $('#foodModal').html(foodModal);
     let parsedNum = parseInt(button.data('text')); // Extract info from data-* attributes
@@ -209,7 +211,7 @@ $('#exampleModal').on('show.bs.modal', function(event) {
     modalImage[0].src = productsArr[parsedNum].dataForObject.itemImg;
     modalImage[0].alt = productsArr[parsedNum].dataForObject.itemName;
 
-    if (productsArr[parsedNum].extras != null) {
+    if (productsArr[parsedNum].dataForObject.extras != 0) {
         for (const item of productsArr[parsedNum].dataForObject.extras) {
             let indexOfExtras = productsArr[parsedNum].extras.indexOf(item.extrasName)
             if (indexOfExtras != -1) {
@@ -221,12 +223,12 @@ $('#exampleModal').on('show.bs.modal', function(event) {
             }
         }
     }
-    if (productsArr[parsedNum].dataForObject.ingredients != null) {
+    if (productsArr[parsedNum].dataForObject.ingredients != 0) {
         for (const ingredient of productsArr[parsedNum].dataForObject.ingredients) {
             ingredients[0].innerHTML += `<li>${ingredient}</li>`
         }
     }
-    if (productsArr[parsedNum].dataForObject.allergens != null) {
+    if (productsArr[parsedNum].dataForObject.allergens != 0) {
         for (const allergen of productsArr[parsedNum].dataForObject.allergens) {
             allergens[0].innerHTML += `<li>${allergen}</li>`
         }
@@ -266,6 +268,7 @@ function setItemsInLocalStorage(item) {
         }
     }
     let productsArr = JSON.parse(localStorage.getItem('productsArr'));
+    productsArr = productsArr.sort((a, b) => (a.pickOrEat > b.pickOrEat) ? 1 : (a.pickOrEat === b.pickOrEat) ? 1 : -1);
     productsArr[item].extras = extrasArrayChecked;
     productsArr[item].fullPrice = priceItem;
     let beforeItemQuantity = productsArr[item].itemQuantity
