@@ -211,7 +211,7 @@ $('#exampleModal').on('show.bs.modal', function(event) {
     modalImage[0].src = productsArr[parsedNum].dataForObject.itemImg;
     modalImage[0].alt = productsArr[parsedNum].dataForObject.itemName;
 
-    if (productsArr[parsedNum].dataForObject.extras != 0) {
+    if (productsArr[parsedNum].dataForObject.extras != null) {
         for (const item of productsArr[parsedNum].dataForObject.extras) {
             let indexOfExtras = productsArr[parsedNum].extras.indexOf(item.extrasName)
             if (indexOfExtras != -1) {
@@ -223,12 +223,12 @@ $('#exampleModal').on('show.bs.modal', function(event) {
             }
         }
     }
-    if (productsArr[parsedNum].dataForObject.ingredients != 0) {
+    if (productsArr[parsedNum].dataForObject.ingredients != null) {
         for (const ingredient of productsArr[parsedNum].dataForObject.ingredients) {
             ingredients[0].innerHTML += `<li>${ingredient}</li>`
         }
     }
-    if (productsArr[parsedNum].dataForObject.allergens != 0) {
+    if (productsArr[parsedNum].dataForObject.allergens != null) {
         for (const allergen of productsArr[parsedNum].dataForObject.allergens) {
             allergens[0].innerHTML += `<li>${allergen}</li>`
         }
