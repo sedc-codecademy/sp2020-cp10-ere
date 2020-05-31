@@ -1,0 +1,756 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+/* colors
+
+    price-bg: #CC1149;
+    item-name: #383434;
+    header-footer: #C8B273;
+
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+p {
+    margin: 0 0 0 0;
+}
+
+
+/* START HEADER */
+
+.header-Contact {
+    padding: 8px 139px;
+    background-color: #C8B273;
+    height: 40px;
+}
+
+.headerParagraph {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 18px;
+}
+
+.envelopeHeader {
+    margin-right: 17.5px;
+}
+
+.phoneHeader {
+    margin-left: 51.7px;
+    margin-right: 14.7px;
+}
+
+.headerNavBar {
+    margin: 65px 179px 142px 157px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logoHeader {
+    height: 116px;
+}
+
+.logoText {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    margin-left: 30px;
+    color: #C8B273;
+}
+
+.navBarLinks {
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+
+.navBarLinks div {
+    font-family: 'Raleway', sans-serif;
+    color: #C8B273;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-right: 55px;
+}
+
+.navBarLinks div:hover {
+    cursor: pointer;
+    color: rgb(250, 177, 115);
+}
+
+.navBarLinks div:last-child {
+    margin-right: 0px;
+}
+
+
+/* END HEADER */
+
+body {
+    background: linear-gradient( rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow-x: hidden;
+}
+
+
+/* START MAINPAGE */
+
+.main-container {
+    margin-bottom: 110px;
+}
+
+.mostOrderedTitle {
+    font-family: 'Raleway', sans-serif;
+    color: #C8B273;
+    font-size: 32px;
+    margin-left: 139px;
+    margin-bottom: 50px;
+}
+
+.mostOrderedItems {
+    display: flex;
+    justify-content: center;
+}
+
+.mostOrderedItems .col-sm-2 {
+    padding: 0 0 0 0;
+}
+
+.flex-sm-column {
+    margin-top: 25px;
+    height: auto;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: none;
+}
+
+.cardImageContainer {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img-top {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.cardImageContainer:hover .card-img-top,
+.cardImageContainer:focus .card-img-top {
+    transform: scale(1.2);
+}
+
+.cardImageContainer:hover .card-img-top:before,
+.cardImageContainer:focus .card-img-top:before {
+    display: block;
+}
+
+.cardItemContent {
+    position: relative;
+    height: 110px;
+    background-color: white;
+    border-radius: 0px 0px 5px 5px;
+    -webkit-border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 0px 0px 5px 5px;
+    -ms-border-radius: 0px 0px 5px 5px;
+    -o-border-radius: 0px 0px 5px 5px;
+}
+
+.itemPrice {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.cardTitle {
+    position: absolute;
+    top: 20px;
+    left: 17px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.itemImageText {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    position: absolute;
+    display: none;
+}
+
+.cardImageContainer:hover .itemImageText,
+.cardImageContainer:focus .itemImageText {
+    z-index: 999;
+    display: block;
+}
+
+.mostOrderedItems {
+    padding: 0 140px;
+}
+
+.mostOrderedItems .cardTitle {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px !important;
+    width: 163px;
+    font-weight: bold;
+    display: inline-flex;
+}
+
+.mostOrderedItems .itemPrice {
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-flex;
+    background-color: #CC1149;
+    width: 108px;
+    height: 32px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+footer {
+    font-family: 'Lato', sans-serif;
+    height: 50px;
+    background-color: #C8B273;
+    color: #FFFF;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalItem {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 1000px;
+    min-height: auto;
+    padding: 41px 29px 26px 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.modalItemTitle {
+    margin-top: 41px;
+    margin-left: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+}
+
+.modalItemTitleLine {
+    background-color: #CC1149;
+    margin-left: 22px;
+    width: 100px;
+    height: 3px;
+}
+
+.xModal {
+    color: black!important;
+    position: absolute;
+    top: 34.9px;
+    right: 34.9px;
+}
+
+.modaladds {
+    display: inline-flex;
+    margin: 28px 0px 28px 20px;
+}
+
+.modalIngredients {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    list-style-type: none;
+}
+
+.modalIngredients li:first-child,
+.modalExtras li:first-child {
+    margin-top: 28px;
+}
+
+.modalIngredients li,
+.modalExtras li {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 22px;
+    margin-left: 6px;
+    min-height: 30px;
+}
+
+.modalExtras label {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 22px;
+}
+
+.modalExtras {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    margin-left: 171px;
+    width: 250px;
+    list-style-type: none;
+}
+
+.modalItemImage {
+    width: 280px;
+    height: 173px;
+    margin-right: 47px;
+}
+
+.modalItemCheck {
+    color: #22B571;
+    margin-right: 11px;
+}
+
+
+/*** custom checkboxes ***/
+
+input[type=checkbox] {
+    display: none;
+}
+
+
+/* to hide the checkbox itself */
+
+input[type=checkbox]+label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+}
+
+input[type=checkbox]+label:before {
+    content: "\f096";
+}
+
+
+/* unchecked icon */
+
+input[type=checkbox]+label:before {
+    letter-spacing: 10px;
+}
+
+
+/* space between checkbox and label */
+
+input[type=checkbox]:checked+label:before {
+    content: "\f046";
+    color: #22B571;
+}
+
+
+/* checked icon */
+
+input[type=checkbox]:checked+label:before {
+    letter-spacing: 5px;
+}
+
+
+/* allow space for check mark */
+
+#modalNote {
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    width: 897px;
+    height: 91px;
+    border: solid 1px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    outline: none;
+    padding: 15px;
+    resize: none;
+    border-color: #DADADA;
+}
+
+#modalNote::placeholder {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    color: #DADADA;
+}
+
+.modalDivider {
+    width: 903px;
+    height: 1px;
+    color: #707070;
+}
+
+
+/* checkbox toggle */
+
+label {
+    margin-bottom: 0px;
+}
+
+.modalFooter {
+    display: flex;
+    align-items: center;
+}
+
+.tg-list {
+    list-style-type: none;
+    display: flex;
+    width: 280px;
+    height: 25px;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+.tg-list p {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    align-items: center;
+    margin: 0 20px 0px 20px;
+    height: 25px;
+}
+
+.tgl {
+    display: none;
+}
+
+.tgl,
+.tgl:after,
+.tgl:before,
+.tgl *,
+.tgl *:after,
+.tgl *:before,
+.tgl+.tgl-btn {
+    box-sizing: border-box;
+}
+
+.tgl::selection,
+.tgl:after::selection,
+.tgl:before::selection,
+.tgl *::selection,
+.tgl *:after::selection,
+.tgl *:before::selection,
+.tgl+.tgl-btn::selection {
+    background: none;
+}
+
+.tgl+.tgl-btn {
+    outline: 0;
+    display: block;
+    width: 4em;
+    height: 2em;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tgl+.tgl-btn:after,
+.tgl+.tgl-btn:before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+}
+
+.tgl+.tgl-btn:after {
+    left: 0;
+}
+
+.tgl+.tgl-btn:before {
+    display: none;
+}
+
+.tgl:checked+.tgl-btn:after {
+    left: 50%;
+}
+
+.tgl:checked+.tgl-btn:after {
+    left: 50%;
+}
+
+.tgl-light+.tgl-btn {
+    background: #fff;
+    border-radius: 2em;
+    transition: all 0.4s ease;
+}
+
+.tgl-light+.tgl-btn:after {
+    border-radius: 50%;
+    background: #fff;
+    transition: all 0.2s ease;
+}
+
+.tgl-light:checked+.tgl-btn {
+    background: #fff;
+}
+
+.tgl-ios+.tgl-btn {
+    background: #fff;
+    border-radius: 2em;
+    transition: all 0.4s ease;
+    border: 1px solid #C8B273;
+}
+
+.tgl-ios+.tgl-btn:after {
+    border-radius: 2em;
+    background: #C8B273;
+    transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+}
+
+.tgl-ios:checked+.tgl-btn {
+    background: #fff;
+}
+
+.tgl-ios:checked+.tgl-btn:active {
+    box-shadow: none;
+}
+
+.eatThere {
+    margin-left: 0px !important;
+    border-bottom: 2px solid #C8B273;
+}
+
+.groupModalQuantity {
+    display: flex;
+    width: 211px;
+    height: 25px;
+    margin-left: 30px;
+    align-items: center;
+}
+
+#modalQuantity {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.addAndRemoveModalQuantity {
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border: solid #DADADA 1px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0px 20px 0px 20px;
+}
+
+.addAndRemoveModalQuantity:focus {
+    outline: none;
+}
+
+.addAndRemoveModalQuantity:hover {
+    cursor: pointer;
+}
+
+#modalItemQuantity {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.modalAddToCart {
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    width: 197px;
+    height: 58px;
+    color: white;
+    background-color: #C8B273;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-left: 30px;
+}
+
+.modalAddToCart {
+    cursor: pointer;
+}
+
+.modalFullPrice {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: #C8B273;
+    margin-left: 30px;
+}
+
+
+/* MENU START */
+
+
+/* MENU BUTTONS AND MENU NAV */
+
+.foodMenuNavigation {
+    margin-left: 139px;
+    display: flex;
+}
+
+.foodMenuButton {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 5px;
+    color: #C8B273;
+    height: 64px;
+    padding: 0px 40px;
+    font-weight: bold;
+    justify-content: center;
+    margin: 0px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.foodMenuButton:first-child {
+    margin: 0px 30px 0px 0px!important;
+}
+
+.foodMenuButton:last-child {
+    margin: 0px 0px 0px 30px!important;
+}
+
+.foodMenuButton:hover {
+    cursor: pointer;
+    color: rgb(250, 177, 115);
+}
+
+.foodMenuNavigation .selected {
+    color: white;
+    background-color: #C8B273;
+}
+
+
+/* DRINKS MODAL */
+
+.drinksModalContent {
+    min-width: 384px;
+    min-height: 680px;
+}
+
+.drinksModalItemTitleLine {
+    background-color: #CC1149;
+    margin-left: 50px;
+    width: 100px;
+    height: 3px;
+    border: none;
+}
+
+.drinksModalItemImage {
+    width: 297px;
+    height: 173px;
+    margin-left: 44px;
+    margin-top: 27px;
+}
+
+#drinksModalNote {
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    width: 286px;
+    height: 91px;
+    margin: 27px 48px 0px 50px;
+    border-radius: 5px;
+    border: solid 1px #DADADA;
+    resize: none;
+    padding: 15px;
+}
+
+#drinksModalNote::placeholder {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    color: #DADADA;
+}
+
+.drinksModalDivider {
+    width: 323px;
+    margin-left: 31px;
+    background-color: #E3E3E3;
+    border: none;
+    height: 1px;
+    margin-top: 13px;
+    margin-bottom: 0px;
+}
+
+.drinksModalFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.drinksTgList {
+    margin-top: 27px;
+    width: unset;
+}
+
+.pickUpDrinks {
+    margin-right: 0px;
+}
+
+.drinksGroupModalQuantity {
+    margin-top: 14px;
+    width: unset;
+    margin-left: 0px;
+}
+
+.drinksModalAddToCart {
+    margin: unset;
+    margin-top: 27px;
+}
+
+.drinksModalFullPrice {
+    margin: unset;
+    margin-top: 14px;
+    margin-bottom: 23px;
+}
+
+.drinksModalItemTitle {
+    margin-left: 50px;
+}
