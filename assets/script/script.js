@@ -7,7 +7,16 @@ const menuNav = `<div class="foodMenuNavigation">
         <div class="foodMenuButton" id="menuBreakfast">BREAKFAST</div>
         <div class="foodMenuButton" id="menuLunch">Lunch</div>
         <div class="foodMenuButton" id="menuDesert">dessert</div>
+        <div class="foodMenuButton" id="menuVegetarian">vegetarian</div>
         <div class="foodMenuButton" id="menuDrinks">drinks</div>
+        <div class="dropdown dropdown-main-button">
+            <button class="btn btn-primary dropdown-design dropdown-toggle" id="selectedView" type="button" data-toggle="dropdown">3 COLUMN</button>
+            <ul class="dropdown-menu">
+              <li id="threeColumn"><a href="#">3 COLUMN</a></li>
+              <li id="twoColumn"><a href="#">2 COLUMN</a></li>
+              <li id="list"><a href="#">LIST</a></li>
+            </ul>
+        </div>
     </div>
     <div class="row mostOrderedItems" id="mostOrderedItemsRow"></div>`;
 const modalForFood = `<div class="modal fade" id="foodModal" tabindex="-1" role="dialog" aria-labelledby="foodModalTitle" aria-hidden="true">
@@ -107,25 +116,25 @@ fetch(url)
 function printMostOrderedItems() {
     currentArray = productItemsArr[0].filter(x => x.ordered === "most ordered");
     mainContainer.innerHTML = mostOrderedProductsTitle;
-    printMenu('none', 'most ordered', modalForFood);
-    printCard(document.getElementById("mostOrderedItemsRow"), currentArray);
+    printMenu('none', 'most ordered', modalForFood, 3);
+    printCard(document.getElementById("mostOrderedItemsRow"), currentArray, 3);
     document.getElementById("divModal").innerHTML = modalForFood;
     modalEventListener();
 };
 
-function printCard(element, array) {
+function printCard(element, array, column) {
     element.innerHTML = ``;
     for (let i = 0; i < array.length; i++) {
         element.innerHTML += `
-        <div class="flex-sm-column col-sm-3" >
-        <div data-toggle="modal" class="pointer" data-target="${array[i].mainCategory != 'Drink' ? '#foodModal' : '#drinkModal'}" data-text="${i}">
+        <div class="flex-sm-column col-sm-${column}" >
+        <div data-toggle="modal" class="${column === 12 ? 'pointer listCardElement' : 'pointer'}" data-target="${array[i].mainCategory != 'Drink' ? '#foodModal' : '#drinkModal'}" data-text="${i}">
         <div class="cardImageContainer">
             <span class="itemImageText"><img src="./assets/images/giphyo.gif" width="150px"></span>
-            <img class="card-img-top" src="./assets/images/Screenshot_2.png" alt="Card image cap">
+            <img class="${column === 12 ? 'card-img-top imageListSize' : 'card-img-top'}" src="./assets/images/Screenshot_2.png" alt="Card image cap">
         </div>
-        <div class="cardItemContent">
-            <h5 class="cardTitle">${array[i].itemName}e</h5>
-            <div class="itemPrice">
+        <div class="${column === 12 ? 'cardItemListContent' : 'cardItemContent'}">
+            <h5 class="${column === 12 ? 'cardListTitle' : 'cardTitle'}">${array[i].itemName}</h5>
+            <div class="${column === 12 ? 'itemListPrice': 'itemPrice'}">
                 ${array[i].price} МКД
             </div>
         </div>
@@ -163,42 +172,53 @@ home.addEventListener(`click`, function() {
 });
 
 menu.addEventListener('click', function() {
-    printMenu('menuAll', 'All', modalForFood + modalForDrinks);
+    printMenu('menuAll', 'All', modalForFood + modalForDrinks, 4);
 });
 
 function filterAndPrintEventListeners() {
-    let menuAll = document.getElementById(`menuAll`);
-    let menuBreakfast = document.getElementById(`menuBreakfast`);
-    let menuLunch = document.getElementById(`menuLunch`);
-    let menuDesert = document.getElementById(`menuDesert`);
-    let menuDrinks = document.getElementById(`menuDrinks`);
-    menuAll.addEventListener(`click`, function() {
-        printMenu('menuAll', 'All', modalForFood + modalForDrinks);
+    document.getElementById(`menuAll`).addEventListener(`click`, function() {
+        printMenu('menuAll', 'All', modalForFood + modalForDrinks, 4);
     });
-    menuBreakfast.addEventListener(`click`, function() {
-        printMenu('menuBreakfast', 'Breakfast', modalForFood);
+    document.getElementById(`menuBreakfast`).addEventListener(`click`, function() {
+        printMenu('menuBreakfast', 'Breakfast', modalForFood, 4);
     });
-    menuLunch.addEventListener(`click`, function() {
-        printMenu("menuLunch", "Lunch", modalForFood);
+    document.getElementById(`menuLunch`).addEventListener(`click`, function() {
+        printMenu("menuLunch", "Lunch", modalForFood, 4);
     });
-    menuDesert.addEventListener(`click`, function() {
-        printMenu('menuDesert', 'Desert', modalForFood);
+    document.getElementById(`menuDesert`).addEventListener(`click`, function() {
+        printMenu('menuDesert', 'Desert', modalForFood, 4);
     });
-    menuDrinks.addEventListener(`click`, function() {
-        printMenu("menuDrinks", "Drink", modalForDrinks);
+    document.getElementById(`menuVegetarian`).addEventListener(`click`, function() {
+        printMenu("menuVegetarian", "Vegetarian", modalForFood, 4);
+    });
+    document.getElementById(`menuDrinks`).addEventListener(`click`, function() {
+        printMenu("menuDrinks", "Drink", modalForDrinks, 4);
     });
 }
 
-function printMenu(menuNavigation, navigation, modal) {
+function printMenu(menuNavigation, navigation, modal, column) {
     if (navigation != 'most ordered') {
         mainContainer.innerHTML = menuNav;
         document.getElementById(menuNavigation).classList.add(`selected`);
         currentArray = navigation != "All" ? productItemsArr[0].filter(x => x.mainCategory === navigation) : productItemsArr[0];
+
+        document.getElementById('threeColumn').addEventListener(`click`, function() {
+            printCard(document.getElementById("mostOrderedItemsRow"), currentArray, 4);
+            document.getElementById("selectedView").innerText = '3 COLUMN';
+        });
+        document.getElementById('twoColumn').addEventListener(`click`, function() {
+            printCard(document.getElementById("mostOrderedItemsRow"), currentArray, 6);
+            document.getElementById("selectedView").innerText = '2 COLUMN';
+        });
+        document.getElementById('list').addEventListener(`click`, function() {
+            printCard(document.getElementById("mostOrderedItemsRow"), currentArray, 12);
+            document.getElementById("selectedView").innerText = 'LIST';
+        });
     } else {
-        currentArray = productItemsArr[0].filter(x => x.ordered === "most ordered")
+        currentArray = productItemsArr[0].filter(x => x.ordered === "most ordered");
     }
     document.getElementById("divModal").innerHTML = modal;
-    printCard(document.getElementById("mostOrderedItemsRow"), currentArray);
+    printCard(document.getElementById("mostOrderedItemsRow"), currentArray, column);
     modalEventListener();
     if (navigation != 'most ordered') {
         filterAndPrintEventListeners();
