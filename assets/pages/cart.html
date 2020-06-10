@@ -7,8 +7,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/icon.png" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/icon.png" />
     <title>E-Restaurant</title>
 </head>
 
@@ -21,7 +21,7 @@
             </p>
         </div>
         <div class="headerNavBar">
-            <img src="./assets/images/icon.png" class="logoHeader">
+            <img src="../images/icon.png" class="logoHeader">
             <p class="logoText">Seavus Reastaurant</p>
             <div class="navBarLinks">
                 <div id="home">
@@ -33,12 +33,10 @@
                 <div>
                     <p>contact</p>
                 </div>
-                <!-- <a href="./assets/pages/cart.html"> -->
-                <div id="card" class="cartButton">
-                    <img src="./assets/images/cart2.png" alt="cart" />
-                    <div class="inCartQuantity">1</div>
+                <div class="cartButton">
+                    <img src="../images/cart2.png" alt="cart" />
+                    <div class="inCartQuantity cart_counter">1</div>
                 </div>
-                <!-- </a> -->
                 <div id="loginButton">
                     <p>login</p>
                 </div>
@@ -48,25 +46,6 @@
     <div class="main-container" id="mainContainer">
     </div>
     <div id="divModal">
-
-        <div data-toggle="modal" class="pointer listCardElement" data-target="#foodModal" data-text="0">
-            <div class="productContainer">
-                <div class="removeProduct"><i class="fas fa-times"></i>
-                </div>
-                <img src="./assets/images/Screenshot_2.png" alt="Card image cap" class="cardProductImage">
-                <p class="producCardTitle">Basic Omelete</p>
-                <div class="quantityContainer">
-                    <p class="quantityParagraph">Quantity</p>
-                    <button type="button" class="quantityStyleButtons"><i class="fas fa-minus"></i></button>
-                    <p class="productQuantityNumber">1</p>
-                    <button type="button" class="quantityStyleButtons"><i class="fas fa-plus"></i></button>
-                </div>
-                <div class="containerCardPrice">
-                    <p class="productCardPrice">140 MKD</p>
-                </div>
-            </div>
-        </div>
-
     </div>
     <footer>
         <p>SEAVUS REASTAURANT | ALL RIGHTS RESERVED</p>
@@ -74,8 +53,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="./assets/script/script.js"></script>
-
+    <script src="../script/cart.js"></script>
 </body>
 
 </html>
