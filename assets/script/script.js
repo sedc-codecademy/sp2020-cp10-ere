@@ -365,9 +365,13 @@ function setItemsInLocalStorage(data, priceItem) {
 
 home.addEventListener(`click`, function() {
     printMostOrderedProducts(currentArray);
+    home.classList.add('eatOrPickSelected');
+    menu.classList.remove('eatOrPickSelected');
 });
 menu.addEventListener('click', function() {
     printMenu('menuAll', 'All', newestModalForFood + modalForDrinks, 4);
+    home.classList.remove('eatOrPickSelected');
+    menu.classList.add('eatOrPickSelected');
 });
 card.addEventListener('click', function() {
     printCardItems();
