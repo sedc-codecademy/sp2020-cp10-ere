@@ -1,6 +1,6 @@
 const url = 'https://raw.githubusercontent.com/LordGrim15/JSON-Menu/master/menu.json';
 const centeredContainer = ``;
-const mostOrderedProductsTitle = `<div class="titleForPages"></div>
+const mostOrderedProductsTitle = `<div class="titleForPages">Most Ordered Products</div>
 <div class="row centeredContainer" id="centeredContainerRow"></div>`;
 const menuNav = `<div class="foodMenuNavigation">
         <div class="foodMenuButton" id="menuAll">all</div>
@@ -435,6 +435,7 @@ card.addEventListener('click', function() {
 
 
 function filterAndPrintEventListeners() {
+    mainContainer.style="margin-bottom: 110px;"
     document.getElementById(`menuAll`).addEventListener(`click`, function() {
         printMenu('menuAll', 'All', newestModalForFood + modalForDrinks, 4);
     });
@@ -456,6 +457,7 @@ function filterAndPrintEventListeners() {
 }
 
 function printMenu(menuNavigation, navigation, modal, column) {
+    mainContainer.style="margin-bottom: 110px;"
     if (navigation != 'most ordered') {
         mainContainer.innerHTML = menuNav;
         document.getElementById(menuNavigation).classList.add(`selected`);
@@ -545,7 +547,55 @@ function productSectionElements(el, e) {
 };
 
 
-
+const contact = document.getElementById("contact");
+contact.addEventListener('click', function(){
+    mainContainer.innerHTML = ``;
+    mainContainer.style="margin-bottom: 0;"
+    mainContainer.innerHTML=`
+    <div class="row contact">
+        <div class="col-sm-6"> 
+            <div class="mail_form">
+                <h1 class="headers_contact">CONTACT US</h1> <br>
+                <form id="contact-form">
+                    <input type="text" name="name" id="name" placeholder="Name" required/>
+                    <br>
+                    <input type="text" name="e-mail" id="email" placeholder="E-mail" required />
+                    <br>
+                    <input type="number" name="phone" id="phone" placeholder="Phone" />
+                    <br>
+                    <textarea name="remark" id="text" placeholder="Questions/Comments" cols="40" rows="4" required></textarea>
+                    <br>
+                    <button type="submut" id="btn_send">SEND</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-6 number">
+            <div class="call_us"><h1 class="headers_contact" ></h1>
+                <button type="" class = "phone"><i class="fa fa-phone" style="font-size:20px"></i>+389 70 123 456</button>
+            </div>
+            <br><br>
+            <div class="working_hours">
+                <h1 class="headers_contact_hours">Working Hours</h1>
+                <br>
+                <div class="days_of_week">
+                    <p>Monday .............. <strong> 9.30 - 15.30</strong></p>
+                    <p>Tuesday ............. <strong> 9.30 - 15.30</strong></p>
+                    <p>Wednesday ...... <strong> 9.30 - 15.30</strong></p>
+                    <p>Thursday ..........<strong> 9.30 - 15.30</strong></p>
+                    <p>Friday .................<strong> 9.30 - 15.30</strong></p>
+                    <p>Saturday <strong>closed</strong></p>
+                    <p>Sunday <strong>closed</strong></p>
+                </div>
+            </div>
+            <br><br><br>
+            <p class="address"><i class="fa fa-map-marker"  style="font-size:18px;color:#C8B273"></i> 11TH OCTOBER ST. 33, SKOPJE 1000</p>
+        </div>
+    </div>
+    <div class="row map">
+        <iframe class= "iframe "src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11862.546673614783!2d21.439687!3d41.98661!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb73c65132f7d38d2!2sSeavus%20Group!5e0!3m2!1sen!2smk!4v1592334183573!5m2!1sen!2smk" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+`
+})
 
 
 
