@@ -76,10 +76,10 @@ const newestFoodModal = `
                     <div class="groupModalQuantity">
                         <p id="modalQuantity">Quantity</p>
                         <button type="button" class="addAndRemoveModalQuantity" id="removeModalQuantity">-</button>
-                        <p id="modalItemQuantity">1</p>
+                        <p class="modalItemQuantity">1</p>
                         <button type="button" class="addAndRemoveModalQuantity" id="addModalQuantity">+</button>
                     </div>
-                    <button id="addItemToCard" type="button" class="modalAddToCart">add to cart</button>
+                    <button id="saveOrAddItemToCard" type="button" class="modalAddToCart">add to cart</button>
                     <p class="modalFullPrice" id="modalFullPrice">70 MKD</p>
                     </div>`;
 const drinkModal = `<div class="drinksModalAdds">
@@ -97,10 +97,10 @@ const drinkModal = `<div class="drinksModalAdds">
 <div class="groupModalQuantity drinksGroupModalQuantity">
     <p id="drinksModalQuantity">Quantity</p>
     <button type="button" class="addAndRemoveModalQuantity" id="removeDrinksModalQuantity">-</button>
-    <p id="drinksModalItemQuantity">1</p>
+    <p class="drinksModalItemQuantity">1</p>
     <button type="button" class="addAndRemoveModalQuantity" id="addDrinksModalQuantity">+</button>
 </div>
-<button type="button" class="modalAddToCart drinksModalAddToCart">add to cart</button>
+<button id="addDrinkItemToCard" type="button" class="modalAddToCart drinksModalAddToCart">add to cart</button>
 <p class="modalFullPrice drinksModalFullPrice" id="drinksModalFullPrice">60 MKD</p>
 </div>`;
 let productItemsArr = [];
@@ -122,13 +122,16 @@ fetch(url)
         console.log(error);
     });
 
-if (!localStorage.getItem('productsArr')) {
-    document.querySelector('.inCartQuantity').textContent = '0';
-} else {
-    let productsArr = JSON.parse(localStorage.getItem('productsArr'));
-    document.querySelector('.inCartQuantity').textContent = productsArr.length;
+function productsInCartNumber() {
+    if (!localStorage.getItem('productsArr')) {
+        document.querySelector('.inCartQuantity').textContent = '0';
+    } else {
+        let productsArr = JSON.parse(localStorage.getItem('productsArr'));
+        document.querySelector('.inCartQuantity').textContent = productsArr.length;
 
+    }
 }
+productsInCartNumber();
 
 function printMostOrderedProducts() {
     currentArray = productItemsArr[0].filter((x) => x.ordered === 'most ordered');
@@ -144,27 +147,46 @@ function printCardItems() {
     currentArray = JSON.parse(localStorage.getItem('productsArr'))
     mainContainer.innerHTML = mostOrderedProductsTitle;
     document.getElementsByClassName(`titleForPages`).innerHTML = `Card`;
-    printItemsCard(document.getElementById('centeredContainerRow'), currentArray, 12);
+    printCard(document.getElementById('centeredContainerRow'), currentArray, 13);
     document.getElementById('divModal').innerHTML = newestModalForFood + modalForDrinks;
     modalEventListenerForCard();
     productSectionElementsListener();
 }
 
+
+
 function printCard(element, array, column) {
     element.innerHTML = ``;
     for (let i = 0; i < array.length; i++) {
-        element.innerHTML += `
-        <div class="flex-sm-column col-sm-${column}" >
-        <div data-toggle="modal" class="${column === 12 ? 'pointer listCardElement' : 'pointer'}" data-target="${array[i].mainCategory != 'Drink'? '#foodModal': '#drinkModal'}" data-text="${i}">
-        <div class="cardImageContainer">
-            <span class="itemImageText"><img src="./assets/images/giphyo.gif" width="150px"></span>
+        if (column != 13) {
+            var cardForEverywere = `<span class="itemImageText"><img src="./assets/images/giphyo.gif" width="150px"></span>
             <img class="${column === 12 ? 'card-img-top imageListSize' : 'card-img-top'}" src="./assets/images/Screenshot_2.png" onerror="this.src = '../assets/images/no-image.png', this.classList.add('onerrorImage')" alt="Card image cap">
-        </div>
-        <div class="${column === 12 ? 'cardItemListContent' : 'cardItemContent'}">
+            </div>
+            <div class="${column === 12 ? 'cardItemListContent' : 'cardItemContent'}">
             <h5 class="${column === 12 ? 'cardListTitle' : 'cardTitle'}">${array[i].itemName}</h5>
             <div class="${column === 12 ? 'itemListPrice' : 'itemPrice'}">
                 ${array[i].price} МКД
+            </div>`;
+        } else {
+            var cardForInCard = `<div class="removeProduct"><i class="fas fa-times"></i>
             </div>
+            <img src="./assets/images/Screenshot_2.png" onerror="this.src = '../assets/images/no-image.png', this.classList.add('onerrorImage')" alt="Card image cap" class="cardProductImage">
+            <h5 class="producCardTitle">${array[i].dataForObject.itemName}</h5>
+            <div class="quantityContainer">
+                <p class="quantityParagraph">Quantity</p>
+                <button type="button" class="quantityStyleButtons"><i class="fas fa-minus"></i></button>
+                <p class="productQuantityNumber">${array[i].itemQuantity}</p>
+                <button type="button" class="quantityStyleButtons"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="containerCardPrice">
+                <p class="productCardPrice">${array[i].fullPrice} MKD</p>
+            </div>`;
+        }
+        element.innerHTML += `
+        <div class="flex-sm-column col-sm-${column != 13 ? column : 12}" >
+        <div data-toggle="modal" class="${column === 12 || column === 13 ? 'pointer listCardElement' : 'pointer'}" data-target="${array[i].mainCategory === undefined ? array[i].dataForObject.mainCategory != 'Drink'? '#foodModal': '#drinkModal' : array[i].mainCategory != 'Drink'? '#foodModal': '#drinkModal'}" data-text="${i}">
+        <div class="${column != 13 ? 'cardImageContainer' : 'productContainer'}">
+        ${ column != 13 ? cardForEverywere : cardForInCard}
         </div>
     </div>
     </div>`;
@@ -212,7 +234,7 @@ function modalEventListener() {
         for (const extras of item.extras) {
             document.getElementById(
                 'foodModalExtrasList'
-            ).innerHTML += `<li><input id="${extras.extrasName}" type="checkbox" class="checkbox" onclick="checkCheckBox(this,'${item.price}')" /><label for="${extras.extrasName}">${extras.extrasName}</label></li>`;
+            ).innerHTML += `<li><input id="${extras.extrasName}" type="checkbox" class="checkbox" onclick="checkCheckBox(this,'${extras.price}')"/><label for="${extras.extrasName}"><abbr title="${extras.price} MKD">${extras.extrasName}</abbr></label></li>`;
         }
         for (const allergen of item.allergens) {
             if (item.allergens[item.allergens.length - 1] === allergen) {
@@ -225,17 +247,19 @@ function modalEventListener() {
         addOrRemoveQuantity(
             document.getElementById('addModalQuantity'),
             document.getElementById('removeModalQuantity'),
-            document.getElementById('modalItemQuantity'),
+            document.querySelector('.modalItemQuantity'),
             currentItemQuantity
         );
         document.getElementById('modalFullPrice').innerHTML = `${item.price} MKD`;
-        document.getElementById('addItemToCard').addEventListener(`click`, function() {
+        document.getElementById('saveOrAddItemToCard').addEventListener(`click`, function() {
             setItemsInLocalStorage(item, priceItem);
+            $('#foodModal').modal('hide');
         });
     });
     $(`#drinkModal`).on('show.bs.modal', function(event) {
         let button = $(event.relatedTarget);
         let item = currentArray[parseInt(button.data('text'))];
+        priceItem = item.price;
         document.getElementById('drinksModalContent').innerHTML = drinkModal;
         document.getElementById('modalDrinksItemTitle').innerHTML = item.itemName;
         document.getElementById('drinksModalFullPrice').innerHTML = `${item.price} MKD`;
@@ -243,43 +267,65 @@ function modalEventListener() {
         addOrRemoveQuantity(
             document.getElementById(`addDrinksModalQuantity`),
             document.getElementById(`removeDrinksModalQuantity`),
-            document.getElementById(`drinksModalItemQuantity`),
+            document.querySelector(`.drinksModalItemQuantity`),
             currentItemQuantity
         );
+        document.getElementById(`addDrinkItemToCard`).addEventListener(`click`, function() {
+            setItemsInLocalStorage(item, priceItem);
+            $('#drinkModal').modal('hide');
+        })
     });
 }
 
 function modalEventListenerForCard() {
     $(`#foodModal`).on('show.bs.modal', function(event) {
         let button = $(event.relatedTarget);
-        let currentItemQuantity = currentArray[parseInt(button.data('text'))].itemQuantity;
-        let item = currentArray[parseInt(button.data('text'))].dataForObject;
-        priceItem = currentArray[parseInt(button.data('text'))].fullPrice;
+        let item = currentArray[parseInt(button.data('text'))];
+        let currentItemQuantity = item.itemQuantity;
+        priceItem = item.fullPrice;
         document.getElementById('inModalFooter').innerHTML = newestFoodModal;
-        document.getElementById('modalItemTitle').innerHTML = item.itemName;
-        for (const ingrediant of item.ingredients) {
+        document.getElementById('modalItemTitle').innerHTML = item.dataForObject.itemName;
+        for (const ingrediant of item.dataForObject.ingredients) {
             document.getElementById('foodModalIngredientsList').innerHTML += `<li><i class="fas fa-check modalItemCheck"></i>${ingrediant}</li>`;
         }
-        for (const extras of item.extras) {
-            document.getElementById('foodModalExtrasList').innerHTML += `<li><input id="${extras.extrasName}" type="checkbox" class="checkbox" onclick="checkCheckBox(this,'${item.price}')" /><label for="${extras.extrasName}">${extras.extrasName}</label></li>`;
+        for (let i = 0; i < item.dataForObject.extras.length; i++) {
+            document.getElementById('foodModalExtrasList').innerHTML += `<li><input id="${item.dataForObject.extras[i].extrasName}" ${item.extras.indexOf(item.dataForObject.extras[i].extrasName) === -1 ? '' : 'checked'} type="checkbox" class="checkbox" onclick="checkCheckBox(this,'${item.dataForObject.extras[i].price}')" /><label for="${item.dataForObject.extras[i].extrasName}"><abbr title="${item.dataForObject.extras[i].price} MKD">${item.dataForObject.extras[i].extrasName}</abbr></label></li>`;
         }
-        for (const allergen of item.allergens) {
-            if (item.allergens[item.allergens.length - 1] === allergen) {
+        for (const allergen of item.dataForObject.allergens) {
+            if (item.dataForObject.allergens[item.dataForObject.allergens.length - 1] === allergen) {
                 document.getElementById('foodModalAllergens').innerText += ` ${allergen}`;
             } else {
                 document.getElementById('foodModalAllergens').innerText += ` ${allergen},`;
             }
         }
+        document.getElementById(`cb2`).checked = item.pickOrEat;
         document.getElementById(`cb2`).addEventListener(`click`, pickOrEatClass.bind(null, 'cb2'));
+        pickOrEatClass(`cb2`);
+        document.querySelector(`.modalItemQuantity`).innerHTML = currentItemQuantity;
         addOrRemoveQuantity(
             document.getElementById('addModalQuantity'),
             document.getElementById('removeModalQuantity'),
-            document.getElementById('modalItemQuantity'),
+            document.querySelector(`.modalItemQuantity`),
             currentItemQuantity
         );
-        document.getElementById('modalFullPrice').innerHTML = `${item.price} MKD`;
-        document.getElementById('addItemToCard').addEventListener(`click`, function() {
-            setItemsInLocalStorage(item, priceItem);
+        document.getElementById('modalFullPrice').innerHTML = `${priceItem} MKD`;
+        document.getElementById('saveOrAddItemToCard').innerHTML = `SAVE`;
+        document.getElementById('saveOrAddItemToCard').addEventListener(`click`, function() {
+            let extrasArrayChecked = [];
+            var x = document.querySelectorAll(".checkbox");
+            for (const item of x) {
+                if (item.checked) {
+                    extrasArrayChecked.push(item.id);
+                }
+            }
+            item.extras = extrasArrayChecked;
+            item.fullPrice = priceItem;
+            item.itemQuantity = parseInt(document.querySelector(`.modalItemQuantity`).innerHTML);
+            item.pickOrEat = document.getElementById(`cb2`).checked;
+            localStorage.setItem("productsArr", JSON.stringify(currentArray));
+            event.relatedTarget.firstElementChild.children[event.relatedTarget.firstElementChild.children.length - 2].children[2].innerText = item.itemQuantity;
+            event.relatedTarget.firstElementChild.lastElementChild.firstElementChild.innerText = `${item.fullPrice} MKD`;
+            $('#foodModal').modal('hide');
         });
     });
     $(`#drinkModal`).on('show.bs.modal', function(event) {
@@ -287,14 +333,20 @@ function modalEventListenerForCard() {
         let item = currentArray[parseInt(button.data('text'))];
         document.getElementById('drinksModalContent').innerHTML = drinkModal;
         document.getElementById('modalDrinksItemTitle').innerHTML = item.itemName;
-        document.getElementById('drinksModalFullPrice').innerHTML = `${item.price} MKD`;
+        document.querySelector('.drinksModalItemQuantity').innerHTML = item.itemQuantity;
+        document.getElementById('drinksModalFullPrice').innerHTML = `${item.fullPrice} MKD`;
+        document.getElementById(`cb3`).checked = item.pickOrEat;
         document.getElementById(`cb3`).addEventListener(`click`, pickOrEatClass.bind(null, 'cb3'));
+        pickOrEatClass(`cb3`);
         addOrRemoveQuantity(
             document.getElementById(`addDrinksModalQuantity`),
             document.getElementById(`removeDrinksModalQuantity`),
-            document.getElementById(`drinksModalItemQuantity`),
-            currentItemQuantity
+            document.querySelector(`.drinksModalItemQuantity`),
+            item.itemQuantity
         );
+        document.getElementById('saveOrAddItemToCard').addEventListener(`click`, function() {
+            $('#drinkModal').modal('hide');
+        });
     });
 }
 
@@ -347,22 +399,23 @@ function setItemsInLocalStorage(data, priceItem) {
         objectPassedToCard.extras = extrasArrayChecked;
         objectPassedToCard.dataForObject = data;
         objectPassedToCard.fullPrice = priceItem;
-        objectPassedToCard.itemQuantity = parseInt(document.getElementById('modalItemQuantity').innerHTML);
+        objectPassedToCard.itemQuantity = parseInt(document.querySelector('.modalItemQuantity').innerHTML);
+        objectPassedToCard.pickOrEat = document.getElementById(`cb1`) === undefined ? document.getElementById(`cb2`).checked : document.getElementById(`cb2`).checked;
         productsArr.push(objectPassedToCard);
         localStorage.setItem("productsArr", JSON.stringify(productsArr));
-        document.querySelector('.inCartQuantity').textContent = productsArr.length;
+        productsInCartNumber();
     } else {
         let productsArr = JSON.parse(localStorage.getItem('productsArr'));
         objectPassedToCard.extras = extrasArrayChecked;
         objectPassedToCard.dataForObject = data;
         objectPassedToCard.fullPrice = priceItem;
-        objectPassedToCard.itemQuantity = parseInt(document.getElementById('modalItemQuantity').innerHTML);
+        objectPassedToCard.itemQuantity = parseInt(document.querySelector('.modalItemQuantity').innerHTML);
+        objectPassedToCard.pickOrEat = document.getElementById(`cb1`) === undefined ? document.getElementById(`cb2`).checked : document.getElementById(`cb2`).checked;
         productsArr.push(objectPassedToCard);
         localStorage.setItem("productsArr", JSON.stringify(productsArr));
-        document.querySelector('.inCartQuantity').textContent = productsArr.length;
+        productsInCartNumber();
     }
 }
-
 home.addEventListener(`click`, function() {
     printMostOrderedProducts(currentArray);
     home.classList.add('eatOrPickSelected');
@@ -375,6 +428,8 @@ menu.addEventListener('click', function() {
 });
 card.addEventListener('click', function() {
     printCardItems();
+    home.classList.remove('eatOrPickSelected');
+    menu.classList.remove('eatOrPickSelected');
 });
 
 
@@ -439,7 +494,66 @@ function productSectionElementsListener() {
 }
 
 function productSectionElements(el, e) {
-    if (el.classList.contains('.removeProduct') || el.classList.value === `fas fa-times`) {
+    if (el.classList.value === `fas fa-times`) {
         e.stopPropagation();
+        if (confirm(`Delete item ?`)) {
+            currentArray.splice(parseInt(el.parentElement.parentElement.parentElement.attributes["data-text"].value), 1);
+            localStorage.setItem("productsArr", JSON.stringify(currentArray));
+            printCardItems();
+            productsInCartNumber();
+        }
+    } else if (el.classList[0] === `quantityStyleButtons` || el.parentElement.className === `quantityStyleButtons`) {
+        e.stopPropagation();
+        if (el.parentElement.parentElement.parentElement.attributes["data-text"] === undefined) {
+            var currentItem = parseInt(el.parentElement.parentElement.parentElement.parentElement.attributes["data-text"].value[0]);
+            if (el.classList[1] != "fa-minus") {
+                if (el.classList[1] === "fa-plus") {
+                    currentArray[currentItem].itemQuantity += 1;
+                    el.parentElement.previousElementSibling.innerText = currentArray[currentItem].itemQuantity;
+                } else if (el.firstElementChild.classList[1] === "fa-minus") {
+                    currentArray[currentItem].itemQuantity -= 1;
+                    el.parentElement.nextElementSibling.innerText = currentArray[currentItem].itemQuantity;
+                } else if (el.firstElementChild.classList[1] === "fa-plus") {
+                    currentArray[currentItem].itemQuantity += 1;
+                    el.parentElement.previousElementSibling.innerText = currentArray[currentItem].itemQuantity;
+                }
+            } else {
+                currentArray[currentItem].itemQuantity -= 1;
+                el.parentElement.nextElementSibling.innerText = currentArray[currentItem].itemQuantity
+            }
+        } else {
+            var currentItem = parseInt(el.parentElement.parentElement.parentElement.attributes["data-text"].value[0]);
+            if (el.classList[1] != "fa-minus") {
+                if (el.classList[1] === "fa-plus") {
+                    currentArray[currentItem].itemQuantity += 1;
+                    el.previousElementSibling.innerText = currentArray[currentItem].itemQuantity;
+                } else if (el.firstElementChild.classList[1] === "fa-minus") {
+                    currentArray[currentItem].itemQuantity -= 1;
+                    el.nextElementSibling.innerText = currentArray[currentItem].itemQuantity
+                } else if (el.firstElementChild.classList[1] === "fa-plus") {
+                    currentArray[currentItem].itemQuantity += 1;
+                    el.previousElementSibling.innerText = currentArray[currentItem].itemQuantity;
+                }
+            } else {
+                currentArray[currentItem].itemQuantity -= 1;
+                el.nextElementSibling.innerText = currentArray[currentItem].itemQuantity
+            }
+        }
+
+        localStorage.setItem("productsArr", JSON.stringify(currentArray));
     }
 };
+
+
+
+
+
+
+
+
+
+
+// KOGA KE OTIDES VO DRINKS I STAVIS NEKOJ DRINK VO KOSNICKA PUKA KODOT!
+// Uncaught TypeError: Cannot read property 'innerHTML' of null
+//     at setItemsInLocalStorage (script.js:398)
+//     at HTMLButtonElement.<anonymous> (script.js:274)
