@@ -7,16 +7,7 @@ const menuNav = `<div class="foodMenuNavigation">
         <div class="foodMenuButton" id="menuBreakfast">BREAKFAST</div>
         <div class="foodMenuButton" id="menuLunch">Lunch</div>
         <div class="foodMenuButton" id="menuDesert">dessert</div>
-        <div class="foodMenuButton" id="menuVegetarian">vegetarian</div>
         <div class="foodMenuButton" id="menuDrinks">drinks</div>
-        <div class="dropdown dropdown-main-button">
-            <button class="btn btn-primary dropdown-design dropdown-toggle" id="selectedView" type="button" data-toggle="dropdown">3 COLUMN</button>
-            <ul class="dropdown-menu">
-              <li id="threeColumn"><a href="#">3 COLUMN</a></li>
-              <li id="twoColumn"><a href="#">2 COLUMN</a></li>
-              <li id="list"><a href="#">LIST</a></li>
-            </ul>
-        </div>
     </div>
     <div class="row mostOrderedItems" id="mostOrderedItemsRow"></div>`;
 const modalForFood = `<div class="modal fade" id="foodModal" tabindex="-1" role="dialog" aria-labelledby="foodModalTitle" aria-hidden="true">
@@ -116,25 +107,25 @@ fetch(url)
 function printMostOrderedItems() {
     currentArray = productItemsArr[0].filter(x => x.ordered === "most ordered");
     mainContainer.innerHTML = mostOrderedProductsTitle;
-    printMenu('none', 'most ordered', modalForFood, 3);
-    printCard(document.getElementById("mostOrderedItemsRow"), currentArray, 3);
+    printMenu('none', 'most ordered', modalForFood);
+    printCard(document.getElementById("mostOrderedItemsRow"), currentArray);
     document.getElementById("divModal").innerHTML = modalForFood;
     modalEventListener();
 };
 
-function printCard(element, array, column) {
+function printCard(element, array) {
     element.innerHTML = ``;
     for (let i = 0; i < array.length; i++) {
         element.innerHTML += `
-        <div class="flex-sm-column col-sm-${column}" >
-        <div data-toggle="modal" class="${column === 12 ? 'pointer listCardElement' : 'pointer'}" data-target="${array[i].mainCategory != 'Drink' ? '#foodModal' : '#drinkModal'}" data-text="${i}">
+        <div class="flex-sm-column col-sm-3" >
+        <div data-toggle="modal" class="pointer" data-target="${array[i].mainCategory != 'Drink' ? '#foodModal' : '#drinkModal'}" data-text="${i}">
         <div class="cardImageContainer">
             <span class="itemImageText"><img src="./assets/images/giphyo.gif" width="150px"></span>
-            <img class="${column === 12 ? 'card-img-top imageListSize' : 'card-img-top'}" src="./assets/images/Screenshot_2.png" alt="Card image cap">
+            <img class="card-img-top" src="./assets/images/Screenshot_2.png" alt="Card image cap">
         </div>
-        <div class="${column === 12 ? 'cardItemListContent' : 'cardItemContent'}">
-            <h5 class="${column === 12 ? 'cardListTitle' : 'cardTitle'}">${array[i].itemName}</h5>
-            <div class="${column === 12 ? 'itemListPrice': 'itemPrice'}">
+        <div class="cardItemContent">
+            <h5 class="cardTitle">${array[i].itemName}</h5>
+            <div class="itemPrice">
                 ${array[i].price} МКД
             </div>
         </div>
@@ -172,55 +163,171 @@ home.addEventListener(`click`, function() {
 });
 
 menu.addEventListener('click', function() {
-    printMenu('menuAll', 'All', modalForFood + modalForDrinks, 4);
+    printMenu('menuAll', 'All', modalForFood + modalForDrinks);
 });
 
 function filterAndPrintEventListeners() {
-    document.getElementById(`menuAll`).addEventListener(`click`, function() {
-        printMenu('menuAll', 'All', modalForFood + modalForDrinks, 4);
+
+    mainContainer.style="margin-bottom: 110px;"
+    let menuAll = document.getElementById(`menuAll`);
+    let menuBreakfast = document.getElementById(`menuBreakfast`);
+    let menuLunch = document.getElementById(`menuLunch`);
+    let menuDesert = document.getElementById(`menuDesert`);
+    let menuDrinks = document.getElementById(`menuDrinks`);
+    menuAll.addEventListener(`click`, function() {
+        printMenu('menuAll', 'All', modalForFood + modalForDrinks);
     });
-    document.getElementById(`menuBreakfast`).addEventListener(`click`, function() {
-        printMenu('menuBreakfast', 'Breakfast', modalForFood, 4);
+    menuBreakfast.addEventListener(`click`, function() {
+        printMenu('menuBreakfast', 'Breakfast', modalForFood);
     });
-    document.getElementById(`menuLunch`).addEventListener(`click`, function() {
-        printMenu("menuLunch", "Lunch", modalForFood, 4);
+    menuLunch.addEventListener(`click`, function() {
+        printMenu("menuLunch", "Lunch", modalForFood);
     });
-    document.getElementById(`menuDesert`).addEventListener(`click`, function() {
-        printMenu('menuDesert', 'Desert', modalForFood, 4);
+    menuDesert.addEventListener(`click`, function() {
+        printMenu('menuDesert', 'Desert', modalForFood);
     });
-    document.getElementById(`menuVegetarian`).addEventListener(`click`, function() {
-        printMenu("menuVegetarian", "Vegetarian", modalForFood, 4);
-    });
-    document.getElementById(`menuDrinks`).addEventListener(`click`, function() {
-        printMenu("menuDrinks", "Drink", modalForDrinks, 4);
+    menuDrinks.addEventListener(`click`, function() {
+        printMenu("menuDrinks", "Drink", modalForDrinks);
     });
 }
 
-function printMenu(menuNavigation, navigation, modal, column) {
+function printMenu(menuNavigation, navigation, modal) {
+    mainContainer.style="margin-bottom: 110px;"
     if (navigation != 'most ordered') {
         mainContainer.innerHTML = menuNav;
         document.getElementById(menuNavigation).classList.add(`selected`);
         currentArray = navigation != "All" ? productItemsArr[0].filter(x => x.mainCategory === navigation) : productItemsArr[0];
-
-        document.getElementById('threeColumn').addEventListener(`click`, function() {
-            printCard(document.getElementById("mostOrderedItemsRow"), currentArray, 4);
-            document.getElementById("selectedView").innerText = '3 COLUMN';
-        });
-        document.getElementById('twoColumn').addEventListener(`click`, function() {
-            printCard(document.getElementById("mostOrderedItemsRow"), currentArray, 6);
-            document.getElementById("selectedView").innerText = '2 COLUMN';
-        });
-        document.getElementById('list').addEventListener(`click`, function() {
-            printCard(document.getElementById("mostOrderedItemsRow"), currentArray, 12);
-            document.getElementById("selectedView").innerText = 'LIST';
-        });
     } else {
-        currentArray = productItemsArr[0].filter(x => x.ordered === "most ordered");
+        currentArray = productItemsArr[0].filter(x => x.ordered === "most ordered")
     }
     document.getElementById("divModal").innerHTML = modal;
-    printCard(document.getElementById("mostOrderedItemsRow"), currentArray, column);
+    printCard(document.getElementById("mostOrderedItemsRow"), currentArray);
     modalEventListener();
     if (navigation != 'most ordered') {
         filterAndPrintEventListeners();
     }
 }
+
+const contact = document.getElementById("contact");
+contact.addEventListener('click', function(){
+    mainContainer.innerHTML = ``;
+    mainContainer.style="margin-bottom: 0;"
+    mainContainer.innerHTML=`
+    <div class="row contact">
+        <div class="col-sm-6"> 
+            <div class="mail_form">
+                <h1 class="headers_contact">CONTACT US</h1> <br>
+                <form id="contact-form">
+                    <input type="text" name="name" id="name" placeholder="Name" required/>
+                    <br>
+                    <input type="text" name="e-mail" id="email" placeholder="E-mail" required />
+                    <br>
+                    <input type="number" name="phone" id="phone" placeholder="Phone" />
+                    <br>
+                    <textarea name="remark" id="text" placeholder="Questions/Comments" cols="40" rows="4" required></textarea>
+                    <br>
+                    <button type="submut" id="btn_send">SEND</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-6 number">
+            <div class="call_us"><h1 class="headers_contact" ></h1>
+                <button type="" class = "phone"><i class="fa fa-phone" style="font-size:20px"></i>+389 70 123 456</button>
+            </div>
+            <br><br>
+            <div class="working_hours">
+                <h1 class="headers_contact_hours">Working Hours</h1>
+                <br>
+                <div class="days_of_week">
+                    <p>Monday .............. <strong> 9.30 - 15.30</strong></p>
+                    <p>Tuesday ............. <strong> 9.30 - 15.30</strong></p>
+                    <p>Wednesday ...... <strong> 9.30 - 15.30</strong></p>
+                    <p>Thursday ..........<strong> 9.30 - 15.30</strong></p>
+                    <p>Friday .................<strong> 9.30 - 15.30</strong></p>
+                    <p>Saturday <strong>closed</strong></p>
+                    <p>Sunday <strong>closed</strong></p>
+                </div>
+            </div>
+            <br><br><br>
+            <p class="address"><i class="fa fa-map-marker"  style="font-size:18px;color:#C8B273"></i> 11TH OCTOBER ST. 33, SKOPJE 1000</p>
+        </div>
+    </div>
+    <div class="row map">
+        <div>
+        <iframe class= "iframe "src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11862.546673614783!2d21.439687!3d41.98661!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb73c65132f7d38d2!2sSeavus%20Group!5e0!3m2!1sen!2smk!4v1592334183573!5m2!1sen!2smk" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+`
+})
+
+//CONTACT VALIDATION
+const name = document.getElementById("name");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const text = document.getElementById("text");
+
+var nameCheck = false;
+var emailCheck = false;
+var phoneCheck = false;
+var textCheck = false;
+
+function ValidateName(inputText, checker) {
+    var nameformat = /^[a-zA-Z]{3,20}(?: [a-zA-Z]+){0,2}$/;
+    if (inputText.value.match(nameformat)) {
+        checker = true;
+        inputText.style.border = "none";
+    } else {
+        inputText.style.border = "Solid red 1px";
+        checker = false;
+    }
+}
+
+function ValidateEmail(inputText, checker) {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (inputText.value.match(mailformat)) {
+        checker = true;
+        inputText.style.border = "none";
+
+    } else {
+        inputText.style.border = "Solid red 1px";
+        checker = false;
+    }
+}
+
+function ValidatePhoneNumber(inputText, checker) {
+    if (inputText.value.trim().length > 15) {
+        inputText.style.border = "Solid red 1px";
+        checker = false;
+    } else {
+        inputText.style.border = "none";
+        checker = true;
+    }
+}
+
+function ValidateText(inputText, checker) {
+    if (inputText.value.length < 10 || inputText.value.length > 300) {
+        inputText.style.border = "Solid red 1px";
+        checker = false;
+    } else {
+        inputText.style.border = "none";
+        checker = true;
+    }
+}
+
+
+name.addEventListener("focusout", function() {
+    ValidateName(name, nameCheck);
+});
+
+email.addEventListener("focusout", function() {
+    ValidateEmail(email, emailCheck);
+});
+
+phone.addEventListener("focusout", function() {
+    ValidatePhoneNumber(phone, phoneCheck)
+});
+
+
+text.addEventListener("focusout", function() {
+    ValidateText(text, textCheck)
+});
