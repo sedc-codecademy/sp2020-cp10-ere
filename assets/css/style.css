@@ -1335,11 +1335,12 @@ abbr[title] {
 
 .cart-item h4 {
     font-family: 'Raleway', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     width: 163px;
     font-weight: bold;
     display: inline-flex;
     margin-bottom: 0px;
+    margin-top: 0px;
     text-transform: capitalize;
     letter-spacing: var(--mainSpacing);
 }

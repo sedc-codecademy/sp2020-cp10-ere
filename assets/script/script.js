@@ -384,10 +384,6 @@ function addOrRemoveQuantity(param1, param2, param3, param4) {
 }
 
 
-
-
-
-
 function setItemsInLocalStorage(data, priceItem, note) {
     let extrasArrayChecked = [];
     let objectPassedToCard = {};
