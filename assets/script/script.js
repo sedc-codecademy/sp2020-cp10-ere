@@ -205,27 +205,27 @@ function modalEventListener() {
     let currentItemQuantity = 1;
     $(`#foodModal`).on('show.bs.modal', function(event) {
         let button = $(event.relatedTarget);
-        let item = currentArray[parseInt(button.data('text'))];
-        priceItem = item.price;
+        var item = currentArray[parseInt(button.data('text'))];
+        priceItem = item.price === undefined ? item.dataForObject.price : item.price;
         document.getElementById('inModalFooter').innerHTML = newestFoodModal;
         document.getElementById('modalItemTitle').innerHTML = item.itemName;
-        for (const ingrediant of item.ingredients) {
+        for (const ingrediant of item.ingredients === undefined ? item.dataForObject.ingredients : item.ingredients) {
             document.getElementById(
                 'foodModalIngredientsList'
             ).innerHTML += `<li><i class="fas fa-check modalItemCheck"></i>${ingrediant}</li>`;
         }
-        for (const extras of item.extras) {
+        for (const extras of item.extras === undefined ? item.dataForObject.extras : item.extras) {
             document.getElementById(
                 'foodModalExtrasList'
             ).innerHTML += `<li><input id="${extras.extrasName}" type="checkbox" class="checkbox" onclick="checkCheckBox(this,'${extras.price}')"/><label for="${extras.extrasName}"><abbr title="${extras.price} MKD">${extras.extrasName}</abbr></label></li>`;
         }
-        for (const allergen of item.allergens) {
-            if (item.allergens[item.allergens.length - 1] === allergen) {
-                document.getElementById('foodModalAllergens').innerText += ` ${allergen}`;
-            } else {
-                document.getElementById('foodModalAllergens').innerText += ` ${allergen},`;
-            }
-        }
+        // for (const allergen of item.allergens === undefined ? item.dataForObject.allergens : item.allergens) {
+        //     if (item.allergens[item.allergens.length - 1] === allergen) {
+        //         document.getElementById('foodModalAllergens').innerText += ` ${allergen}`;
+        //     } else {
+        //         document.getElementById('foodModalAllergens').innerText += ` ${allergen},`;
+        //     }
+        // }
         document.getElementById(`cb2`).addEventListener(`click`, pickOrEatClass.bind(null, 'cb2'));
         addOrRemoveQuantity(
             document.getElementById('addModalQuantity'),
@@ -233,7 +233,7 @@ function modalEventListener() {
             document.querySelector('.modalItemQuantity'),
             currentItemQuantity
         );
-        document.getElementById('modalFullPrice').innerHTML = `${item.price} MKD`;
+        document.getElementById('modalFullPrice').innerHTML = `${item.price === undefined ? item.fullPrice : item.price} MKD`;
         document.getElementById('saveOrAddItemToCard').addEventListener(`click`, function() {
             setItemsInLocalStorage(item, priceItem, document.getElementById("foodModalNote"));
             $('#foodModal').modal('hide');
@@ -632,10 +632,12 @@ const cartFooter = document.querySelector('.cart-footer');
 
 let cart = [];
 var priceForAll = 0;
+var currentArraySave
 
 function addCartItem() {
     productsArr = JSON.parse(localStorage.getItem('productsArr'));
-    console.log(productsArr);
+    currentArraySave = currentArray;
+    currentArray = productsArr;
     priceForAll = 0;
     if (productsArr != null && productsArr.length != 0) {
         cartContent.innerHTML = '';
@@ -645,6 +647,9 @@ function addCartItem() {
             let cartItems = document.createElement('div');
             cartItems.classList.add('cart-item');
             cartItems.classList.add(counter);
+            cartItems.setAttribute("data-toggle", "modal");
+            cartItems.setAttribute("data-target", `${product.dataForObject.mainCategory === "Drink" ? "#drinkModal" : "#foodModal"}`);
+            cartItems.setAttribute("data-text", counter);
             priceForAll += product.itemQuantity * product.fullPrice;
             cartItems.innerHTML += `
         <img src="./assets/images/Screenshot_2.png" alt="product">
@@ -686,6 +691,7 @@ function showCart() {
 function hideCart(elementOne, elementTwo) {
     elementOne.classList.remove('transparentBcg');
     elementTwo.classList.remove('showCart');
+    currentArray = currentArraySave;
 }
 
 function cartContentEventListener(el, e) {
