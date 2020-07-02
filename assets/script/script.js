@@ -689,12 +689,10 @@ function hideCart(elementOne, elementTwo) {
 }
 
 function cartContentEventListener(el, e) {
-    if (el.classList.contains('remove-item')) {
-        priceForAll -= parseInt(el.previousElementSibling.innerHTML.split(` `)[0]);
-        productsArr.splice(parseInt(el.parentElement.parentElement.classList[1]), 1);
+    if (el.closest(`.remove-item`)) {
+        priceForAll -= parseInt(e.currentTarget.children[1].children[1].innerHTML.split(` `)[0]);
+        productsArr.splice(parseInt(e.currentTarget.classList[1]), 1);
         localStorage.setItem('productsArr', JSON.stringify(productsArr));
-        // el.parentElement.parentElement.remove()
-        // document.querySelector(".cart-total").innerText = `${priceForAll},00 MKD`
         productsInCartNumber();
         addCartItem();
     } else if (el.classList.contains('clear-cart')) {
@@ -711,7 +709,6 @@ function cartContentEventListener(el, e) {
             localStorage.setItem('productsArr', JSON.stringify(productsArr));
             addCartItem();
         }
-        xx
     } else if (el.classList.contains('fa-chevron-down')) {
         if (productsArr[parseInt(el.parentElement.parentElement.classList[1])].itemQuantity > 1) {
             productsArr[parseInt(el.parentElement.parentElement.classList[1])].itemQuantity -= 1;
