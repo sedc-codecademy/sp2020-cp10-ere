@@ -45,7 +45,9 @@ p {
 /* START HEADER */
 
 .header-Contact {
-    padding: 8px 139px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     background-color: #c8b273;
     height: 40px;
 }
@@ -54,6 +56,7 @@ p {
     font-family: 'Lato', sans-serif;
     color: white;
     font-size: 18px;
+    width: 80%;
 }
 
 .envelopeHeader {
@@ -153,15 +156,24 @@ p {
 
 /* START MAINPAGE */
 
+.main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 .main-container {
     margin-bottom: 110px;
+    display: flex;
+    width: 80%;
+    flex-direction: column;
 }
 
 .titleForPages {
     font-family: 'Raleway', sans-serif;
     color: #C8B273;
     font-size: 32px;
-    margin-left: 139px;
     margin-bottom: 17px;
 }
 
@@ -174,15 +186,40 @@ p {
     padding: 0 0 0 0;
 }
 
+.centeredContainer .cardTitle {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px !important;
+    width: 163px;
+    font-weight: bold;
+    display: inline-flex;
+}
+
+.centeredContainer .itemPrice {
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-flex;
+    background-color: #cc1149;
+    width: 108px;
+    height: 32px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
 .flex-sm-column {
     margin-top: 25px;
     height: auto;
-    border-radius: 5px;
+    border: radius 5px;
+    border: none;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    border: none;
 }
 
 .cardImageContainer {
@@ -270,35 +307,6 @@ p {
 .cardImageContainer:focus .itemImageText {
     z-index: 999;
     display: block;
-}
-
-.centeredContainer {
-    padding: 0 140px;
-}
-
-.centeredContainer .cardTitle {
-    font-family: 'Raleway', sans-serif;
-    font-size: 24px !important;
-    width: 163px;
-    font-weight: bold;
-    display: inline-flex;
-}
-
-.centeredContainer .itemPrice {
-    font-size: 18px;
-    font-weight: bold;
-    display: inline-flex;
-    background-color: #cc1149;
-    width: 108px;
-    height: 32px;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
 }
 
 footer {
@@ -797,10 +805,9 @@ label {
 /* MENU BUTTONS AND MENU NAV */
 
 .foodMenuNavigation {
-    margin-left: 139px;
     display: flex;
     align-items: center;
-    position: relative;
+    justify-content: space-between;
 }
 
 .foodMenuButton {
@@ -860,7 +867,7 @@ label {
     margin-top: 27px;
 }
 
-#drinksModalNote {
+#drinkModalNote {
     font-size: 15px;
     font-family: 'Lato', sans-serif;
     width: 286px;
@@ -872,14 +879,14 @@ label {
     padding: 15px;
 }
 
-#drinksModalNote::placeholder {
+#drinkModalNote::placeholder {
     font-family: 'Lato', sans-serif;
     font-weight: normal;
     font-style: italic;
     color: #dadada;
 }
 
-.drinksModalDivider {
+.drinkModalNote {
     width: 323px;
     margin-left: 31px;
     background-color: #e3e3e3;
@@ -930,8 +937,6 @@ label {
 
 .dropdown-main-button {
     height: 35px;
-    position: absolute;
-    right: 135px;
 }
 
 .dropdown-main-button:hover {
@@ -1142,48 +1147,50 @@ abbr[title] {
     text-decoration: none !important;
 }
 
+
 /* CONTACT */
 
-*{
-    margin: 0;
-}
-.contact{
+.contact {
     font-weight: 600;
     font-family: 'Raleway', sans-serif;
     height: 550px;
 }
-.map{
+
+.map {
     height: 200px;
     margin-bottom: 0;
     margin-left: 0;
-
 }
+
 .contact {
     margin-left: 30px;
     text-align: center;
 }
 
-.mail_form{
+.mail_form {
     font-size: 16px;
     padding: 0px 50px 0px 110px;
 }
 
-.headers_contact{
+.headers_contact {
     text-align: start;
     color: #C8B273;
     font-size: 20px;
 }
 
-.headers_contact_hours{
+.headers_contact_hours {
     font-size: 20px;
 }
 
-#contact-form{
+#contact-form {
     line-height: 30px;
     position: relative;
 }
 
-#name, #email, #phone, #text {
+#name,
+#email,
+#phone,
+#text {
     margin-bottom: 10px;
     width: 100%;
     border-radius: 5px;
@@ -1191,15 +1198,15 @@ abbr[title] {
     padding: 3px 20px;
 }
 
-
-#text{
+#text {
     height: 150px;
 }
-#btn_send{
+
+#btn_send {
     font-size: 15px;
     padding: 5px;
     color: black;
-    background-color:rgb(201, 178, 115);
+    background-color: rgb(201, 178, 115);
     cursor: pointer;
     border: none;
     width: 170px;
@@ -1209,41 +1216,199 @@ abbr[title] {
     right: 0;
 }
 
-.number{
+.number {
     text-align: center;
 }
 
-.phone{
+.phone {
     color: black;
-    background-color:rgb(201, 178, 115);
+    background-color: rgb(201, 178, 115);
     border-radius: 5px;
     font-size: 20px;
     padding: 5px;
     font-family: Arial, Helvetica, sans-serif;
+}
 
-} 
-
-.working_hours{
+.working_hours {
     text-transform: uppercase;
     color: #C8B273;
-
 }
 
-
-.days_of_week{
+.days_of_week {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
 
-.address{
+.address {
     font-size: 16px;
     color: #C8B273;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
-.iframe{
+.iframe {
     /* width: 1440px; */
     width: 100%;
     height: 200px;
+}
+
+
+/* NEW CARD */
+
+:root {
+    --primaryColor: #f09d51;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+}
+
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--mainTransition);
+    background: #000000a6;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    z-index: 3;
+    background: rgb(231, 226, 221);
+    padding: 1.5rem;
+    transition: var(--mainTransition);
+    transform: translateX(100%);
+}
+
+.showCart {
+    transform: translateX(0);
+}
+
+.transparentBcg {
+    visibility: visible;
+    background-color: #000000a6;
+}
+
+@media screen and (min-width: 768px) {
+    .cart {
+        width: 30vw;
+        min-width: 450px;
+    }
+}
+
+.close-cart {
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.cart h2 {
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 2rem;
+}
+
+
+/*---------- Cart Item -------------------- */
+
+.cart-item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.cart-item img {
+    margin: 2px;
+    height: 70px;
+}
+
+.cart-item h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    width: 163px;
+    font-weight: bold;
+    display: inline-flex;
+    margin-bottom: 0px;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+}
+
+.cart-item h5 {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #cc1149;
+    width: 85px;
+    height: 17px;
+    color: white;
+    margin: 0.5rem 0;
+}
+
+.item-amount {
+    text-align: center;
+}
+
+.remove-item {
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fa-chevron-up,
+.fa-chevron-down {
+    color: var(--primaryColor);
+    cursor: pointer;
+}
+
+.place-order {
+    border: 1px solid #707070;
+    border-radius: 3px;
+    background: #C8B273;
+    width: 110px;
+    color: white;
+    height: 30px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 2px;
+}
+
+.clear-cart {
+    border: 1px solid #707070;
+    border-radius: 3px;
+    background-color: #cc1149;
+    width: 110px;
+    color: white;
+    height: 30px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 2px;
+}
+
+
+/*---------- End of Cart Item -------------------- */
+
+.cart-footer {
+    margin-top: 2rem;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
+}
+
+.cart-footer h3 {
+    text-transform: capitalize;
+    margin-bottom: 1rem;
 }
