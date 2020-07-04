@@ -16,57 +16,41 @@
     <header>
         <div class="header-Contact">
             <p class="headerParagraph">
-                <i class="fas fa-envelope envelopeHeader"></i> e-restaurant@seavus.com
-                <i class="fas fa-phone phoneHeader"></i> +389 70 123 456
+                <a class="mail-to" href="mailto:e-restaurant@seavus.com"><i class="fas fa-envelope envelopeHeader"></i>e-restaurant@seavus.com</a>
+                <i class="fas fa-phone phoneHeader"></i>+389 70 123 456
             </p>
         </div>
         <div class="headerNavBar">
-            <img src="./assets/images/icon.png" class="logoHeader">
-            <p class="logoText">Seavus Reastaurant</p>
-            <div class="navBarLinks">
-                <div class="eatOrPickSelected" id="home">
-                    <p>home</p>
+            <a href="index.html">
+            <img src="./assets/images/icon.png" class="logoHeader"></a>
+            <a class="name-link" href="index.html"><p class="logoText">Seavus Restaurant</p></a> 
+                <div class="navBarLinks">
+                    <!-- <label for="toggle" id="labelToggle">&#9776;</label>
+                    <input type="checkbox" id="toggleMenu"/> -->
+                    <!-- <div class="hamburger-menu"> -->
+                        <div class="eatOrPickSelected" id="home">
+                            <p>home</p>
+                        </div>
+                        <div id="menu">
+                            <p>menu</p>
+                        </div>
+                        <div id="contact">
+                            <p>contact</p>
+                        </div>
+                    
+                        <div id="card" class="cartButton">
+                            <img src="./assets/images/cart2.png" alt="cart" />
+                            <div class="inCartQuantity">1</div>
+                        </div>
+                        <div id="loginButton">
+                            <p>log in</p>
+                        </div>
+                    <!-- </div> -->
                 </div>
-                <div id="menu">
-                    <p>menu</p>
-                </div>
-                <div id="contact">
-                    <p>contact</p>
-                </div>
-                <div id="card" class="cartButton">
-                    <img src="./assets/images/cart2.png" alt="cart" />
-                    <div class="inCartQuantity"></div>
-                </div>
-                <div id="loginButton">
-                    <p>login</p>
-                </div>
-            </div>
         </div>
     </header>
-    <div class="main">
-        <div class="main-container" id="mainContainer"></div>
+    <div class="main-container" id="mainContainer">
     </div>
-
-    <div class="cart-overlay">
-        <div class="cart showCart">
-            <span class="close-cart">
-                <i class="fas fa-window-close"></i>
-            </span>
-            <h2 id="cartTitle">Your cart</h2>
-
-            <div class="cart-content">
-
-            </div>
-
-
-            <div class="cart-footer">
-                <!-- here -->
-            </div>
-        </div>
-
-    </div>
-
-
     <div id="divModal">
     </div>
     <footer>
