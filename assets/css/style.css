@@ -44,9 +44,7 @@ p {
 /* START HEADER */
 
 .header-Contact {
-	justify-content: center;
-	align-items: center;
-	display: flex;
+    padding: 8px 139px;
 	background-color: #c8b273;
 	height: 40px;
 }
@@ -55,7 +53,6 @@ p {
 	font-family: 'Lato', sans-serif;
 	color: white;
 	font-size: 18px;
-	width: 80%;
 }
 
 .envelopeHeader {
@@ -153,25 +150,27 @@ p {
 
 /* START MAINPAGE */
 
-.main {
+/* .main {
 	display: flex;
 	width: 100%;
 	justify-content: center;
 	align-items: center;
-}
+} */
 
 .main-container {
 	margin-bottom: 110px;
-	display: flex;
+	/* display: flex;
 	width: 80%;
-	flex-direction: column;
+	flex-direction: column; */
 }
 
 .titleForPages {
-	font-family: 'Raleway', sans-serif;
-	color: #c8b273;
-	font-size: 32px;
-	margin-bottom: 17px;
+    font-family: 'Raleway', sans-serif;
+    color: #C8B273;
+    font-size: 32px;
+    margin-left: 139px;
+    margin-bottom: 17px;
+    text-transform: uppercase;
 }
 
 .centeredContainer {
@@ -211,7 +210,7 @@ p {
 .flex-sm-column {
 	margin-top: 25px;
 	height: auto;
-	border: radius 5px;
+	border-radius: 5px;
 	border: none;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -708,11 +707,11 @@ label {
 }
 
 .groupModalQuantity {
-	display: flex;
-	width: 211px;
-	height: 25px;
-	margin-left: 30px;
-	align-items: center;
+    display: flex;
+    width: 211px;
+    height: 25px;
+    margin-left: 0px;
+    align-items: center;
 }
 
 #modalQuantity {
@@ -786,25 +785,26 @@ label {
 /* MENU BUTTONS AND MENU NAV */
 
 .foodMenuNavigation {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+    margin-left: 139px;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .foodMenuButton {
 	display: flex;
-	align-items: center;
-	font-size: 22px;
-	font-family: 'Raleway', sans-serif;
-	border-radius: 5px;
-	color: #c8b273;
-	height: 64px;
-	padding: 0px 40px;
-	font-weight: bold;
-	justify-content: center;
-	margin: 0px 30px;
-	text-transform: uppercase;
-	cursor: pointer;
+    align-items: center;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 5px;
+    color: #c8b273;
+    height: 64px;
+    padding: 0px 40px;
+    font-weight: bold;
+    justify-content: center;
+    margin: 0px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .foodMenuButton:first-child {
@@ -828,8 +828,8 @@ label {
 /* DRINKS MODAL */
 
 .drinksModalContent {
-	min-width: 384px;
-	min-height: 680px;
+    width: 384px;
+    height: 680px;
 }
 
 .drinksModalItemTitleLine {
@@ -916,7 +916,9 @@ label {
 /* Dropdown menu */
 
 .dropdown-main-button {
-	height: 35px;
+    height: 35px;
+    position: absolute;
+    right: 135px;
 }
 
 .dropdown-main-button:hover {
@@ -1126,105 +1128,106 @@ abbr[title] {
 
 /* CONTACT */
 
+*{
+    margin: 0;
+}
+.contact{
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    height: 550px;
+}
+.map{
+    height: 200px;
+    margin-bottom: 0;
+    margin-left: 0;
+
+}
 .contact {
-	font-weight: 600;
-	font-family: 'Raleway', sans-serif;
-	height: 550px;
+    margin-left: 30px;
+    text-align: center;
 }
 
-.map {
-	height: 200px;
-	margin-bottom: 0;
-	margin-left: 0;
+.mail_form{
+    font-size: 16px;
+    padding: 0px 50px 0px 110px;
 }
 
-.contact {
-	margin-left: 30px;
-	text-align: center;
+.headers_contact{
+    text-align: start;
+    color: #C8B273;
+    font-size: 20px;
 }
 
-.mail_form {
-	font-size: 16px;
-	padding: 0px 50px 0px 110px;
+.headers_contact_hours{
+    font-size: 20px;
 }
 
-.headers_contact {
-	text-align: start;
-	color: #c8b273;
-	font-size: 20px;
+
+#name, #email, #phone, #text {
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 5px;
+    resize: none;
+    padding: 3px 20px;
 }
 
-.headers_contact_hours {
-	font-size: 20px;
+#text{
+    height: 150px;
+}
+#btn_send{
+    font-size: 15px;
+    padding: 5px;
+    color: black;
+    background-color:rgb(201, 178, 115);
+    cursor: pointer;
+    border: none;
+    width: 170px;
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
 }
 
-#contact-form {
-	line-height: 30px;
-	position: relative;
+.number{
+    text-align: center;
 }
 
-#name,
-#email,
-#phone,
-#text {
-	margin-bottom: 10px;
-	width: 100%;
-	border-radius: 5px;
-	resize: none;
-	padding: 3px 20px;
+.phone{
+    color: black;
+    /* background-color:rgb(201, 178, 115); */
+    background-color: #cc1149;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0px;
+    color:black;
+    font-weight: 600;
+
+} 
+
+.working_hours{
+    text-transform: uppercase;
+    color: #C8B273;
+
 }
 
-#text {
-	height: 150px;
+
+.days_of_week{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 
-#btn_send {
-	font-size: 15px;
-	padding: 5px;
-	color: black;
-	background-color: rgb(201, 178, 115);
-	cursor: pointer;
-	border: none;
-	width: 170px;
-	color: white;
-	border-radius: 5px;
-	position: absolute;
-	right: 0;
+.address{
+    font-size: 16px;
+    color: #C8B273;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
-.number {
-	text-align: center;
-}
-
-.phone {
-	color: black;
-	background-color: rgb(201, 178, 115);
-	border-radius: 5px;
-	font-size: 20px;
-	padding: 5px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-.working_hours {
-	text-transform: uppercase;
-	color: #c8b273;
-}
-
-.days_of_week {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 16px;
-}
-
-.address {
-	font-size: 16px;
-	color: #c8b273;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-.iframe {
-	/* width: 1440px; */
-	width: 100%;
-	height: 200px;
+.iframe{
+    width: 100%;
+    height: 200px;
 }
 
 /* NEW CARD */
@@ -1387,3 +1390,2392 @@ abbr[title] {
 	text-transform: capitalize;
 	margin-bottom: 1rem;
 }
+
+
+/* HAMBURGER MENU */
+/* 
+#toggleMenu {
+    display: none;
+}
+#labelToggle{
+    margin: 0 35px 0 0;
+    font-size: 40px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+    color:#c8b273;
+} */
+
+
+
+/* NEW THINGS ADDED */
+.mail-to{
+    color: inherit;
+    text-decoration: none;
+}
+.mail-to:hover{
+    text-decoration: none;
+    color: black;
+}
+.envelopeHeader{
+    margin-right: 9.7px;
+}
+.phoneHeader{
+    margin-right: 6.7px;
+}
+.name-link:hover{
+    text-decoration: none;
+}
+
+#contact-form{
+    line-height: 30px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+ 
+
+
+/* DELETE MODAL */
+.modal-confirm {		
+	color: #636363;
+	width: 400px;
+}
+.modal-confirm .modal-content {
+	padding: 20px;
+	border-radius: 5px;
+	border: none;
+	text-align: center;
+	font-size: 14px;
+}
+.modal-confirm .modal-header {
+	border-bottom: none;   
+	position: relative;
+}
+.modal-confirm h4 {
+	text-align: center;
+	font-size: 26px;
+	margin: 30px 0 -10px;
+}
+.modal-confirm .close {
+	position: absolute;
+	top: -5px;
+	right: -2px;
+}
+.modal-confirm .modal-body {
+	color: #999;
+}
+.modal-confirm .modal-footer {
+	border: none;
+	text-align: center;		
+	border-radius: 5px;
+	font-size: 13px;
+	padding: 10px 15px 25px;
+}
+.modal-confirm .modal-footer a {
+	color: #999;
+}		
+.modal-confirm .icon-box {
+	width: 80px;
+	height: 80px;
+	margin: 0 auto;
+	border-radius: 50%;
+	z-index: 9;
+	text-align: center;
+	border: 3px solid #f15e5e;
+}
+.modal-confirm .icon-box i {
+	color: #f15e5e;
+	font-size: 46px;
+	display: inline-block;
+	margin-top: 13px;
+}
+.modal-confirm .btn, .modal-confirm .btn:active {
+	color: #fff;
+	border-radius: 4px;
+	background: #60c7c1;
+	text-decoration: none;
+	transition: all 0.4s;
+	line-height: normal;
+	min-width: 120px;
+	border: none;
+	min-height: 40px;
+	border-radius: 3px;
+	margin: 0 5px;
+}
+.modal-confirm .btn-secondary {
+	background: #c1c1c1;
+}
+.modal-confirm .btn-secondary:hover, .modal-confirm .btn-secondary:focus {
+	background: #a8a8a8;
+}
+.modal-confirm .btn-danger {
+	background: #f15e5e;
+}
+.modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
+	background: #ee3535;
+}
+.trigger-btn {
+	display: inline-block;
+	margin: 100px auto;
+}
+
+
+@media only screen and (min-width: 2560px) {
+    
+    .headerNavBar {
+        margin: 65px 179px 103px 129px;
+    }
+    .logoHeader {
+        height: 140px;
+    }
+    .navBarLinks div {
+        font-size: 27px;
+    }
+    .logoText {
+        font-size: 37px;
+    }
+    footer {
+        height: 40px;
+    }
+    .headers_contact {
+        text-align: start;
+        color: #C8B273;
+        font-size: 26px;
+        margin-bottom: 33px;
+    }
+    .call_us{
+        margin-bottom: 38px;
+    }
+    .headers_contact_hours {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+    .days_of_week { 
+        font-size: 19px;
+    }
+    .phone {
+        font-size: 30px;
+        padding: 5px 20px;
+    }
+    .address {
+        font-size: 19px;
+    }
+    #contact-form {
+        line-height: 36px;
+    }
+    .foodMenuButton {
+        font-size: 26px;
+    }
+    .dropdown-design {
+        font-size: 26px;
+    }
+    .dropdown-main-button {
+        height: 51px;
+    }
+    .cardImageContainer {
+        height: 300px;
+    }
+    .card-img-top{
+        object-fit: cover;
+    }
+    .imageListSize {
+        height: 170px !important;
+        width: 268px !important;
+    }
+    .cardItemListContent {
+        height: 173px;
+        margin-top: 60px;
+    }
+    .cardListTitle {
+        font-size: 40px !important;
+        top: 56px;
+    }
+    .itemListPrice {
+        font-size: 33px;
+        width: 176px;
+        height: 58px;
+        top: 61px;
+    }
+    .producCardTitle {
+        width: 67%;
+    }
+    .listCardElement{
+        height: 194px;
+    }
+    .modalItem{
+        top: 631px;
+        min-width: 1086px;
+    }
+    .modalFooter{
+        width: 100%;
+        margin-left: 49px;
+    }
+    .modalFullPrice{
+        margin-left: 80px;
+    }
+    .modalAddToCart{
+        margin-left: 70px;
+    }
+    .groupModalQuantity {
+        margin-left: 4px;
+        margin-top: -1px;
+    }
+
+   /* DRINKS MODAL */
+    #drinksModalNote {
+        font-size: 17px;
+        width: 326px;
+        height: 65px;
+        padding: 13px;
+    }
+    .drinksTgList {
+        margin-top: 27px;
+        margin-bottom: 15px;
+    }
+    .modalFullPrice {
+        font-size: 30px;
+    }
+    .drinksModalItemTitleLine{
+        margin-top: 0px;
+    }
+    .drinksModalAdds{
+        margin-top: -18px;
+    }
+    .drinksModalContent {
+        width: 420px;
+        height: 680px;
+        top: 200px;
+    }
+    #drinksModalQuantity{
+        display: none;
+    }
+    .groupModalQuantity{
+        font-size: 20px;
+    }
+    .addAndRemoveModalQuantity {
+        height: 30px;
+        width: 30px;
+        border-radius: 3px;
+        font-size: 19px;
+    }
+    .close{
+        margin-top: -14px;
+        margin-right: -14px;
+    }
+    .modalItemTitle{
+        margin-top: 36px;
+    }
+    .drinksModalItemQuantity{
+        font-weight: 600;
+    }
+    .drinksModalItemImage {
+        width: 326px;
+        height: 190px;
+    }
+    .drinksModalDivider {
+        width: 336px;
+        margin-left: 36px;
+    } 
+  
+} 
+
+@media only screen and (min-width: 1440px) and (max-width:2559px){
+
+    .headerNavBar{
+        margin: 30px 72px 50px 72px;
+    }
+    .centeredContainer {
+        padding: 0 70px;
+    }
+    .navBarLinks div {
+        font-size: 17px;
+        margin-right: 40px;
+    }
+    .cartButton > img {
+        height: 35px;
+    }
+    .titleForPages {
+        margin-left: 74px;
+        margin-bottom: 0px;
+        font-size: 20px;
+    }
+    #loginButton{
+        padding: 8px 30px;
+    }
+    .header-Contact {
+        padding: 4px 85px;
+        height: 30px;
+    }
+    .logoHeader {
+        height: 95px;
+    }
+    .headerParagraph {
+        font-size: 14px;
+    }
+    footer {
+        height: 30px;
+        font-size: 14px;
+    }
+    .contact{
+        height: 400px;
+    }
+    .mail_form{
+        font-size: 16px;
+        padding: 0px 40px 0px 40px;
+    }
+
+    .days_of_week, .address{
+        font-size: 16px;
+    
+    }
+    #contact-form{
+        line-height: 30px;
+    }
+    #name, #email, #phone, #text {
+        margin-bottom: 7px;
+        padding: 3px 10px;
+    }
+    #text{
+        height: 100px;
+    }
+    .headers_contact{
+        padding-bottom: 10px;
+        font-size: 20px;
+        padding-left: 5px;
+    }
+    .headers_contact_hours {
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+    .phone {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+    .foodMenuButton:first-child {
+        margin: 0px 0px 0px 0px 
+    }
+    .foodMenuNavigation {
+        margin-left: 75px;
+    }
+    .foodMenuButton {
+        font-size: 18px;
+        border-radius: 5px;
+        height: 50px;
+        padding: 0px 17px;
+        margin: 0px 30px;
+    }
+    .dropdown-main-button {
+        font-size: 18px;
+        height: 40px;
+        right: 66px;
+    }
+    .dropdown-design{
+        font-size: 18px;
+    }
+    .cardItemContent {
+        height: 85px;
+    }
+    .centeredContainer .cardTitle {
+        font-size: 21px !important;
+        width: 151px;
+    }
+    .cardTitle {
+        top: 13px;
+        left: 17px;
+    }
+    .imageListSize {
+        height: 96px !important;
+        width: 223px !important;
+    }
+    .cardItemListContent {
+        height: 95px;
+        margin-top: 36px;
+    }
+    .cardListTitle {
+        font-size: 23px !important;
+        top: 30px;
+        left: 39px;
+    }
+    .itemListPrice {
+        font-size: 24px;
+        width: 141px;
+        height: 41px;
+        top: 30px;
+    }
+    .productContainer {
+        height: 80px;
+    }
+    .cardProductImage {
+        height: 81px;
+        width: 153px;
+    }
+    .removeProduct {
+        margin-right: 32.5px;
+        font-size: 20px;
+        margin-left: 37.5px;
+    }
+    .producCardTitle {
+        padding-left: 41px;
+        font-size: 23px;
+    }
+    .quantityParagraph {
+        font-size: 20px;
+        padding-right: 25px;
+    }
+    .quantityStyleButtons {
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+    }
+    .containerCardPrice {
+        min-width: 149px;
+        height: 39px;
+    }
+    .productCardPrice {
+        font-size: 20px;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+    }
+    .modalItem{
+        min-width: 900px;
+        top: 360px;
+    }
+    .modalItemTitle { 
+        margin-top: 18px;
+        font-size: 30px;
+    }
+    #modalFoodItemImage{
+        width: 322px;
+    }
+    .foodModalIngredientsParagraph {
+        font-size: 22px;
+        margin: 14px 0px 18px 20px;
+    }
+    .foodModalExtrasParagraph {
+        font-size: 22px;
+        margin: 15px 29px;
+    }
+    #foodModalNote{
+        margin-top: 44px;
+    }
+    .foodModalIngredientsList > li{
+        font-size: 15px;
+    }
+    .foodModalExtrasList > li{
+        font-size: 15px;
+    }
+    .foodModalAllergensParagraph {
+        font-size: 14px;
+        margin-top: 3px;
+    }
+    .modalImageAndAllergensDiv {
+        margin: -10px 0px 0px 0px;
+        width: 38%;
+    }
+    #foodModalNote {
+        margin-top: 11px;
+        margin-bottom: 8px;
+    }
+    .modalAddToCart{
+        width: 163px;
+        font-size: 20px;
+    }
+    .modalFullPrice{
+        font-size: 20px;
+    }
+    .cardImageContainer {
+        height: 167px;
+    }
+    .card-img-top{
+        object-fit: cover;
+    }
+    .logoText {
+        font-size: 27px;
+    }
+    .listCardElement{
+        height: 86px;
+    }
+
+
+    .drinksModalItemImage{
+        margin-top: 16px;
+    }
+    .drinksModalItemTitleLine{
+        margin-top: 0px;
+    }
+    .drinksModalContent {
+        height: 656px;
+    }
+    
+
+    /* DRINK MODAL */
+    /* #drinksModalNote {
+        font-size: 15px;
+        font-family: 'Lato', sans-serif;
+        width: 300px;
+        height: 65px;
+        margin: 27px 41px 0px 44px;
+        border-radius: 5px;
+        border: solid 1px #dadada;
+        resize: none;
+        padding: 11px;
+    }
+    .drinksTgList {
+        margin-top: 27px;
+        margin-bottom: 15px;
+    }
+    .modalFullPrice {
+        font-size: 24px;
+    }
+    .drinksModalItemTitleLine{
+        margin-top: 0px;
+    }
+    .drinksModalAdds{
+        margin-top: -18px;
+    }
+    .drinksModalContent {
+        width: 384px;
+        height: 654px;
+        top: 20px;
+    }
+    #drinksModalQuantity{
+        display: none;
+    }
+    .groupModalQuantity{
+        font-size: 20px;
+    }
+    .addAndRemoveModalQuantity {
+        height: 30px;
+        width: 30px;
+        border-radius: 3px;
+        font-size: 19px;
+    }
+    .close{
+        margin-top: -14px;
+        margin-right: -14px;
+    }
+    .modalItemTitle{
+        margin-top: 29px;
+    }
+    .drinksModalItemQuantity{
+        font-weight: 600;
+    } */
+}
+
+@media only screen and (min-width: 1024px) and (max-width:1439px){
+    .headerNavBar{
+        margin: 40px 43px 40px 45px;
+    }
+    .centeredContainer {
+        padding: 0 40px;
+    }
+    .navBarLinks div {
+        font-size: 14px;
+        margin-right: 30px;
+    }
+    .logoText {
+        margin-left: 5px;
+        font-size: 20px;
+    }
+    #loginButton{
+        padding: 6px 16px;
+    }
+    .logoHeader {
+        height: 80px;
+    }
+
+    .cartButton > img {
+        height: 25px;
+    }
+    .titleForPages {
+        margin-left: 47px;
+        margin-bottom: -12px;
+        font-size: 17px;
+    }
+    .header-Contact {
+        padding: 8px 58px;
+    }
+    .headerParagraph {
+        font-size: 14px;
+    }
+    footer {
+        height: 30px;
+        font-size: 14px;
+    }
+    .contact{
+        height: 350px;
+    }
+    .mail_form{
+        font-size: 14px;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .days_of_week, .address{
+        font-size: 14px;
+    }
+    #contact-form{
+        line-height: 27px;
+    }
+    #name, #email, #phone, #text {
+        margin-bottom: 7px;
+        padding: 3px 8px;
+    }
+    #text{
+        height: 80px;
+    }
+    .headers_contact{
+        padding-bottom: 10px;
+        font-size: 17px;
+    }
+    .headers_contact_hours {
+        font-size: 17px;
+        padding-bottom: 10px;
+    }
+    .phone {
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+
+    .foodMenuButton:first-child {
+        margin: 0px 0px 0px 0px 
+    }
+    .foodMenuNavigation {
+        margin-left: 44px;
+    }
+    .foodMenuButton {
+        font-size: 16px;
+        border-radius: 5px;
+        height: 40px;
+        padding: 0px 14px;
+        margin: 0px 15px;
+    }
+    .dropdown-main-button {
+        height: 37px;
+        right: 34px;
+    }
+    .dropdown-design{
+        font-size: 16px;
+    }
+    .cardItemContent {
+        height: 80px;
+    }
+    .centeredContainer .cardTitle {
+        font-size: 18px !important;
+        width: 80px;
+    }
+    .cardTitle {
+        top: 7px;
+        left: 6px;
+    }
+    .itemPrice {
+        right: 10px;
+        top: 13px;
+    }
+    .centeredContainer .itemPrice {
+        font-size: 18px;
+        width: 92px;
+        height: 30px;
+    }
+    .imageListSize {
+        height: 95px !important;
+        width: 160px !important;
+    }
+    .cardItemListContent {
+        height: 95px;
+        margin-top: 18px
+    }
+    .cardListTitle {
+        font-size: 23px !important;
+        top: 28px;
+        left: 39px;
+    }
+    .itemListPrice {
+        font-size: 24px;
+        width: 141px;
+        height: 41px;
+        top: 28px;
+    }
+    .productContainer {
+        height: 60px;
+    }
+    .cardProductImage {
+        height: 60px;
+        width: 120px;
+    }
+    .removeProduct {
+        margin-right: 24.5px;
+        font-size: 16px;
+        margin-left: 23.5px;
+    }
+    .producCardTitle {
+        padding-left: 28px;
+        font-size: 20px;
+    }
+    .quantityParagraph {
+        font-size: 18px;
+        padding-right: 21px;
+    }
+    .quantityStyleButtons {
+        height: 22px;
+        width: 21px;
+        font-size: 14px;
+    }
+    .containerCardPrice {
+        min-width: 119px;
+        height: 39px;
+    }
+    .productCardPrice {
+        font-size: 20px;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+    }
+    .modalItem{
+        top: 373px;
+        padding: 32px 22px 15px 22px;
+        min-width: 857px;
+    }
+    .modalItemTitle {
+        margin-top: 22px;    
+        margin-left: 13px;
+        font-size: 25px;
+    }
+    .foodModalIngredientsParagraph {
+        font-size: 17px;
+        margin: 9px 0px 13px 15px;
+    }
+    .foodModalExtrasParagraph {
+        font-size: 17px;
+        margin: 10px 14px;
+    }
+    #foodModalNote{
+        margin-top: 41px;
+    }
+    .foodModalIngredientsList > li{
+        font-size: 15px;
+    }
+    .foodModalExtrasList > li{
+        font-size: 15px;
+    }
+    .foodModalAllergensParagraph {
+        font-size: 14px;
+        margin-top: 3px;
+    }
+    .modalImageAndAllergensDiv {
+        margin: -10px 0px 0px 0px;
+        width: 38%;
+    }
+    .modalImageAndAllergensDiv img {
+        width: 325px;
+    }
+    #foodModalNote {
+        margin-top: 11px;
+        margin-bottom: 8px;
+    }
+    .modalAddToCart{
+        width: 140px;
+        font-size: 18px;
+
+    }
+    .modalFullPrice{
+        font-size: 18px;
+    }
+
+    .cardImageContainer {
+        height: 130px;
+    }
+    .card-img-top{
+        object-fit: cover;
+    }
+    .header-Contact {
+        padding: 4px 85px;
+        height: 27px;
+    }
+    .headerParagraph {
+        font-size: 12px;
+    }
+    footer {
+        height: 25px;
+        font-size: 12px;
+    }
+    .listCardElement{
+        height: 70px;
+    }
+
+    /* DRINK MODAL */
+    #drinksModalNote {
+        font-size: 15px;
+        width: 277px;
+        height: 65px;
+        margin: 23px 41px 0px 44px;
+        padding: 11px;
+    }
+    .drinksTgList {
+        margin-top: 27px;
+        margin-bottom: 15px;
+    }
+    .modalFullPrice {
+        font-size: 24px;
+    }
+    .drinksModalItemTitleLine{
+        margin-top: 0px;
+    }
+    .drinksModalAdds{
+        margin-top: -18px;
+    }
+    .drinksModalContent {
+        width: 369px;
+        height: 614px;
+        top: 20px;
+    }
+    #drinksModalQuantity{
+        display: none;
+    }
+    .addAndRemoveModalQuantity {
+        height: 25px;
+        width: 25px;
+        border-radius: 3px;
+        font-size: 16px;
+    }
+    .close{
+        margin-top: -14px;
+        margin-right: -14px;
+    }
+    .modalItemTitle{
+        margin-top: 29px;
+        margin-left: 44px;
+    }
+    .drinksModalItemQuantity{
+        font-weight: 600;
+    }
+    .drinksModalItemImage {
+        width: 277px;
+        height: 159px;
+        margin-left: 43px;
+        margin-top: 27px;
+    }
+    .drinksModalDivider {
+        width: 300px;
+    }
+    .drinksModalItemTitleLine{
+        margin-left: 44px;
+    }
+    .tg-list p {
+        font-size: 14px;
+    }
+    .groupModalQuantity {
+        font-size: 18px;
+    }
+    .drinksGroupModalQuantity {
+        margin-top: 11px;
+    }
+    .drinksModalAddToCart {
+        margin-top: 22px;
+    }
+    .modalAddToCart {
+        width: 137px;
+        font-size: 18px;
+        height: 50px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width:1023px){
+    .foodMenuButton:first-child{
+        margin: 0px !important;
+    }
+    .headerNavBar {
+        margin: 20px 20px 20px 19px;
+    }
+    .navBarLinks{
+        margin-top: 76px;
+        margin-right: 86px;
+    }
+    .logoHeader {
+        height: 70px;
+    }
+    .logoText {
+        font-size: 24px;
+        margin-left: 13px;
+    }
+    #loginButton {
+        padding: 8px 22px;
+        font-size: 15px;
+    }
+    .titleForPages {
+        font-size: 21px;
+        margin-left: 22px;
+        margin-bottom: -10px;
+        margin-top: 129px;
+    }
+    .cartButton img {
+     height: 32px;
+    }
+    .inCartQuantity {
+        width: 24px;
+        height: 24px;
+    }
+    .centeredContainer {
+        padding: 2px 18px;
+    }
+    .centeredContainer .cardTitle {
+        font-size: 18px !important;
+        width: 163px;
+    }
+    .cardTitle {
+        top: 0px;
+        left: 7px;
+    }
+    .itemPrice {
+        right: 6px;
+        top: 53px;
+    }
+    .cardItemContent {
+        position: relative;
+        height: 91px;
+    }
+    .centeredContainer .itemPrice {
+        font-size: 16px;
+        width: 86px;
+        height: 32px;
+    }
+    .header-Contact {
+        padding: 5px 29px;
+        height: 30px;
+    }
+    .headerParagraph {
+        font-size: 14px;
+    }
+    .foodMenuNavigation {
+        margin-left: 35px;
+        margin-top: 118px;
+    }
+    .foodMenuButton {
+        font-size: 17px;
+        height: 46px;
+        padding: 0px 29px;
+        margin: 0px -9px;
+    }
+    .dropdown-main-button {
+        height: 37px;
+        right: 9px;
+        margin-top: 40px;
+    }
+    .dropdown-design {
+        font-size: 15px;
+    }
+    
+    footer{
+        height: 30px;
+        font-size: 14px;
+    }
+    .cardImageContainer{
+        height: 140px;
+    }
+    .card-img-top{
+        object-fit: cover;
+        height: 120px;
+    }
+    .cardItemContent {
+        height: 91px;
+        margin-top: -10px;
+    }
+    .cardItemListContent {
+        height: 86px;
+    }
+    .imageListSize {
+        height: 72px !important;
+        width: 160px !important;
+    }
+    .cardItemListContent {
+        height: 72px;
+        margin-top: 34px;
+    }
+    .itemListPrice {
+        font-size: 19px;
+        width: 111px;
+        height: 39px;
+        top: 19px;
+    }
+    .listCardElement{
+        height: 78px;
+    }
+    .cardListTitle {
+        font-size: 21px !important;
+        top: 19px;
+        left: 33px;
+    }
+    .mail_form {
+        font-size: 16px;
+        padding: 0px 0px 0px 0px;
+        margin-top: 100px;
+    }
+    .headers_contact {
+        font-size: 18px;
+        margin-bottom: 13px;
+    }
+    #contact-form {
+        line-height: 25px;
+    }
+    .number{
+        margin-top: 101px;
+    }
+    .phone {
+        font-size: 18px;
+    }
+    .headers_contact_hours {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+    .days_of_week {
+        font-size: 15px;
+    }
+    .address {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    #text {
+        height: 106px;
+    }
+    #btn_send{
+        width: 147px;
+    }
+    .contact{
+        margin-top: 30px;
+        height: 460px;
+    }
+    .productContainer {
+        height: 65px;
+    }
+    .cardProductImage {
+        width: 124px;
+        height: 65px;
+    }
+    .removeProduct {
+        margin-right: 15.5px;
+        font-size: 18px;
+        margin-left: 15.5px;
+    }
+    .listCardElement {
+        height: 64px;
+    }
+    .producCardTitle {
+        padding-left: 14px;
+        font-size: 22px;
+    }
+    .quantityParagraph {
+        font-size: 19px;
+        padding-right: 13px;
+    }
+    .quantityStyleButtons {
+        height: 25px;
+        width: 25px;
+        font-size: 13px;
+    }
+    .productQuantityNumber {
+        margin: 0px 14px;
+        font-size: 21px;
+    }
+    .containerCardPrice {
+        margin-right: 7px;
+        margin-left: 11px;
+        min-width: 113px;
+        height: 41px;
+    }
+    .productCardPrice {
+        font-size: 20px;
+    }
+    .modalItem{
+        top: 305px;
+        padding: 27px 10px 10px 10px;
+        min-width: 700px;
+    }
+    .modalItemTitle {
+        margin-top: -11px;
+        margin-left: 14px;
+        font-size: 20px;
+    }
+    .xModal{
+        margin-right: -26px;
+        margin-top: -28px;
+    }
+    .foodModalIngredientsParagraph {
+        font-size: 15px;
+        margin: 3px 0px 5px 15px;
+    }
+    .foodModalExtrasParagraph {
+        font-size: 15px;
+        margin: 3px 0px 5px 15px;
+    }
+    #foodModalNote{
+        margin-top: 14px;
+        margin-bottom: 14px;
+    }
+    .foodModalIngredientsList > li{
+        font-size: 12px;
+    }
+    .foodModalExtrasList > li{
+        font-size: 12px;
+    }
+    .foodModalAllergensParagraph {
+        font-size: 10px;
+        margin-top: 3px;
+        margin-right: 43px;
+    }
+
+    .modalImageAndAllergensDiv {
+        margin: -19px 0px 0px 26px;
+        width: 38%;
+        
+    }
+    .modalImageAndAllergensDiv img {
+        width: 250px;
+    }
+
+    #foodModalNote {
+        height: 60px;
+        padding: 10px;
+    }
+    .tg-list{
+        margin-left: 10px;
+        width: 231px;
+    }
+    .tg-list p {
+        font-size: 12px;
+        margin: 0 15px 0px 15px;
+        height: 19px;
+        margin-bottom: -5px;
+    }
+    .tg-list-item{
+        width: 46px;
+        height: 27px;
+    }
+    .addAndRemoveModalQuantity {
+        height: 20px;
+        width: 20px;
+        font-size: 14px;
+        margin: 0px 12px 0px 12px;
+    }
+    #modalQuantity {
+        font-size: 15px;
+    }
+
+    .modalAddToCart{
+        font-size: 16px;
+        width: 130px;
+        height: 37px;
+        margin-left: 0px;
+    }
+    .modalFullPrice{
+        font-size: 18px;
+    }
+    .groupModalQuantity{
+        margin-left: 0px;
+    }
+    #modalFoodItemImage{
+        width: 244px;
+    }
+
+    /* DRINK MODAL */
+ 
+    #drinksModalNote {
+        font-size: 12px;
+        width: 266px;
+        height: 56px;
+        margin: 16px 20px 0px 20px;
+        padding: 10px;
+    }
+    .drinksTgList {
+        margin-top: 18px;
+        margin-bottom: 15px;
+        margin-left: 48px;
+    }
+    .modalFullPrice {
+        font-size: 22px;
+    }
+    .drinksModalItemTitleLine{
+        margin-top: 0px;
+    }
+    .drinksModalAdds{
+        margin-top: -26px;
+    }
+    .drinksModalContent {
+        width: 311px;
+        height: 535px;
+        top: 9px;
+    }
+    #drinksModalQuantity{
+        display: none;
+    }
+    .addAndRemoveModalQuantity {
+        height: 25px;
+        width: 25px;
+        border-radius: 3px;
+        font-size: 16px;
+    }
+    .close{
+        margin-top: -14px;
+        margin-right: -14px;
+    }
+    .modalItemTitle{
+        margin-top: 25px;
+        margin-left: 28px;
+    }
+    .drinksModalItemQuantity{
+        font-weight: 600;
+    }
+    .drinksModalItemImage {
+        width: 256px;
+        height: 144px;
+        margin-left: 25px;
+        margin-top: 27px;
+    }
+    .drinksModalDivider {
+        width: 247px;
+    }
+    .drinksModalItemTitleLine{
+        margin-left: 28px;
+    }
+    .tg-list p {
+        font-size: 13px;
+    }
+    .groupModalQuantity {
+        font-size: 16px;
+    }
+    .drinksGroupModalQuantity {
+        margin-top: 11px;
+    }
+    .drinksModalAddToCart {
+        margin-top: 22px;
+    }
+    .modalAddToCart {
+        width: 133px;
+        font-size: 17px;
+        height: 48px;
+    }
+    .drinksModalFullPrice {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+}
+
+/* 
+.hamburger-menu {
+    text-align: center;
+    width: 100%;
+    display: none;
+}
+.hamburger-menu div {
+    display: block;
+} */
+/* #labelToggle {
+    display: block;
+    cursor: pointer;
+}
+#toggleManu:checked + .hamburger-menu {
+    display: block;
+} */
+
+@media only screen and (min-width: 425px) and (max-width:767px){
+    .headerParagraph {
+        font-size: 13px;
+    }
+    .header-Contact {
+        padding: 5px;
+        height: 27px;
+        text-align: center;
+    }
+    footer {
+        height: 20px;
+        font-size: 12px;
+    }
+    .centeredContainer {
+        padding: 0 20px;
+    }
+    .headerNavBar {
+        margin: 20px;
+    }
+    .logoHeader {
+        height: 70px;
+    }
+    .logoText {
+        font-size: 18px;
+        margin-left: 11px;
+    }
+    .navBarLinks{
+        margin-right: -34px;
+    }
+    .titleForPages {
+        font-size: 17px;
+        margin-top: 47px;
+        margin-left: 30px;
+        margin-bottom: 0px;
+    }
+    .centeredContainer .flex-sm-column{
+        width: 207px;
+        height: 181px;
+    }
+    .cardItemContent {
+        height: 84px;
+    }
+    .centeredContainer .cardTitle {
+        font-size: 15px !important;
+        width: 160px;
+    }
+    .cardTitle {
+        top: 4px;
+        left: 8px;
+    }
+    .centeredContainer .itemPrice {
+        font-size: 16px;
+        width: 89px;
+        height: 32px;
+    }
+    .itemPrice {
+        right: 8px;
+        top: 49px;
+    }
+
+    .modalItem{
+        min-width: 300px;
+        min-height: 328px;
+        padding: 10px;
+        top: 328px;
+    }
+    .modalItemTitle {
+        margin-top: 4px;
+        margin-left: 9px;
+        font-size: 18px;
+    }
+    .close{
+        margin-top: -23px;
+        margin-right: -19px;
+    }
+    .foodModalIngredientsParagraph {
+        font-size: 15px;
+        margin: 10px;
+    }
+    .foodModalIngredientsList {
+        font-size: 13px;
+        margin-left: 12px;
+    }
+    .foodModalExtras {
+        width: 36%;
+    }
+    .foodModalExtrasParagraph {
+        font-size: 15px;
+        margin: 10px;
+        margin-left: 2px;
+    }
+    .foodModalExtrasList {
+        font-size: 13px;
+        margin: 0px 2px;
+    }
+    #modalFoodItemImage{
+        width: 146px;
+    }
+    .foodModalAllergensParagraph {
+        font-size: 12px;
+        margin-top: 7px;
+    }
+    #foodModalNote {
+        height: 50px;
+        padding: 9px;
+        font-size: 11px;
+        margin-bottom: 7px;
+        margin-top: 17px;
+    }
+    .modalAddToCart {
+        font-size: 11px;
+        width: 139px;
+        height: 33px;
+        margin-left: 19px;
+    }
+    .modalFooter{
+        width: 400px;
+        margin-top: -11px;
+        margin-left: 3px;
+    }
+    .tg-list p {
+        font-size: 11px;
+        margin: 9px 5px 0px 6px;
+        height: 32px;
+    }
+    #modalQuantity{
+        display: none;
+    }
+    .addAndRemoveModalQuantity {
+        height: 22px;
+        width: 19px;
+        font-size: 14px;
+        margin: 4px 3px 0px 10px;
+    }
+    .modalItemQuantity {
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 9px;
+    }
+    .groupModalQuantity{
+        margin-left: -28px;
+        margin-top: -2px;
+        width: 144px;
+    }
+    .modalFullPrice {
+        font-size: 18px;
+        margin-left: 24px;
+    }
+    .card-img-top{
+        height: 100px;
+    }
+    .foodMenuNavigation {
+        margin-left:  -13px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .dropdown-main-button{
+        display: none;
+    }
+    .foodMenuButton:first-child {
+        margin: 0px 30px 0px 30px !important;
+    }
+    .foodMenuButton{
+        width: 165px;
+        padding: 0px 0px;
+        font-size: 19px;
+        height: 48px;
+    }
+    .contact {
+        margin-left: 0px;
+        height: 580px;
+    }
+    .mail_form {
+        font-size: 12px;
+        padding: 0px 12px;
+    }
+    #name, #email, #phone, #text {
+        margin-bottom: 5px;
+        padding: 3px 9px;
+    }
+    #contact-form{
+        line-height: 22px;
+    }
+    #text {
+        height: 82px;
+    }
+    .headers_contact {
+        font-size: 16px;
+    }
+    #btn_send {
+        font-size: 13px;
+        padding: 5px;
+        width: 103px;
+        margin-top: -6px;
+    }
+    .call_us{
+        margin-top: 51px;
+    }
+    .phone{
+        font-size: 18px;
+        margin-top: 11px;
+    }
+    .headers_contact_hours {
+        font-size: 16px;
+    }
+    .days_of_week {
+        font-size: 13px;
+    }
+    .address {
+        font-size: 13px;
+        margin-top: -13px;
+        color: #C8B273;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 20px;
+    }
+    .productContainer{
+        width: 207px;
+        height: 190px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .cardProductImage {
+        width: 120px;
+        height: 64px;
+        margin-left: -145px;
+        margin-top: 5px;
+    }
+    .removeProduct {
+        margin-right: 8.5px;
+        font-size: 17px;
+        margin-left: 8.5px;
+    }
+    .quantityParagraph{
+        display: none;
+    }
+    .producCardTitle {
+        padding-left: 10px;
+        font-size: 23px;
+    }
+    .containerCardPrice{
+        margin-right: 37px;
+        margin-left: 8px;
+    }
+    .quantityContainer{
+        margin-left: -100px;
+    }
+    .productQuantityNumber {
+        margin: 0px 14px;
+        font-size: 18px;
+    }
+    .quantityStyleButtons {
+        height: 24px;
+        width: 23px;
+    }
+
+    .tgl+.tgl-btn {
+        width: 40px;
+        height: 20px;
+    }
+    .tg-list p {
+        font-size: 10px;
+        height: 23px;
+    }
+
+    /* DRINK MODAL */
+    /* 
+    #drinksModalNote {
+        font-size: 12px;
+        width: 266px;
+        height: 56px;
+        margin: 16px 20px 0px 20px;
+        padding: 10px;
+    }
+    .drinksTgList {
+        margin-top: 18px;
+        margin-bottom: 15px;
+        margin-left: 48px;
+    }
+    .modalFullPrice {
+        font-size: 22px;
+        margin-left: 0px;
+    }
+    .drinksModalItemTitleLine{
+        margin-top: 0px;
+    }
+    .drinksModalAdds{
+        margin-top: -26px;
+    }
+    .drinksModalContent {
+        width: 311px;
+        height: 533px;
+        top: 23px;
+        left: 47px;
+    }
+    #drinksModalQuantity{
+        display: none;
+    }
+    .addAndRemoveModalQuantity {
+        height: 26px;
+        width: 26px;
+        border-radius: 3px;
+        font-size: 16px;
+    }
+    .close{
+        margin-top: -14px;
+        margin-right: -14px;
+    }
+    .modalItemTitle{
+        margin-top: 25px;
+        margin-left: 28px;
+    }
+    .drinksModalItemQuantity{
+        font-weight: 600;
+        margin: 0px 5px;
+    }
+    .drinksModalItemImage {
+        width: 256px;
+        height: 144px;
+        margin-left: 25px;
+        margin-top: 27px;
+    }
+    .drinksModalDivider {
+        width: 247px;
+    }
+    .drinksModalItemTitleLine{
+        margin-left: 28px;
+    }
+    .tg-list p {
+        font-size: 13px;
+        height: 24px;
+    }
+    .groupModalQuantity {
+        font-size: 16px;
+        margin-left: 0px;
+    }
+    .drinksGroupModalQuantity {
+        margin-top: 11px;
+    }
+    .drinksModalAddToCart {
+        margin-top: 22px;
+    }
+    .modalAddToCart {
+        width: 133px;
+        font-size: 17px;
+        height: 48px;
+        margin-left: 0px;
+    }
+    .drinksModalFullPrice {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .drinksTgList{
+        margin-left: 0;
+    } */
+}
+
+
+@media only screen and (min-width: 375px) and (max-width:424px){
+     
+    /* TESTING */
+    .navBarLinks{
+        display: block;
+    }
+
+    .headerParagraph {
+        font-size: 13px;
+    }
+    .header-Contact {
+        padding: 5px;
+        height: 27px;
+        text-align: center;
+    }
+    footer {
+        height: 20px;
+        font-size: 12px;
+    }
+    .centeredContainer {
+        padding: 0 20px;
+    }
+    .headerNavBar {
+        margin: 20px;
+    }
+    .logoHeader {
+        height: 70px;
+    }
+    .logoText {
+        font-size: 18px;
+        margin-left: 11px;
+    }
+    .navBarLinks{
+        margin-right: -34px;
+    }
+    .titleForPages {
+        font-size: 17px;
+        margin-top: 47px;
+        margin-left: 30px;
+        margin-bottom: 0px;
+    }
+    .centeredContainer .flex-sm-column{
+        width: 177px;
+        height: 172px;
+    }
+    .cardItemContent {
+        height: 84px;
+    }
+    .centeredContainer .cardTitle {
+        font-size: 15px !important;
+        width: 160px;
+    }
+    .cardTitle {
+        top: 4px;
+        left: 8px;
+    }
+    .centeredContainer .itemPrice {
+        font-size: 16px;
+        width: 89px;
+        height: 32px;
+    }
+    .itemPrice {
+        right: 8px;
+        top: 49px;
+    }
+
+    .modalItem{
+        min-width: 300px;
+        min-height: 328px;
+        padding: 10px;
+        top: 328px;
+    }
+    .modalItemTitle {
+        margin-top: 4px;
+        margin-left: 9px;
+        font-size: 18px;
+    }
+    .close{
+        margin-top: -23px;
+        margin-right: -19px;
+    }
+    .foodModalIngredientsParagraph {
+        font-size: 15px;
+        margin: 10px;
+    }
+    .foodModalIngredientsList {
+        font-size: 13px;
+        margin-left: 12px;
+    }
+    .foodModalExtras {
+        width: 36%;
+    }
+    .foodModalExtrasParagraph {
+        font-size: 15px;
+        margin: 10px;
+        margin-left: 2px;
+    }
+    .foodModalExtrasList {
+        font-size: 13px;
+        margin: 0px 2px;
+    }
+    #modalFoodItemImage{
+        width: 146px;
+    }
+    .foodModalAllergensParagraph {
+        font-size: 12px;
+        margin-top: 7px;
+    }
+    #foodModalNote {
+        height: 50px;
+        padding: 9px;
+        font-size: 11px;
+        margin-bottom: 17px;
+        margin-top: 17px;
+    }
+    .modalAddToCart {
+        font-size: 11px;
+        width: 126px;
+        height: 33px;
+        margin-left: 40px;
+        margin-top: 0px;
+    }
+    .modalFooter{
+        width: 335px;
+        margin-top: -11px;
+        margin-left: -11px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .tg-list p {
+        font-size: 11px;
+        margin: 9px 5px 0px 6px;
+        height: 23px;
+    }
+    .tg-list{
+        width: 220px;
+        height: 25px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+    #modalQuantity{
+        display: none;
+    }
+    .addAndRemoveModalQuantity {
+        height: 22px;
+        width: 19px;
+        font-size: 14px;
+        margin: 4px 3px 0px 10px;
+    }
+    .modalItemQuantity {
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 9px;
+    }
+    .groupModalQuantity{
+        margin-left: -4px;
+        margin-bottom: 10px;
+        width: 211px;
+        height: 24px;
+        margin-top: -11px;
+    }
+    .modalFullPrice {
+        font-size: 22px;
+        margin-left: -125px;
+    }
+    .card-img-top{
+        height: 87px;
+    }
+    .foodMenuNavigation {
+        margin-left: -10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .dropdown-main-button{
+        display: none;
+    }
+    .foodMenuButton:first-child {
+        margin: 0px 22px 0px 30px !important;
+    }
+    .foodMenuButton{
+        width: 139px;
+        padding: 0px 0px;
+        font-size: 18px;
+        height: 46px;
+    }
+    .contact {
+        margin-left: 0px;
+        height: 580px;
+    }
+    .mail_form {
+        font-size: 12px;
+        padding: 0px 12px;
+    }
+    #name, #email, #phone, #text {
+        margin-bottom: 5px;
+        padding: 3px 9px;
+    }
+    #contact-form{
+        line-height: 22px;
+    }
+    #text {
+        height: 82px;
+    }
+    .headers_contact {
+        font-size: 16px;
+    }
+    #btn_send {
+        font-size: 13px;
+        padding: 5px;
+        width: 103px;
+        margin-top: -6px;
+    }
+    .call_us{
+        margin-top: 51px;
+    }
+    .phone{
+        font-size: 18px;
+        margin-top: 11px;
+    }
+    .headers_contact_hours {
+        font-size: 16px;
+    }
+    .days_of_week {
+        font-size: 13px;
+    }
+    .address {
+        font-size: 13px;
+        margin-top: -13px;
+        color: #C8B273;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 20px;
+    }
+    .productContainer{
+        width: 207px;
+        height: 190px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .cardProductImage {
+        width: 120px;
+        height: 64px;
+        margin-left: -145px;
+        margin-top: 5px;
+    }
+    .removeProduct {
+        margin-right: 8.5px;
+        font-size: 17px;
+        margin-left: 8.5px;
+    }
+    .quantityParagraph{
+        display: none;
+    }
+    .producCardTitle {
+        padding-left: 10px;
+        font-size: 23px;
+    }
+    .containerCardPrice{
+        margin-right: 37px;
+        margin-left: 8px;
+    }
+    .quantityContainer{
+        margin-left: -100px;
+    }
+    .productQuantityNumber {
+        margin: 0px 14px;
+        font-size: 18px;
+    }
+    .quantityStyleButtons {
+        height: 24px;
+        width: 23px;
+    }
+
+    /* DRINK MODAL */
+
+    /* #drinksModalNote {
+        font-size: 12px;
+        width: 242px;
+        height: 54px;
+        margin: 16px 20px 0px 22px;
+        padding: 8px;
+    }
+    .drinksTgList {
+        margin-top: 18px;
+        margin-bottom: 15px;
+        margin-left: 48px;
+    }
+    .modalFullPrice {
+        font-size: 22px;
+        margin-left: -103px;
+    }
+    .drinksModalItemTitleLine{
+        margin-top: 0px;
+    }
+    .drinksModalAdds{
+        margin-top: -26px;
+    }
+    .drinksModalContent {
+        width: 294px;
+        height: 515px;
+        top: 23px;
+        left: 34px;
+    }
+    #drinksModalQuantity{
+        display: none;
+    }
+    .addAndRemoveModalQuantity {
+        height: 26px;
+        width: 26px;
+        border-radius: 3px;
+        font-size: 16px;
+        margin: 4px 8px 0px 6px;
+    }
+    .close{
+        margin-top: -14px;
+        margin-right: -14px;
+    }
+    .modalItemTitle{
+        margin-top: 25px;
+        margin-left: 28px;
+    }
+    .drinksModalItemQuantity{
+        font-weight: 600;
+        margin: 0px 5px;
+    }
+    .drinksModalItemImage {
+        width: 235px;
+        height: 135px;
+        margin-left: 25px;
+        margin-top: 27px;
+    }
+    .drinksModalDivider {
+        width: 226px;
+    }
+    .drinksModalItemTitleLine{
+        margin-left: 28px;
+    }
+    .tg-list p {
+        font-size: 13px;
+        height: 24px;
+    }
+    .groupModalQuantity {
+        font-size: 16px;
+        margin-left: 110px;
+    }
+    .drinksGroupModalQuantity {
+        margin-top: 8px;
+    }
+    .drinksModalAddToCart {
+        margin-top: 22px;
+    }
+    .modalAddToCart {
+        width: 133px;
+        font-size: 17px;
+        height: 46px;
+        margin-left: 0px;
+    }
+    .drinksModalFullPrice {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 0px;
+    }
+    .drinksTgList{
+        margin-left: 39px;
+    } */
+}
+
+@media only screen and (min-width: 320px) and (max-width:374px){
+     
+    /* TESTING */
+    .navBarLinks{
+        display: block;
+    }
+
+
+
+    .headerParagraph {
+        font-size: 12px;
+    }
+    .header-Contact {
+        padding: 5px;
+        height: 27px;
+        text-align: center;
+    }
+    footer {
+        height: 20px;
+        font-size: 12px;
+    }
+    .centeredContainer {
+        padding: 0px 6px 0px 20px;
+    }
+    .headerNavBar {
+        margin: 20px;
+    }
+    .logoHeader {
+        height: 70px;
+    }
+    .logoText {
+        font-size: 18px;
+        margin-left: 11px;
+    }
+    .navBarLinks{
+        margin-right: -34px;
+    }
+    .titleForPages {
+        font-size: 17px;
+        margin-top: 47px;
+        margin-left: 30px;
+        margin-bottom: 0px;
+    }
+    .centeredContainer .flex-sm-column{
+        width: 155px;
+        height: 172px;
+    }
+    .cardItemContent {
+        height: 84px;
+    }
+    .centeredContainer .cardTitle {
+        font-size: 15px !important;
+        width: 160px;
+    }
+    .cardTitle {
+        top: 4px;
+        left: 8px;
+    }
+    .centeredContainer .itemPrice {
+        font-size: 16px;
+        width: 89px;
+        height: 32px;
+    }
+    .itemPrice {
+        right: 8px;
+        top: 49px;
+    }
+
+    .modalItem{
+        min-width: 300px;
+        min-height: 328px;
+        padding: 10px;
+        top: 328px;
+    }
+    .modalItemTitle {
+        margin-top: 4px;
+        margin-left: 9px;
+        font-size: 18px;
+    }
+    .close{
+        margin-top: -23px;
+        margin-right: -19px;
+    }
+    .foodModalIngredientsParagraph {
+        font-size: 15px;
+        margin: 10px;
+    }
+    .foodModalIngredientsList {
+        font-size: 13px;
+        margin-left: 12px;
+    }
+    .foodModalExtras {
+        width: 36%;
+    }
+    .foodModalExtrasParagraph {
+        font-size: 15px;
+        margin: 10px;
+        margin-left: 2px;
+    }
+    .foodModalExtrasList {
+        font-size: 13px;
+        margin: 0px 2px;
+    }
+    #modalFoodItemImage{
+        width: 146px;
+    }
+    .foodModalAllergensParagraph {
+        font-size: 12px;
+        margin-top: 7px;
+    }
+    #foodModalNote {
+        height: 50px;
+        padding: 9px;
+        font-size: 11px;
+        margin-bottom: 17px;
+        margin-top: 17px;
+    }
+    .modalAddToCart {
+        font-size: 11px;
+        width: 126px;
+        height: 33px;
+        margin-left: 40px;
+        margin-top: 0px;
+    }
+    .modalFooter{
+        width: 335px;
+        margin-top: -11px;
+        margin-left: -11px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .tg-list p {
+        font-size: 11px;
+        margin: 9px 5px 0px 6px;
+        height: 23px;
+    }
+    .tg-list{
+        width: 220px;
+        height: 25px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+    #modalQuantity{
+        display: none;
+    }
+    .addAndRemoveModalQuantity {
+        height: 22px;
+        width: 19px;
+        font-size: 14px;
+        margin: 4px 3px 0px 10px;
+    }
+    .modalItemQuantity {
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 9px;
+    }
+    .groupModalQuantity{
+        margin-left: -4px;
+        margin-bottom: 10px;
+        width: 211px;
+        height: 24px;
+        margin-top: -11px;
+    }
+    .modalFullPrice {
+        font-size: 22px;
+        margin-left: -125px;
+    }
+    .card-img-top{
+        height: 72px;
+    }
+    .foodMenuNavigation {
+        margin-left: -6px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .dropdown-main-button{
+        display: none;
+    }
+    .foodMenuButton:first-child {
+        margin: 0px 22px 0px 30px !important;
+    }
+    .foodMenuButton{
+        width: 113px;
+        padding: 0px 0px;
+        font-size: 17px;
+        height: 45px;
+    }
+    .contact {
+        margin-left: 0px;
+        height: 580px;
+    }
+    .mail_form {
+        font-size: 12px;
+        padding: 0px 12px;
+    }
+    #name, #email, #phone, #text {
+        margin-bottom: 5px;
+        padding: 3px 9px;
+    }
+    #contact-form{
+        line-height: 22px;
+    }
+    #text {
+        height: 82px;
+    }
+    .headers_contact {
+        font-size: 16px;
+    }
+    #btn_send {
+        font-size: 13px;
+        padding: 5px;
+        width: 103px;
+        margin-top: -6px;
+    }
+    .call_us{
+        margin-top: 51px;
+    }
+    .phone{
+        font-size: 18px;
+        margin-top: 11px;
+    }
+    .headers_contact_hours {
+        font-size: 16px;
+    }
+    .days_of_week {
+        font-size: 13px;
+    }
+    .address {
+        font-size: 13px;
+        margin-top: -13px;
+        color: #C8B273;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 20px;
+    }
+    .productContainer{
+        width: 207px;
+        height: 190px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .cardProductImage {
+        width: 120px;
+        height: 64px;
+        margin-left: -145px;
+        margin-top: 5px;
+    }
+    .removeProduct {
+        margin-right: 8.5px;
+        font-size: 17px;
+        margin-left: 8.5px;
+    }
+    .quantityParagraph{
+        display: none;
+    }
+    .producCardTitle {
+        padding-left: 10px;
+        font-size: 23px;
+    }
+    .containerCardPrice{
+        margin-right: 37px;
+        margin-left: 8px;
+    }
+    .quantityContainer{
+        margin-left: -100px;
+    }
+    .productQuantityNumber {
+        margin: 0px 14px;
+        font-size: 18px;
+    }
+    .quantityStyleButtons {
+        height: 24px;
+        width: 23px;
+    }
+    .phoneHeader {
+        margin-left: 32.7px;
+    }
+
+    /* DRINK MODAL */
+/*     
+    #drinksModalNote {
+        font-size: 12px;
+        width: 242px;
+        height: 54px;
+        margin: 16px 20px 0px 22px;
+        padding: 8px;
+    }
+    .drinksTgList {
+        margin-top: 18px;
+        margin-bottom: 15px;
+        margin-left: 48px;
+    }
+    .modalFullPrice {
+        font-size: 22px;
+        margin-left: -103px;
+    }
+    .drinksModalItemTitleLine{
+        margin-top: 0px;
+    }
+    .drinksModalAdds{
+        margin-top: -26px;
+    }
+    .drinksModalContent {
+        width: 294px;
+        height: 515px;
+        top: 23px;
+        left: 34px;
+    }
+    #drinksModalQuantity{
+        display: none;
+    }
+    .addAndRemoveModalQuantity {
+        height: 26px;
+        width: 26px;
+        border-radius: 3px;
+        font-size: 16px;
+        margin: 4px 8px 0px 6px;
+    }
+    .close{
+        margin-top: -14px;
+        margin-right: -14px;
+    }
+    .modalItemTitle{
+        margin-top: 25px;
+        margin-left: 28px;
+    }
+    .drinksModalItemQuantity{
+        font-weight: 600;
+        margin: 0px 5px;
+    }
+    .drinksModalItemImage {
+        width: 235px;
+        height: 135px;
+        margin-left: 25px;
+        margin-top: 27px;
+    }
+    .drinksModalDivider {
+        width: 226px;
+    }
+    .drinksModalItemTitleLine{
+        margin-left: 28px;
+    }
+    .tg-list p {
+        font-size: 13px;
+        height: 24px;
+    }
+    .groupModalQuantity {
+        font-size: 16px;
+        margin-left: 110px;
+    }
+    .drinksGroupModalQuantity {
+        margin-top: 8px;
+    }
+    .drinksModalAddToCart {
+        margin-top: 22px;
+    }
+    .modalAddToCart {
+        width: 133px;
+        font-size: 17px;
+        height: 46px;
+        margin-left: 0px;
+    }
+    .drinksModalFullPrice {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 0px;
+    }
+    .drinksTgList{
+        margin-left: 39px;
+    } */
+}
+
