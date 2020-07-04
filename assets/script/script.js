@@ -508,7 +508,7 @@ card.addEventListener('click', function() {
 });
 
 function filterAndPrintEventListeners() {
-    mainContainer.style = 'margin-bottom: 30px;';
+    mainContainer.style = 'margin-bottom: 83px;';
     document.getElementById(`menuAll`).addEventListener(`click`, function() {
         printMenu('menuAll', 'All', newestModalForFood + modalForDrinks, columnSaved);
     });
@@ -530,7 +530,7 @@ function filterAndPrintEventListeners() {
 }
 
 function printMenu(menuNavigation, navigation, modal, column) {
-    mainContainer.style = 'margin-bottom: 30px;';
+    mainContainer.style = 'margin-bottom: 83px;';
     if (navigation != 'most ordered') {
         mainContainer.innerHTML = menuNav;
         document.getElementById(menuNavigation).classList.add(`selected`);
