@@ -13,142 +13,146 @@
 *,
 *::after,
 *::before {
-	-webkit-user-select: none;
-	-webkit-user-drag: none;
-	-webkit-app-region: no-drag;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-app-region: no-drag;
 }
 
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-	margin: 0;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	font-weight: 400;
-	line-height: 1.5;
-	color: #212529;
-	text-align: left;
-	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../images/background.png);
-	background-repeat: repeat;
-	overflow-x: hidden;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../images/background.png);
+    background-repeat: repeat;
+    overflow-x: hidden;
 }
 
 p {
-	margin: 0 0 0 0;
+    margin: 0 0 0 0;
 }
+
 
 /* START HEADER */
 
 .header-Contact {
     padding: 8px 139px;
-	background-color: #c8b273;
-	height: 40px;
+    background-color: #c8b273;
+    height: 40px;
 }
 
 .headerParagraph {
-	font-family: 'Lato', sans-serif;
-	color: white;
-	font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 18px;
 }
 
 .envelopeHeader {
-	margin-right: 17.5px;
+    margin-right: 17.5px;
 }
 
 .phoneHeader {
-	margin-left: 51.7px;
-	margin-right: 14.7px;
+    margin-left: 51.7px;
+    margin-right: 14.7px;
 }
 
 .headerNavBar {
-	margin: 65px 179px 142px 157px;
-	display: flex;
-	align-items: center;
-	position: relative;
+    margin: 65px 179px 142px 157px;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .logoHeader {
-	height: 116px;
+    height: 116px;
 }
 
 .logoText {
-	font-family: 'Raleway', sans-serif;
-	font-size: 24px;
-	margin-left: 30px;
-	color: #c8b273;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    margin-left: 30px;
+    color: #c8b273;
 }
 
 .navBarLinks {
-	display: flex;
-	position: absolute;
-	align-items: center;
-	right: 0;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    right: 0;
 }
 
 .navBarLinks div {
-	font-family: 'Raleway', sans-serif;
-	color: #c8b273;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 18px;
-	margin-right: 55px;
+    font-family: 'Raleway', sans-serif;
+    color: #c8b273;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-right: 55px;
 }
 
 .navBarLinks div:hover {
-	cursor: pointer;
-	color: rgb(250, 177, 115);
+    cursor: pointer;
+    color: rgb(250, 177, 115);
 }
 
 .navBarLinks div:last-child {
-	margin-right: 0px;
+    margin-right: 0px;
 }
 
 .cartButton {
-	position: relative;
+    position: relative;
 }
 
 .inCartQuantity {
-	font-family: 'Lato', sans-serif !important;
-	font-weight: bold;
-	border: 0;
-	background-color: #c8b273;
-	width: 28px;
-	height: 28px;
-	border-radius: 15px;
-	color: white !important;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
-	top: -10px;
-	right: -10px;
+    font-family: 'Lato', sans-serif !important;
+    font-weight: bold;
+    border: 0;
+    background-color: #c8b273;
+    width: 28px;
+    height: 28px;
+    border-radius: 15px;
+    color: white !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -10px;
+    right: -10px;
 }
 
 #loginButton {
-	border: 0px;
-	background-color: #c8b273;
-	color: white;
-	padding: 10px 47px;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-ms-border-radius: 5px;
-	-o-border-radius: 5px;
-	margin-bottom: 10px;
+    border: 0px;
+    background-color: #c8b273;
+    color: white;
+    padding: 10px 47px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 #loginButton:hover {
-	color: #c8b273;
-	background-color: white;
+    color: #c8b273;
+    background-color: white;
 }
+
 
 /* END HEADER */
 
+
 /* START MAINPAGE */
+
 
 /* .main {
 	display: flex;
@@ -158,8 +162,8 @@ p {
 } */
 
 .main-container {
-	margin-bottom: 110px;
-	/* display: flex;
+    margin-bottom: 110px;
+    /* display: flex;
 	width: 80%;
 	flex-direction: column; */
 }
@@ -174,432 +178,446 @@ p {
 }
 
 .centeredContainer {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .centeredContainer .col-sm-2 {
-	padding: 0 0 0 0;
+    padding: 0 0 0 0;
 }
 
 .centeredContainer .cardTitle {
-	font-family: 'Raleway', sans-serif;
-	font-size: 24px !important;
-	width: 163px;
-	font-weight: bold;
-	display: inline-flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px !important;
+    width: 163px;
+    font-weight: bold;
+    display: inline-flex;
 }
 
 .centeredContainer .itemPrice {
-	font-size: 18px;
-	font-weight: bold;
-	display: inline-flex;
-	background-color: #cc1149;
-	width: 108px;
-	height: 32px;
-	color: white;
-	justify-content: center;
-	align-items: center;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-ms-border-radius: 3px;
-	-o-border-radius: 3px;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-flex;
+    background-color: #cc1149;
+    width: 108px;
+    height: 32px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .flex-sm-column {
-	margin-top: 25px;
-	height: auto;
-	border-radius: 5px;
-	border: none;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-ms-border-radius: 5px;
-	-o-border-radius: 5px;
+    margin-top: 25px;
+    height: auto;
+    border-radius: 5px;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 .cardImageContainer {
-	overflow: hidden;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-img-top {
-	height: 100%;
-	width: 100%;
-	background-size: cover;
-	background-repeat: no-repeat;
-	-webkit-transition: all .5s;
-	-moz-transition: all .5s;
-	-o-transition: all .5s;
-	transition: all .5s;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
 }
 
 .cardImageContainer:hover .card-img-top,
 .cardImageContainer:focus .card-img-top {
-	transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .cardImageContainer:hover .card-img-top:before,
 .cardImageContainer:focus .card-img-top:before {
-	display: block;
+    display: block;
 }
+
 
 /* onerror */
 
 .onerrorImage {
-	height: 235px !important;
-	width: 382px !important;
+    height: 235px !important;
+    width: 382px !important;
 }
 
 .onerrorImageModal {
-	height: 237px !important;
-	width: 375px !important;
+    height: 237px !important;
+    width: 375px !important;
 }
 
 .onerrorImageModalDrinks {
-	height: 173px !important;
-	width: 297px !important;
+    height: 173px !important;
+    width: 297px !important;
 }
 
 .cardItemContent {
-	position: relative;
-	height: 110px;
-	background-color: white;
-	border-radius: 0px 0px 5px 5px;
-	-webkit-border-radius: 0px 0px 5px 5px;
-	-moz-border-radius: 0px 0px 5px 5px;
-	-ms-border-radius: 0px 0px 5px 5px;
-	-o-border-radius: 0px 0px 5px 5px;
+    position: relative;
+    height: 110px;
+    background-color: white;
+    border-radius: 0px 0px 5px 5px;
+    -webkit-border-radius: 0px 0px 5px 5px;
+    -moz-border-radius: 0px 0px 5px 5px;
+    -ms-border-radius: 0px 0px 5px 5px;
+    -o-border-radius: 0px 0px 5px 5px;
 }
 
 .itemPrice {
-	position: absolute;
-	right: 20px;
-	top: 20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
 
 .cardTitle {
-	position: absolute;
-	top: 20px;
-	left: 17px;
+    position: absolute;
+    top: 20px;
+    left: 17px;
 }
 
 .pointer {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .itemImageText {
-	color: white;
-	font-family: 'Raleway', sans-serif;
-	font-size: 24px;
-	position: absolute;
-	display: none;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    position: absolute;
+    display: none;
 }
 
 .cardImageContainer:hover .itemImageText,
 .cardImageContainer:focus .itemImageText {
-	z-index: 999;
-	display: block;
+    z-index: 999;
+    display: block;
 }
 
 footer {
-	font-family: 'Lato', sans-serif;
-	height: 50px;
-	background-color: #c8b273;
-	color: #FFFF;
-	font-size: 18px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    font-family: 'Lato', sans-serif;
+    height: 50px;
+    background-color: #c8b273;
+    color: #FFFF;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modalItem {
-	position: absolute;
-	top: 400px;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	min-width: 1000px;
-	min-height: auto;
-	padding: 41px 29px 26px 30px;
-	border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-ms-border-radius: 10px;
-	-o-border-radius: 10px;
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	-o-transform: translate(-50%, -50%);
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 1000px;
+    min-height: auto;
+    padding: 41px 29px 26px 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
 
 .modalItemTitle {
-	margin-top: 41px;
-	margin-left: 20px;
-	font-family: 'Raleway', sans-serif;
-	font-size: 32px;
+    margin-top: 41px;
+    margin-left: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
 }
 
 .modalItemTitleLine {
-	background-color: #cc1149;
-	margin-left: 20px;
-	width: 100px;
-	height: 3px;
+    background-color: #cc1149;
+    margin-left: 20px;
+    width: 100px;
+    height: 3px;
 }
 
 .xModal {
-	color: black !important;
-	position: absolute;
-	top: 34.9px;
-	right: 34.9px;
+    color: black !important;
+    position: absolute;
+    top: 34.9px;
+    right: 34.9px;
 }
 
 .modaladds {
-	display: inline-flex;
-	margin: 28px 0px 28px 20px;
+    display: inline-flex;
+    margin: 28px 0px 28px 20px;
 }
+
 
 /* new food modal ingredients */
 
 .foodModalIngredients {
-	display: flex;
-	flex-direction: column;
-	width: 30%;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
 }
+
 
 /* foodModalIngredientsParagraph */
 
 .foodModalIngredientsParagraph {
-	font-size: 22px;
-	font-family: 'Lato', sans-serif;
-	font-weight: bold;
-	margin: 28px 0px 28px 20px;
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    margin: 28px 0px 28px 20px;
 }
 
 .foodModalIngredientsList {
-	list-style: none;
-	font-size: 22px;
-	font-family: 'Lato', sans-serif;
-	font-weight: normal;
-	margin-left: 26px;
+    list-style: none;
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    margin-left: 26px;
 }
+
 
 /* foodModalExtras */
 
 .foodModalExtrasParagraph {
-	font-size: 22px;
-	font-family: 'Lato', sans-serif;
-	font-weight: bold;
-	margin: 28px 30px;
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    margin: 28px 30px;
 }
 
-ul#foodModalExtrasList > li > label {
-	font-weight: normal;
-	cursor: pointer;
+ul#foodModalExtrasList>li>label {
+    font-weight: normal;
+    cursor: pointer;
 }
 
 .foodModalExtrasList {
-	list-style: none;
-	font-size: 22px;
-	font-family: 'Lato', sans-serif;
-	font-weight: normal;
-	justify-content: center;
-	display: flex;
-	flex-direction: column;
-	align-self: flex-start;
-	margin: 0px 30px;
+    list-style: none;
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin: 0px 30px;
 }
 
 .foodModalExtras {
-	display: flex;
-	flex-direction: column;
-	width: 30%;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
 }
+
 
 /* foodModalItemImage */
 
 .modalImageAndAllergensDiv {
-	display: flex;
-	flex-direction: column;
-	margin: 21px 20px 0px 0px;
-	width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 21px 20px 0px 0px;
+    width: 40%;
 }
 
 .foodModalAllergensParagraph {
-	align-self: flex-end;
-	font-size: 18px;
-	font-weight: bold;
-	font-style: italic;
-	font-family: 'Lato', sans-serif;
-	color: #cc1149;
-	margin-top: 18px;
+    align-self: flex-end;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Lato', sans-serif;
+    color: #cc1149;
+    margin-top: 18px;
 }
+
 
 /* food modal note */
 
 #foodModalNote {
-	width: 100%;
-	height: 91px;
-	resize: none;
-	border-radius: 5px;
-	padding: 15px;
-	border-color: #dadada;
-	font-family: 'Lato', sans-serif;
-	font-style: italic;
-	font-size: 13px;
-	margin-top: 55px;
+    width: 100%;
+    height: 91px;
+    resize: none;
+    border-radius: 5px;
+    padding: 15px;
+    border-color: #dadada;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-size: 13px;
+    margin-top: 55px;
 }
 
 .modalFooter {
-	align-self: center;
+    align-self: center;
 }
 
 .modalIngredients li:first-child,
 .modalExtras li:first-child {
-	margin-top: 28px;
+    margin-top: 28px;
 }
 
 .modalIngredients li,
 .modalExtras li {
-	font-family: 'Lato', sans-serif;
-	font-weight: normal;
-	font-size: 22px;
-	margin-left: 6px;
-	min-height: 30px;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 22px;
+    margin-left: 6px;
+    min-height: 30px;
 }
 
 .modalExtras label {
-	font-family: 'Lato', sans-serif;
-	font-weight: normal;
-	font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 22px;
 }
 
 .modalExtras {
-	font-family: 'Lato', sans-serif;
-	font-weight: bold;
-	font-size: 22px;
-	margin-left: 171px;
-	width: 250px;
-	list-style-type: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    margin-left: 171px;
+    width: 250px;
+    list-style-type: none;
 }
 
 .modalItemImage {
-	width: 280px;
-	height: 173px;
-	margin-right: 47px;
+    width: 280px;
+    height: 173px;
+    margin-right: 47px;
 }
 
 .modalItemCheck {
-	color: #22b571;
-	margin-right: 11px;
+    color: #22b571;
+    margin-right: 11px;
 }
+
 
 /* new */
 
 #inModalContent {
-	display: flex;
+    display: flex;
 }
+
 
 /*** custom checkboxes ***/
 
 input[type=checkbox] {
-	display: none;
+    display: none;
 }
+
 
 /* to hide the checkbox itself */
 
-input[type=checkbox] + label:before {
-	font-family: FontAwesome;
-	display: inline-block;
+input[type=checkbox]+label:before {
+    font-family: FontAwesome;
+    display: inline-block;
 }
 
-input[type=checkbox] + label:before {
-	content: "\f096";
+input[type=checkbox]+label:before {
+    content: "\f096";
 }
+
 
 /* unchecked icon */
 
-input[type=checkbox] + label:before {
-	letter-spacing: 10px;
+input[type=checkbox]+label:before {
+    letter-spacing: 10px;
 }
+
 
 /* space between checkbox and label */
 
-input[type=checkbox]:checked + label:before {
-	content: "\f046";
-	color: #22b571;
+input[type=checkbox]:checked+label:before {
+    content: "\f046";
+    color: #22b571;
 }
+
 
 /* checked icon */
 
-input[type=checkbox]:checked + label:before {
-	letter-spacing: 5px;
+input[type=checkbox]:checked+label:before {
+    letter-spacing: 5px;
 }
+
 
 /* allow space for check mark */
 
 #modalNote {
-	font-size: 15px;
-	font-family: 'Lato', sans-serif;
-	width: 897px;
-	height: 91px;
-	border: solid 1px;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-ms-border-radius: 5px;
-	-o-border-radius: 5px;
-	outline: none;
-	padding: 15px;
-	resize: none;
-	border-color: #dadada;
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    width: 897px;
+    height: 91px;
+    border: solid 1px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    outline: none;
+    padding: 15px;
+    resize: none;
+    border-color: #dadada;
 }
 
 #modalNote::placeholder {
-	font-family: 'Lato', sans-serif;
-	font-weight: normal;
-	font-style: italic;
-	color: #dadada;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    color: #dadada;
 }
 
 .modalDivider {
-	width: 903px;
-	height: 1px;
-	color: #707070;
+    width: 903px;
+    height: 1px;
+    color: #707070;
 }
+
 
 /* checkbox toggle */
 
 label {
-	margin-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .modalFooter {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .tg-list {
-	list-style-type: none;
-	display: flex;
-	width: 280px;
-	height: 25px;
-	margin-bottom: 0;
-	align-items: center;
+    list-style-type: none;
+    display: flex;
+    width: 280px;
+    height: 25px;
+    margin-bottom: 0;
+    align-items: center;
 }
 
 .tg-list p {
-	font-family: 'Lato', sans-serif;
-	font-weight: bold;
-	font-size: 16px;
-	align-items: center;
-	margin: 0 20px 0px 20px;
-	height: 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    align-items: center;
+    margin: 0 20px 0px 20px;
+    height: 25px;
 }
 
 .tgl {
-	display: none;
+    display: none;
 }
 
 .tgl,
@@ -608,8 +626,8 @@ label {
 .tgl *,
 .tgl *:after,
 .tgl *:before,
-.tgl + .tgl-btn {
-	box-sizing: border-box;
+.tgl+.tgl-btn {
+    box-sizing: border-box;
 }
 
 .tgl::selection,
@@ -618,92 +636,92 @@ label {
 .tgl *::selection,
 .tgl *:after::selection,
 .tgl *:before::selection,
-.tgl + .tgl-btn::selection {
-	background: none;
+.tgl+.tgl-btn::selection {
+    background: none;
 }
 
-.tgl + .tgl-btn {
-	outline: 0;
-	display: block;
-	width: 4em;
-	height: 2em;
-	position: relative;
-	cursor: pointer;
-	user-select: none;
+.tgl+.tgl-btn {
+    outline: 0;
+    display: block;
+    width: 4em;
+    height: 2em;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
 }
 
-.tgl + .tgl-btn:after,
-.tgl + .tgl-btn:before {
-	position: relative;
-	display: block;
-	content: "";
-	width: 50%;
-	height: 100%;
+.tgl+.tgl-btn:after,
+.tgl+.tgl-btn:before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
 }
 
-.tgl + .tgl-btn:after {
-	left: 0;
+.tgl+.tgl-btn:after {
+    left: 0;
 }
 
-.tgl + .tgl-btn:before {
-	display: none;
+.tgl+.tgl-btn:before {
+    display: none;
 }
 
-.tgl:checked + .tgl-btn:after {
-	left: 50%;
+.tgl:checked+.tgl-btn:after {
+    left: 50%;
 }
 
-.tgl:checked + .tgl-btn:after {
-	left: 50%;
+.tgl:checked+.tgl-btn:after {
+    left: 50%;
 }
 
-.tgl-light + .tgl-btn {
-	background: #fff;
-	border-radius: 2em;
-	transition: all 0.4s ease;
+.tgl-light+.tgl-btn {
+    background: #fff;
+    border-radius: 2em;
+    transition: all 0.4s ease;
 }
 
-.tgl-light + .tgl-btn:after {
-	border-radius: 50%;
-	background: #fff;
-	transition: all 0.2s ease;
+.tgl-light+.tgl-btn:after {
+    border-radius: 50%;
+    background: #fff;
+    transition: all 0.2s ease;
 }
 
-.tgl-light:checked + .tgl-btn {
-	background: #fff;
+.tgl-light:checked+.tgl-btn {
+    background: #fff;
 }
 
-.tgl-ios + .tgl-btn {
-	background: #fff;
-	border-radius: 2em;
-	transition: all 0.4s ease;
-	border: 1px solid #c8b273;
+.tgl-ios+.tgl-btn {
+    background: #fff;
+    border-radius: 2em;
+    transition: all 0.4s ease;
+    border: 1px solid #c8b273;
 }
 
-.tgl-ios + .tgl-btn:after {
-	border-radius: 2em;
-	background: #c8b273;
-	transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
-	-webkit-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
-	-moz-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
-	-ms-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
-	-o-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+.tgl-ios+.tgl-btn:after {
+    border-radius: 2em;
+    background: #c8b273;
+    transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+    -webkit-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+    -moz-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+    -ms-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+    -o-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
 }
 
-.tgl-ios:checked + .tgl-btn {
-	background: #fff;
+.tgl-ios:checked+.tgl-btn {
+    background: #fff;
 }
 
-.tgl-ios:checked + .tgl-btn:active {
-	box-shadow: none;
+.tgl-ios:checked+.tgl-btn:active {
+    box-shadow: none;
 }
 
 .eatThere {
-	margin-left: 0px !important;
+    margin-left: 0px !important;
 }
 
 .eatOrPickSelected {
-	border-bottom: 2px solid #c8b273;
+    border-bottom: 2px solid #c8b273;
 }
 
 .groupModalQuantity {
@@ -715,72 +733,74 @@ label {
 }
 
 #modalQuantity {
-	font-family: 'Lato', sans-serif;
-	font-weight: normal;
-	font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
 }
 
 .addAndRemoveModalQuantity {
-	height: 25px;
-	width: 25px;
-	background-color: white;
-	border: solid #dadada 1px;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-ms-border-radius: 3px;
-	-o-border-radius: 3px;
-	font-weight: bold;
-	font-size: 15px;
-	margin: 0px 20px 0px 20px;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border: solid #dadada 1px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0px 20px 0px 20px;
 }
 
 .addAndRemoveModalQuantity:focus {
-	outline: none;
+    outline: none;
 }
 
 .addAndRemoveModalQuantity:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .modalItemQuantity {
-	font-family: 'Lato', sans-serif;
-	font-weight: bold;
-	font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .modalAddToCart {
-	text-transform: uppercase;
-	font-family: 'Lato', sans-serif;
-	font-weight: normal;
-	font-size: 18px;
-	width: 197px;
-	height: 58px;
-	color: white;
-	background-color: #c8b273;
-	border: none;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-ms-border-radius: 5px;
-	-o-border-radius: 5px;
-	margin-left: 30px;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    width: 197px;
+    height: 58px;
+    color: white;
+    background-color: #c8b273;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-left: 30px;
 }
 
 .modalAddToCart {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .modalFullPrice {
-	text-align: center;
-	font-family: 'Lato', sans-serif;
-	font-weight: bold;
-	font-size: 32px;
-	color: #c8b273;
-	margin-left: 30px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: #c8b273;
+    margin-left: 30px;
 }
 
+
 /* MENU START */
+
 
 /* MENU BUTTONS AND MENU NAV */
 
@@ -792,7 +812,7 @@ label {
 }
 
 .foodMenuButton {
-	display: flex;
+    display: flex;
     align-items: center;
     font-size: 22px;
     font-family: 'Raleway', sans-serif;
@@ -808,22 +828,23 @@ label {
 }
 
 .foodMenuButton:first-child {
-	margin: 0px 30px 0px 0px !important;
+    margin: 0px 30px 0px 0px !important;
 }
 
 .foodMenuButton:last-child {
-	margin: 0px 0px 0px 30px !important;
+    margin: 0px 0px 0px 30px !important;
 }
 
 .foodMenuButton:hover {
-	cursor: pointer;
-	color: rgb(250, 177, 115);
+    cursor: pointer;
+    color: rgb(250, 177, 115);
 }
 
 .foodMenuNavigation .selected {
-	color: white;
-	background-color: #c8b273;
+    color: white;
+    background-color: #c8b273;
 }
+
 
 /* DRINKS MODAL */
 
@@ -833,85 +854,86 @@ label {
 }
 
 .drinksModalItemTitleLine {
-	background-color: #cc1149;
-	margin-left: 50px;
-	width: 100px;
-	height: 3px;
-	border: none;
+    background-color: #cc1149;
+    margin-left: 50px;
+    width: 100px;
+    height: 3px;
+    border: none;
 }
 
 .drinksModalItemImage {
-	width: 297px;
-	height: 173px;
-	margin-left: 44px;
-	margin-top: 27px;
+    width: 297px;
+    height: 173px;
+    margin-left: 44px;
+    margin-top: 27px;
 }
 
 #drinkModalNote {
-	font-size: 13px;
-	font-style: italic;
-	font-family: 'Lato', sans-serif;
-	width: 286px;
-	height: 91px;
-	margin: 27px 48px 0px 50px;
-	border-radius: 5px;
-	border: solid 1px #dadada;
-	resize: none;
-	padding: 15px;
+    font-size: 13px;
+    font-style: italic;
+    font-family: 'Lato', sans-serif;
+    width: 286px;
+    height: 91px;
+    margin: 27px 48px 0px 50px;
+    border-radius: 5px;
+    border: solid 1px #dadada;
+    resize: none;
+    padding: 15px;
 }
 
 #drinkModalNote::placeholder {
-	font-family: 'Lato', sans-serif;
-	font-weight: normal;
-	font-style: italic;
-	color: #dadada;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    color: #dadada;
 }
 
 .drinkModalNote {
-	width: 323px;
-	margin-left: 31px;
-	background-color: #e3e3e3;
-	border: none;
-	height: 1px;
-	margin-top: 13px;
-	margin-bottom: 0px;
+    width: 323px;
+    margin-left: 31px;
+    background-color: #e3e3e3;
+    border: none;
+    height: 1px;
+    margin-top: 13px;
+    margin-bottom: 0px;
 }
 
 .drinksModalFooter {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .drinksTgList {
-	margin-top: 27px;
-	width: unset;
+    margin-top: 27px;
+    width: unset;
 }
 
 .pickUpDrinks {
-	margin-right: 0px;
+    margin-right: 0px;
 }
 
 .drinksGroupModalQuantity {
-	margin-top: 14px;
-	width: unset;
-	margin-left: 0px;
+    margin-top: 14px;
+    width: unset;
+    margin-left: 0px;
 }
 
 .drinksModalAddToCart {
-	margin: unset;
-	margin-top: 27px;
+    margin: unset;
+    margin-top: 27px;
 }
 
 .drinksModalFullPrice {
-	margin: unset;
-	margin-top: 14px;
-	margin-bottom: 23px;
+    margin: unset;
+    margin-top: 14px;
+    margin-bottom: 23px;
 }
 
 .drinksModalItemTitle {
-	margin-left: 50px;
+    margin-left: 50px;
 }
+
 
 /* Dropdown menu */
 
@@ -922,248 +944,256 @@ label {
 }
 
 .dropdown-main-button:hover {
-	background-color: transparent !important;
-	border: none !important;
-	outline: none !important;
-	box-shadow: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .dropdown-main-button:focus {
-	background-color: transparent !important;
-	border: none !important;
-	outline: none !important;
-	box-shadow: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .dropdown-main-button:active {
-	background-color: transparent !important;
-	border: none !important;
-	outline: none !important;
-	box-shadow: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .dropdown-design {
-	border: none !important;
-	background-color: transparent !important;
-	outline: none !important;
-	color: #c8b273;
-	box-shadow: none !important;
-	font-family: 'Lato', sans-serif;
-	font-weight: bold;
-	font-size: 18px;
+    border: none !important;
+    background-color: transparent !important;
+    outline: none !important;
+    color: #c8b273;
+    box-shadow: none !important;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .dropdown-design:hover {
-	background-color: transparent !important;
-	border: none !important;
-	outline: none !important;
-	box-shadow: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .dropdown-design:focus {
-	background-color: transparent !important;
-	border: none !important;
-	outline: none !important;
-	box-shadow: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .dropdown-design:active {
-	background-color: transparent !important;
-	border: none !important;
-	outline: none !important;
-	box-shadow: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
+
 
 /* list view */
 
 .listCardElement {
-	display: flex;
+    display: flex;
 }
 
 .cardItemListContent {
-	height: 138px;
-	width: 100%;
-	position: relative;
-	border-radius: 0px 5px 5px 0px;
-	background-color: white;
+    height: 138px;
+    width: 100%;
+    position: relative;
+    border-radius: 0px 5px 5px 0px;
+    background-color: white;
 }
 
 .imageListSize {
-	height: 138px !important;
-	width: 224px !important;
+    height: 138px !important;
+    width: 224px !important;
 }
 
 .cardListTitle {
-	font-family: 'Raleway', sans-serif;
-	font-size: 40px !important;
-	font-weight: bold;
-	display: inline-flex;
-	position: absolute;
-	top: 35px;
-	left: 36px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px !important;
+    font-weight: bold;
+    display: inline-flex;
+    position: absolute;
+    top: 35px;
+    left: 36px;
 }
 
 .itemListPrice {
-	font-size: 24px;
-	font-weight: bold;
-	display: inline-flex;
-	background-color: #cc1149;
-	width: 145px;
-	height: 43px;
-	color: white;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	right: 37px;
-	top: 45px;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-ms-border-radius: 3px;
-	-o-border-radius: 3px;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-flex;
+    background-color: #cc1149;
+    width: 145px;
+    height: 43px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 37px;
+    top: 45px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
+
 
 /* CARD */
 
 .productContainer {
-	align-items: center;
-	display: flex;
-	background-color: white;
-	width: 100%;
-	height: 138px;
+    align-items: center;
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 138px;
 }
 
 .removeProduct {
-	margin-right: 39.5px;
-	font-size: 30px;
-	margin-left: 44.5px;
+    margin-right: 39.5px;
+    font-size: 30px;
+    margin-left: 44.5px;
 }
 
 .cardProductImage {
-	width: 164px;
-	height: 100px;
+    width: 164px;
+    height: 100px;
 }
 
 .producCardTitle {
-	width: 55%;
-	padding-left: 41px;
-	font-family: 'Raleway', sans-serif;
-	font-size: 40px;
-	font-weight: bold;
+    width: 55%;
+    padding-left: 41px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .quantityContainer {
-	display: flex;
-	vertical-align: center;
-	align-items: center;
+    display: flex;
+    vertical-align: center;
+    align-items: center;
 }
 
 .quantityParagraph {
-	font-size: 24px;
-	font-family: 'Lato', sans-serif;
-	padding-right: 35px;
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+    padding-right: 35px;
 }
 
 .btnQuantityStyle {
-	width: 35px;
-	border: none;
-	height: 36px;
+    width: 35px;
+    border: none;
+    height: 36px;
 }
 
 .productQuantityNumber {
-	margin: 0px 25px;
-	font-size: 24px;
-	font-family: 'Lato', sans-serif;
-	font-weight: bold;
+    margin: 0px 25px;
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
 }
 
 .containerCardPrice {
-	color: white;
-	margin-right: 37px;
-	margin-left: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-width: 145px;
-	height: 43px;
-	background-color: white;
-	background-color: #cc1149;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-ms-border-radius: 3px;
-	-o-border-radius: 3px;
+    color: white;
+    margin-right: 37px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 145px;
+    height: 43px;
+    background-color: white;
+    background-color: #cc1149;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .productCardPrice {
-	font-size: 24px;
-	font-family: 'Lato', sans-serif;
-	font-weight: bold;
+    font-size: 24px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
 }
 
 .quantityStyleButtons {
-	height: 36px;
-	width: 35px;
-	background-color: white;
-	border: solid #dadada 1px;
-	border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-ms-border-radius: 3px;
-	-o-border-radius: 3px;
-	font-size: 15px;
+    height: 36px;
+    width: 35px;
+    background-color: white;
+    border: solid #dadada 1px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    font-size: 15px;
 }
 
 .removeProduct :hover {
-	color: #cc1149;
+    color: #cc1149;
 }
+
 
 /* ABBR */
 
 abbr[title] {
-	border-bottom: none !important;
-	cursor: pointer !important;
-	text-decoration: none !important;
+    border-bottom: none !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
 }
+
 
 /* CONTACT */
 
-*{
+* {
     margin: 0;
 }
-.contact{
+
+.contact {
     font-weight: 600;
     font-family: 'Raleway', sans-serif;
     height: 550px;
 }
-.map{
+
+.map {
     height: 200px;
     margin-bottom: 0;
     margin-left: 0;
-
 }
+
 .contact {
     margin-left: 30px;
     text-align: center;
 }
 
-.mail_form{
+.mail_form {
     font-size: 16px;
     padding: 0px 50px 0px 110px;
 }
 
-.headers_contact{
+.headers_contact {
     text-align: start;
     color: #C8B273;
     font-size: 20px;
 }
 
-.headers_contact_hours{
+.headers_contact_hours {
     font-size: 20px;
 }
 
-
-#name, #email, #phone, #text {
+#name,
+#email,
+#phone,
+#text {
     margin-bottom: 10px;
     width: 100%;
     border-radius: 5px;
@@ -1171,14 +1201,15 @@ abbr[title] {
     padding: 3px 20px;
 }
 
-#text{
+#text {
     height: 150px;
 }
-#btn_send{
+
+#btn_send {
     font-size: 15px;
     padding: 5px;
     color: black;
-    background-color:rgb(201, 178, 115);
+    background-color: rgb(201, 178, 115);
     cursor: pointer;
     border: none;
     width: 170px;
@@ -1188,11 +1219,11 @@ abbr[title] {
     right: 0;
 }
 
-.number{
+.number {
     text-align: center;
 }
 
-.phone{
+.phone {
     color: black;
     /* background-color:rgb(201, 178, 115); */
     background-color: #cc1149;
@@ -1201,198 +1232,199 @@ abbr[title] {
     padding: 5px;
     font-family: Arial, Helvetica, sans-serif;
     border: 0px;
-    color:black;
+    color: black;
     font-weight: 600;
+}
 
-} 
-
-.working_hours{
+.working_hours {
     text-transform: uppercase;
     color: #C8B273;
-
 }
 
-
-.days_of_week{
+.days_of_week {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
 
-.address{
+.address {
     font-size: 16px;
     color: #C8B273;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
-.iframe{
+.iframe {
     width: 100%;
     height: 200px;
 }
 
+
 /* NEW CARD */
 
 :root {
-	--primaryColor: #f09d51;
-	--mainWhite: #fff;
-	--mainBlack: #222;
-	--mainGrey: #ececec;
-	--mainSpacing: 0.1rem;
-	--mainTransition: all 0.3s linear;
+    --primaryColor: #f09d51;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
 }
 
 .cart-overlay {
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	transition: var(--mainTransition);
-	background: #000000a6;
-	z-index: 2;
-	visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--mainTransition);
+    background: #000000a6;
+    z-index: 2;
+    visibility: hidden;
 }
 
 .cart {
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	overflow: scroll;
-	z-index: 3;
-	background: rgb(231, 226, 221);
-	padding: 1.5rem;
-	transition: var(--mainTransition);
-	transform: translateX(100%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    z-index: 3;
+    background: rgb(231, 226, 221);
+    padding: 1.5rem;
+    transition: var(--mainTransition);
+    transform: translateX(100%);
 }
 
 .showCart {
-	transform: translateX(0);
+    transform: translateX(0);
 }
 
 .transparentBcg {
-	visibility: visible;
-	background-color: #000000a6;
+    visibility: visible;
+    background-color: #000000a6;
 }
 
 @media screen and (min-width: 768px) {
-	.cart {
-		width: 30vw;
-		min-width: 450px;
-	}
+    .cart {
+        width: 30vw;
+        min-width: 450px;
+    }
 }
 
 .close-cart {
-	font-size: 1.7rem;
-	cursor: pointer;
+    font-size: 1.7rem;
+    cursor: pointer;
 }
 
 .cart h2 {
-	text-transform: capitalize;
-	text-align: center;
-	letter-spacing: var(--mainSpacing);
-	margin-bottom: 2rem;
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 2rem;
 }
+
 
 /*---------- Cart Item -------------------- */
 
 .cart-item {
-	display: grid;
-	align-items: center;
-	grid-template-columns: auto 1fr auto;
-	grid-column-gap: 1.5rem;
-	margin: 1.5rem 0;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 1.5rem;
+    margin: 1.5rem 0;
 }
 
 .cart-item img {
-	margin: 2px;
-	height: 70px;
+    margin: 2px;
+    height: 70px;
 }
 
 .cart-item h4 {
-	font-family: 'Raleway', sans-serif;
-	font-size: 12px;
-	width: 163px;
-	font-weight: bold;
-	display: inline-flex;
-	margin-bottom: 0px;
-	margin-top: 0px;
-	text-transform: capitalize;
-	letter-spacing: var(--mainSpacing);
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    width: 163px;
+    font-weight: bold;
+    display: inline-flex;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
 }
 
 .cart-item h5 {
-	text-align: center;
-	font-size: 15px;
-	font-weight: bold;
-	background-color: #cc1149;
-	width: 85px;
-	height: 17px;
-	color: white;
-	margin: 0.5rem 0;
-	padding-top: 1px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #cc1149;
+    width: 85px;
+    height: 17px;
+    color: white;
+    margin: 0.5rem 0;
+    padding-top: 1px;
 }
 
 .item-amount {
-	text-align: center;
+    text-align: center;
 }
 
 .remove-item {
-	color: black;
-	font-weight: bold;
-	cursor: pointer;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .fa-chevron-up,
 .fa-chevron-down {
-	color: var(--primaryColor);
-	cursor: pointer;
+    color: var(--primaryColor);
+    cursor: pointer;
 }
 
 .place-order {
-	border: 1px solid #707070;
-	border-radius: 3px;
-	background: #c8b273;
-	width: 110px;
-	color: white;
-	height: 30px;
-	font-weight: bold;
-	font-family: 'Raleway', sans-serif;
-	font-size: inherit;
-	line-height: inherit;
-	margin: 2px;
+    border: 1px solid #707070;
+    border-radius: 3px;
+    background: #c8b273;
+    width: 110px;
+    color: white;
+    height: 30px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 2px;
 }
 
 .clear-cart {
-	border: 1px solid #707070;
-	border-radius: 3px;
-	background-color: #cc1149;
-	width: 110px;
-	color: white;
-	height: 30px;
-	font-weight: bold;
-	font-family: 'Raleway', sans-serif;
-	font-size: inherit;
-	line-height: inherit;
-	margin: 2px;
+    border: 1px solid #707070;
+    border-radius: 3px;
+    background-color: #cc1149;
+    width: 110px;
+    color: white;
+    height: 30px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 2px;
 }
+
 
 /*---------- End of Cart Item -------------------- */
 
 .cart-footer {
-	margin-top: 2rem;
-	letter-spacing: var(--mainSpacing);
-	text-align: center;
+    margin-top: 2rem;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
 }
 
 .cart-footer h3 {
-	text-transform: capitalize;
-	margin-bottom: 1rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
 }
 
 
 /* HAMBURGER MENU */
+
+
 /* 
 #toggleMenu {
     display: none;
@@ -1408,127 +1440,147 @@ abbr[title] {
 } */
 
 
-
 /* NEW THINGS ADDED */
-.mail-to{
+
+.mail-to {
     color: inherit;
     text-decoration: none;
 }
-.mail-to:hover{
+
+.mail-to:hover {
     text-decoration: none;
     color: black;
 }
-.envelopeHeader{
+
+.envelopeHeader {
     margin-right: 9.7px;
 }
-.phoneHeader{
+
+.phoneHeader {
     margin-right: 6.7px;
 }
-.name-link:hover{
+
+.name-link:hover {
     text-decoration: none;
 }
 
-#contact-form{
+#contact-form {
     line-height: 30px;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
- 
 
 
 /* DELETE MODAL */
-.modal-confirm {		
-	color: #636363;
-	width: 400px;
-}
-.modal-confirm .modal-content {
-	padding: 20px;
-	border-radius: 5px;
-	border: none;
-	text-align: center;
-	font-size: 14px;
-}
-.modal-confirm .modal-header {
-	border-bottom: none;   
-	position: relative;
-}
-.modal-confirm h4 {
-	text-align: center;
-	font-size: 26px;
-	margin: 30px 0 -10px;
-}
-.modal-confirm .close {
-	position: absolute;
-	top: -5px;
-	right: -2px;
-}
-.modal-confirm .modal-body {
-	color: #999;
-}
-.modal-confirm .modal-footer {
-	border: none;
-	text-align: center;		
-	border-radius: 5px;
-	font-size: 13px;
-	padding: 10px 15px 25px;
-}
-.modal-confirm .modal-footer a {
-	color: #999;
-}		
-.modal-confirm .icon-box {
-	width: 80px;
-	height: 80px;
-	margin: 0 auto;
-	border-radius: 50%;
-	z-index: 9;
-	text-align: center;
-	border: 3px solid #f15e5e;
-}
-.modal-confirm .icon-box i {
-	color: #f15e5e;
-	font-size: 46px;
-	display: inline-block;
-	margin-top: 13px;
-}
-.modal-confirm .btn, .modal-confirm .btn:active {
-	color: #fff;
-	border-radius: 4px;
-	background: #60c7c1;
-	text-decoration: none;
-	transition: all 0.4s;
-	line-height: normal;
-	min-width: 120px;
-	border: none;
-	min-height: 40px;
-	border-radius: 3px;
-	margin: 0 5px;
-}
-.modal-confirm .btn-secondary {
-	background: #c1c1c1;
-}
-.modal-confirm .btn-secondary:hover, .modal-confirm .btn-secondary:focus {
-	background: #a8a8a8;
-}
-.modal-confirm .btn-danger {
-	background: #f15e5e;
-}
-.modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
-	background: #ee3535;
-}
-.trigger-btn {
-	display: inline-block;
-	margin: 100px auto;
+
+.modal-confirm {
+    color: #636363;
+    width: 400px;
 }
 
+.modal-confirm .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+.modal-confirm .modal-header {
+    border-bottom: none;
+    position: relative;
+}
+
+.modal-confirm h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -10px;
+}
+
+.modal-confirm .close {
+    position: absolute;
+    top: -5px;
+    right: -2px;
+}
+
+.modal-confirm .modal-body {
+    color: #999;
+}
+
+.modal-confirm .modal-footer {
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 10px 15px 25px;
+}
+
+.modal-confirm .modal-footer a {
+    color: #999;
+}
+
+.modal-confirm .icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 9;
+    text-align: center;
+    border: 3px solid #f15e5e;
+}
+
+.modal-confirm .icon-box i {
+    color: #f15e5e;
+    font-size: 46px;
+    display: inline-block;
+    margin-top: 13px;
+}
+
+.modal-confirm .btn,
+.modal-confirm .btn:active {
+    color: #fff;
+    border-radius: 4px;
+    background: #60c7c1;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    min-width: 120px;
+    border: none;
+    min-height: 40px;
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.modal-confirm .btn-secondary {
+    background: #c1c1c1;
+}
+
+.modal-confirm .btn-secondary:hover,
+.modal-confirm .btn-secondary:focus {
+    background: #a8a8a8;
+}
+
+.modal-confirm .btn-danger {
+    background: #f15e5e;
+}
+
+.modal-confirm .btn-danger:hover,
+.modal-confirm .btn-danger:focus {
+    background: #ee3535;
+}
+
+.trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+}
 
 @media only screen and (min-width: 2560px) {
-    
     .headerNavBar {
         margin: 65px 179px 103px 129px;
     }
@@ -1550,14 +1602,14 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 26px;
         margin-bottom: 33px;
     }
-    .call_us{
+    .call_us {
         margin-bottom: 38px;
     }
     .headers_contact_hours {
         font-size: 26px;
         margin-bottom: 25px;
     }
-    .days_of_week { 
+    .days_of_week {
         font-size: 19px;
     }
     .phone {
@@ -1582,7 +1634,7 @@ input[type=number]::-webkit-outer-spin-button {
     .cardImageContainer {
         height: 300px;
     }
-    .card-img-top{
+    .card-img-top {
         object-fit: cover;
     }
     .imageListSize {
@@ -1606,29 +1658,28 @@ input[type=number]::-webkit-outer-spin-button {
     .producCardTitle {
         width: 67%;
     }
-    .listCardElement{
+    .listCardElement {
         height: 194px;
     }
-    .modalItem{
+    .modalItem {
         top: 631px;
         min-width: 1086px;
     }
-    .modalFooter{
+    .modalFooter {
         width: 100%;
         margin-left: 49px;
     }
-    .modalFullPrice{
+    .modalFullPrice {
         margin-left: 80px;
     }
-    .modalAddToCart{
+    .modalAddToCart {
         margin-left: 70px;
     }
     .groupModalQuantity {
         margin-left: 4px;
         margin-top: -1px;
     }
-
-   /* DRINKS MODAL */
+    /* DRINKS MODAL */
     #drinksModalNote {
         font-size: 17px;
         width: 326px;
@@ -1642,10 +1693,10 @@ input[type=number]::-webkit-outer-spin-button {
     .modalFullPrice {
         font-size: 30px;
     }
-    .drinksModalItemTitleLine{
+    .drinksModalItemTitleLine {
         margin-top: 0px;
     }
-    .drinksModalAdds{
+    .drinksModalAdds {
         margin-top: -18px;
     }
     .drinksModalContent {
@@ -1653,10 +1704,10 @@ input[type=number]::-webkit-outer-spin-button {
         height: 680px;
         top: 200px;
     }
-    #drinksModalQuantity{
+    #drinksModalQuantity {
         display: none;
     }
-    .groupModalQuantity{
+    .groupModalQuantity {
         font-size: 20px;
     }
     .addAndRemoveModalQuantity {
@@ -1665,14 +1716,14 @@ input[type=number]::-webkit-outer-spin-button {
         border-radius: 3px;
         font-size: 19px;
     }
-    .close{
+    .close {
         margin-top: -14px;
         margin-right: -14px;
     }
-    .modalItemTitle{
+    .modalItemTitle {
         margin-top: 36px;
     }
-    .drinksModalItemQuantity{
+    .drinksModalItemQuantity {
         font-weight: 600;
     }
     .drinksModalItemImage {
@@ -1682,13 +1733,11 @@ input[type=number]::-webkit-outer-spin-button {
     .drinksModalDivider {
         width: 336px;
         margin-left: 36px;
-    } 
-  
-} 
+    }
+}
 
-@media only screen and (min-width: 1440px) and (max-width:2559px){
-
-    .headerNavBar{
+@media only screen and (min-width: 1440px) and (max-width:2559px) {
+    .headerNavBar {
         margin: 30px 72px 50px 72px;
     }
     .centeredContainer {
@@ -1698,7 +1747,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 17px;
         margin-right: 40px;
     }
-    .cartButton > img {
+    .cartButton>img {
         height: 35px;
     }
     .titleForPages {
@@ -1706,7 +1755,7 @@ input[type=number]::-webkit-outer-spin-button {
         margin-bottom: 0px;
         font-size: 20px;
     }
-    #loginButton{
+    #loginButton {
         padding: 8px 30px;
     }
     .header-Contact {
@@ -1723,29 +1772,31 @@ input[type=number]::-webkit-outer-spin-button {
         height: 30px;
         font-size: 14px;
     }
-    .contact{
+    .contact {
         height: 400px;
     }
-    .mail_form{
+    .mail_form {
         font-size: 16px;
         padding: 0px 40px 0px 40px;
     }
-
-    .days_of_week, .address{
+    .days_of_week,
+    .address {
         font-size: 16px;
-    
     }
-    #contact-form{
+    #contact-form {
         line-height: 30px;
     }
-    #name, #email, #phone, #text {
+    #name,
+    #email,
+    #phone,
+    #text {
         margin-bottom: 7px;
         padding: 3px 10px;
     }
-    #text{
+    #text {
         height: 100px;
     }
-    .headers_contact{
+    .headers_contact {
         padding-bottom: 10px;
         font-size: 20px;
         padding-left: 5px;
@@ -1759,7 +1810,7 @@ input[type=number]::-webkit-outer-spin-button {
         padding: 5px 10px;
     }
     .foodMenuButton:first-child {
-        margin: 0px 0px 0px 0px 
+        margin: 0px 0px 0px 0px
     }
     .foodMenuNavigation {
         margin-left: 75px;
@@ -1776,7 +1827,7 @@ input[type=number]::-webkit-outer-spin-button {
         height: 40px;
         right: 66px;
     }
-    .dropdown-design{
+    .dropdown-design {
         font-size: 18px;
     }
     .cardItemContent {
@@ -1843,15 +1894,15 @@ input[type=number]::-webkit-outer-spin-button {
         font-family: 'Lato', sans-serif;
         font-weight: bold;
     }
-    .modalItem{
+    .modalItem {
         min-width: 900px;
         top: 360px;
     }
-    .modalItemTitle { 
+    .modalItemTitle {
         margin-top: 18px;
         font-size: 30px;
     }
-    #modalFoodItemImage{
+    #modalFoodItemImage {
         width: 322px;
     }
     .foodModalIngredientsParagraph {
@@ -1862,13 +1913,13 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 22px;
         margin: 15px 29px;
     }
-    #foodModalNote{
+    #foodModalNote {
         margin-top: 44px;
     }
-    .foodModalIngredientsList > li{
+    .foodModalIngredientsList>li {
         font-size: 15px;
     }
-    .foodModalExtrasList > li{
+    .foodModalExtrasList>li {
         font-size: 15px;
     }
     .foodModalAllergensParagraph {
@@ -1883,38 +1934,34 @@ input[type=number]::-webkit-outer-spin-button {
         margin-top: 11px;
         margin-bottom: 8px;
     }
-    .modalAddToCart{
+    .modalAddToCart {
         width: 163px;
         font-size: 20px;
     }
-    .modalFullPrice{
+    .modalFullPrice {
         font-size: 20px;
     }
     .cardImageContainer {
         height: 167px;
     }
-    .card-img-top{
+    .card-img-top {
         object-fit: cover;
     }
     .logoText {
         font-size: 27px;
     }
-    .listCardElement{
+    .listCardElement {
         height: 86px;
     }
-
-
-    .drinksModalItemImage{
+    .drinksModalItemImage {
         margin-top: 16px;
     }
-    .drinksModalItemTitleLine{
+    .drinksModalItemTitleLine {
         margin-top: 0px;
     }
     .drinksModalContent {
         height: 656px;
     }
-    
-
     /* DRINK MODAL */
     /* #drinksModalNote {
         font-size: 15px;
@@ -1969,8 +2016,8 @@ input[type=number]::-webkit-outer-spin-button {
     } */
 }
 
-@media only screen and (min-width: 1024px) and (max-width:1439px){
-    .headerNavBar{
+@media only screen and (min-width: 1024px) and (max-width:1439px) {
+    .headerNavBar {
         margin: 40px 43px 40px 45px;
     }
     .centeredContainer {
@@ -1984,14 +2031,13 @@ input[type=number]::-webkit-outer-spin-button {
         margin-left: 5px;
         font-size: 20px;
     }
-    #loginButton{
+    #loginButton {
         padding: 6px 16px;
     }
     .logoHeader {
         height: 80px;
     }
-
-    .cartButton > img {
+    .cartButton>img {
         height: 25px;
     }
     .titleForPages {
@@ -2009,28 +2055,31 @@ input[type=number]::-webkit-outer-spin-button {
         height: 30px;
         font-size: 14px;
     }
-    .contact{
+    .contact {
         height: 350px;
     }
-    .mail_form{
+    .mail_form {
         font-size: 14px;
         padding: 0px 20px 0px 20px;
     }
-
-    .days_of_week, .address{
+    .days_of_week,
+    .address {
         font-size: 14px;
     }
-    #contact-form{
+    #contact-form {
         line-height: 27px;
     }
-    #name, #email, #phone, #text {
+    #name,
+    #email,
+    #phone,
+    #text {
         margin-bottom: 7px;
         padding: 3px 8px;
     }
-    #text{
+    #text {
         height: 80px;
     }
-    .headers_contact{
+    .headers_contact {
         padding-bottom: 10px;
         font-size: 17px;
     }
@@ -2042,9 +2091,8 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 18px;
         padding: 5px 10px;
     }
-
     .foodMenuButton:first-child {
-        margin: 0px 0px 0px 0px 
+        margin: 0px 0px 0px 0px
     }
     .foodMenuNavigation {
         margin-left: 44px;
@@ -2060,7 +2108,7 @@ input[type=number]::-webkit-outer-spin-button {
         height: 37px;
         right: 34px;
     }
-    .dropdown-design{
+    .dropdown-design {
         font-size: 16px;
     }
     .cardItemContent {
@@ -2136,13 +2184,13 @@ input[type=number]::-webkit-outer-spin-button {
         font-family: 'Lato', sans-serif;
         font-weight: bold;
     }
-    .modalItem{
+    .modalItem {
         top: 373px;
         padding: 32px 22px 15px 22px;
         min-width: 857px;
     }
     .modalItemTitle {
-        margin-top: 22px;    
+        margin-top: 22px;
         margin-left: 13px;
         font-size: 25px;
     }
@@ -2154,13 +2202,13 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 17px;
         margin: 10px 14px;
     }
-    #foodModalNote{
+    #foodModalNote {
         margin-top: 41px;
     }
-    .foodModalIngredientsList > li{
+    .foodModalIngredientsList>li {
         font-size: 15px;
     }
-    .foodModalExtrasList > li{
+    .foodModalExtrasList>li {
         font-size: 15px;
     }
     .foodModalAllergensParagraph {
@@ -2178,19 +2226,17 @@ input[type=number]::-webkit-outer-spin-button {
         margin-top: 11px;
         margin-bottom: 8px;
     }
-    .modalAddToCart{
+    .modalAddToCart {
         width: 140px;
         font-size: 18px;
-
     }
-    .modalFullPrice{
+    .modalFullPrice {
         font-size: 18px;
     }
-
     .cardImageContainer {
         height: 130px;
     }
-    .card-img-top{
+    .card-img-top {
         object-fit: cover;
     }
     .header-Contact {
@@ -2204,10 +2250,9 @@ input[type=number]::-webkit-outer-spin-button {
         height: 25px;
         font-size: 12px;
     }
-    .listCardElement{
+    .listCardElement {
         height: 70px;
     }
-
     /* DRINK MODAL */
     #drinksModalNote {
         font-size: 15px;
@@ -2223,10 +2268,10 @@ input[type=number]::-webkit-outer-spin-button {
     .modalFullPrice {
         font-size: 24px;
     }
-    .drinksModalItemTitleLine{
+    .drinksModalItemTitleLine {
         margin-top: 0px;
     }
-    .drinksModalAdds{
+    .drinksModalAdds {
         margin-top: -18px;
     }
     .drinksModalContent {
@@ -2234,7 +2279,7 @@ input[type=number]::-webkit-outer-spin-button {
         height: 614px;
         top: 20px;
     }
-    #drinksModalQuantity{
+    #drinksModalQuantity {
         display: none;
     }
     .addAndRemoveModalQuantity {
@@ -2243,15 +2288,15 @@ input[type=number]::-webkit-outer-spin-button {
         border-radius: 3px;
         font-size: 16px;
     }
-    .close{
+    .close {
         margin-top: -14px;
         margin-right: -14px;
     }
-    .modalItemTitle{
+    .modalItemTitle {
         margin-top: 29px;
         margin-left: 44px;
     }
-    .drinksModalItemQuantity{
+    .drinksModalItemQuantity {
         font-weight: 600;
     }
     .drinksModalItemImage {
@@ -2263,7 +2308,7 @@ input[type=number]::-webkit-outer-spin-button {
     .drinksModalDivider {
         width: 300px;
     }
-    .drinksModalItemTitleLine{
+    .drinksModalItemTitleLine {
         margin-left: 44px;
     }
     .tg-list p {
@@ -2285,14 +2330,14 @@ input[type=number]::-webkit-outer-spin-button {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width:1023px){
-    .foodMenuButton:first-child{
+@media only screen and (min-width: 768px) and (max-width:1023px) {
+    .foodMenuButton:first-child {
         margin: 0px !important;
     }
     .headerNavBar {
         margin: 20px 20px 20px 19px;
     }
-    .navBarLinks{
+    .navBarLinks {
         margin-top: 76px;
         margin-right: 86px;
     }
@@ -2314,7 +2359,7 @@ input[type=number]::-webkit-outer-spin-button {
         margin-top: 129px;
     }
     .cartButton img {
-     height: 32px;
+        height: 32px;
     }
     .inCartQuantity {
         width: 24px;
@@ -2369,15 +2414,14 @@ input[type=number]::-webkit-outer-spin-button {
     .dropdown-design {
         font-size: 15px;
     }
-    
-    footer{
+    footer {
         height: 30px;
         font-size: 14px;
     }
-    .cardImageContainer{
+    .cardImageContainer {
         height: 140px;
     }
-    .card-img-top{
+    .card-img-top {
         object-fit: cover;
         height: 120px;
     }
@@ -2402,7 +2446,7 @@ input[type=number]::-webkit-outer-spin-button {
         height: 39px;
         top: 19px;
     }
-    .listCardElement{
+    .listCardElement {
         height: 78px;
     }
     .cardListTitle {
@@ -2422,7 +2466,7 @@ input[type=number]::-webkit-outer-spin-button {
     #contact-form {
         line-height: 25px;
     }
-    .number{
+    .number {
         margin-top: 101px;
     }
     .phone {
@@ -2442,10 +2486,10 @@ input[type=number]::-webkit-outer-spin-button {
     #text {
         height: 106px;
     }
-    #btn_send{
+    #btn_send {
         width: 147px;
     }
-    .contact{
+    .contact {
         margin-top: 30px;
         height: 460px;
     }
@@ -2490,7 +2534,7 @@ input[type=number]::-webkit-outer-spin-button {
     .productCardPrice {
         font-size: 20px;
     }
-    .modalItem{
+    .modalItem {
         top: 305px;
         padding: 27px 10px 10px 10px;
         min-width: 700px;
@@ -2500,7 +2544,7 @@ input[type=number]::-webkit-outer-spin-button {
         margin-left: 14px;
         font-size: 20px;
     }
-    .xModal{
+    .xModal {
         margin-right: -26px;
         margin-top: -28px;
     }
@@ -2512,14 +2556,14 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 15px;
         margin: 3px 0px 5px 15px;
     }
-    #foodModalNote{
+    #foodModalNote {
         margin-top: 14px;
         margin-bottom: 14px;
     }
-    .foodModalIngredientsList > li{
+    .foodModalIngredientsList>li {
         font-size: 12px;
     }
-    .foodModalExtrasList > li{
+    .foodModalExtrasList>li {
         font-size: 12px;
     }
     .foodModalAllergensParagraph {
@@ -2527,21 +2571,18 @@ input[type=number]::-webkit-outer-spin-button {
         margin-top: 3px;
         margin-right: 43px;
     }
-
     .modalImageAndAllergensDiv {
         margin: -19px 0px 0px 26px;
         width: 38%;
-        
     }
     .modalImageAndAllergensDiv img {
         width: 250px;
     }
-
     #foodModalNote {
         height: 60px;
         padding: 10px;
     }
-    .tg-list{
+    .tg-list {
         margin-left: 10px;
         width: 231px;
     }
@@ -2551,7 +2592,7 @@ input[type=number]::-webkit-outer-spin-button {
         height: 19px;
         margin-bottom: -5px;
     }
-    .tg-list-item{
+    .tg-list-item {
         width: 46px;
         height: 27px;
     }
@@ -2564,25 +2605,22 @@ input[type=number]::-webkit-outer-spin-button {
     #modalQuantity {
         font-size: 15px;
     }
-
-    .modalAddToCart{
+    .modalAddToCart {
         font-size: 16px;
         width: 130px;
         height: 37px;
         margin-left: 0px;
     }
-    .modalFullPrice{
+    .modalFullPrice {
         font-size: 18px;
     }
-    .groupModalQuantity{
+    .groupModalQuantity {
         margin-left: 0px;
     }
-    #modalFoodItemImage{
+    #modalFoodItemImage {
         width: 244px;
     }
-
     /* DRINK MODAL */
- 
     #drinksModalNote {
         font-size: 12px;
         width: 266px;
@@ -2598,10 +2636,10 @@ input[type=number]::-webkit-outer-spin-button {
     .modalFullPrice {
         font-size: 22px;
     }
-    .drinksModalItemTitleLine{
+    .drinksModalItemTitleLine {
         margin-top: 0px;
     }
-    .drinksModalAdds{
+    .drinksModalAdds {
         margin-top: -26px;
     }
     .drinksModalContent {
@@ -2609,7 +2647,7 @@ input[type=number]::-webkit-outer-spin-button {
         height: 535px;
         top: 9px;
     }
-    #drinksModalQuantity{
+    #drinksModalQuantity {
         display: none;
     }
     .addAndRemoveModalQuantity {
@@ -2618,15 +2656,15 @@ input[type=number]::-webkit-outer-spin-button {
         border-radius: 3px;
         font-size: 16px;
     }
-    .close{
+    .close {
         margin-top: -14px;
         margin-right: -14px;
     }
-    .modalItemTitle{
+    .modalItemTitle {
         margin-top: 25px;
         margin-left: 28px;
     }
-    .drinksModalItemQuantity{
+    .drinksModalItemQuantity {
         font-weight: 600;
     }
     .drinksModalItemImage {
@@ -2638,7 +2676,7 @@ input[type=number]::-webkit-outer-spin-button {
     .drinksModalDivider {
         width: 247px;
     }
-    .drinksModalItemTitleLine{
+    .drinksModalItemTitleLine {
         margin-left: 28px;
     }
     .tg-list p {
@@ -2662,8 +2700,8 @@ input[type=number]::-webkit-outer-spin-button {
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    
 }
+
 
 /* 
 .hamburger-menu {
@@ -2674,6 +2712,8 @@ input[type=number]::-webkit-outer-spin-button {
 .hamburger-menu div {
     display: block;
 } */
+
+
 /* #labelToggle {
     display: block;
     cursor: pointer;
@@ -2682,7 +2722,7 @@ input[type=number]::-webkit-outer-spin-button {
     display: block;
 } */
 
-@media only screen and (min-width: 425px) and (max-width:767px){
+@media only screen and (min-width: 425px) and (max-width:767px) {
     .headerParagraph {
         font-size: 13px;
     }
@@ -2708,7 +2748,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 18px;
         margin-left: 11px;
     }
-    .navBarLinks{
+    .navBarLinks {
         margin-right: -34px;
     }
     .titleForPages {
@@ -2717,7 +2757,7 @@ input[type=number]::-webkit-outer-spin-button {
         margin-left: 30px;
         margin-bottom: 0px;
     }
-    .centeredContainer .flex-sm-column{
+    .centeredContainer .flex-sm-column {
         width: 207px;
         height: 181px;
     }
@@ -2741,8 +2781,7 @@ input[type=number]::-webkit-outer-spin-button {
         right: 8px;
         top: 49px;
     }
-
-    .modalItem{
+    .modalItem {
         min-width: 300px;
         min-height: 328px;
         padding: 10px;
@@ -2753,7 +2792,7 @@ input[type=number]::-webkit-outer-spin-button {
         margin-left: 9px;
         font-size: 18px;
     }
-    .close{
+    .close {
         margin-top: -23px;
         margin-right: -19px;
     }
@@ -2777,7 +2816,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 13px;
         margin: 0px 2px;
     }
-    #modalFoodItemImage{
+    #modalFoodItemImage {
         width: 146px;
     }
     .foodModalAllergensParagraph {
@@ -2797,7 +2836,7 @@ input[type=number]::-webkit-outer-spin-button {
         height: 33px;
         margin-left: 19px;
     }
-    .modalFooter{
+    .modalFooter {
         width: 400px;
         margin-top: -11px;
         margin-left: 3px;
@@ -2807,7 +2846,7 @@ input[type=number]::-webkit-outer-spin-button {
         margin: 9px 5px 0px 6px;
         height: 32px;
     }
-    #modalQuantity{
+    #modalQuantity {
         display: none;
     }
     .addAndRemoveModalQuantity {
@@ -2822,7 +2861,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 18px;
         margin-left: 9px;
     }
-    .groupModalQuantity{
+    .groupModalQuantity {
         margin-left: -28px;
         margin-top: -2px;
         width: 144px;
@@ -2831,21 +2870,21 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 18px;
         margin-left: 24px;
     }
-    .card-img-top{
+    .card-img-top {
         height: 100px;
     }
     .foodMenuNavigation {
-        margin-left:  -13px;
+        margin-left: -13px;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .dropdown-main-button{
+    .dropdown-main-button {
         display: none;
     }
     .foodMenuButton:first-child {
         margin: 0px 30px 0px 30px !important;
     }
-    .foodMenuButton{
+    .foodMenuButton {
         width: 165px;
         padding: 0px 0px;
         font-size: 19px;
@@ -2859,11 +2898,14 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 12px;
         padding: 0px 12px;
     }
-    #name, #email, #phone, #text {
+    #name,
+    #email,
+    #phone,
+    #text {
         margin-bottom: 5px;
         padding: 3px 9px;
     }
-    #contact-form{
+    #contact-form {
         line-height: 22px;
     }
     #text {
@@ -2878,10 +2920,10 @@ input[type=number]::-webkit-outer-spin-button {
         width: 103px;
         margin-top: -6px;
     }
-    .call_us{
+    .call_us {
         margin-top: 51px;
     }
-    .phone{
+    .phone {
         font-size: 18px;
         margin-top: 11px;
     }
@@ -2898,7 +2940,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-family: Arial, Helvetica, sans-serif;
         margin-bottom: 20px;
     }
-    .productContainer{
+    .productContainer {
         width: 207px;
         height: 190px;
         display: grid;
@@ -2915,18 +2957,18 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 17px;
         margin-left: 8.5px;
     }
-    .quantityParagraph{
+    .quantityParagraph {
         display: none;
     }
     .producCardTitle {
         padding-left: 10px;
         font-size: 23px;
     }
-    .containerCardPrice{
+    .containerCardPrice {
         margin-right: 37px;
         margin-left: 8px;
     }
-    .quantityContainer{
+    .quantityContainer {
         margin-left: -100px;
     }
     .productQuantityNumber {
@@ -2937,7 +2979,6 @@ input[type=number]::-webkit-outer-spin-button {
         height: 24px;
         width: 23px;
     }
-
     .tgl+.tgl-btn {
         width: 40px;
         height: 20px;
@@ -2946,7 +2987,6 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 10px;
         height: 23px;
     }
-
     /* DRINK MODAL */
     /* 
     #drinksModalNote {
@@ -3039,14 +3079,11 @@ input[type=number]::-webkit-outer-spin-button {
     } */
 }
 
-
-@media only screen and (min-width: 375px) and (max-width:424px){
-     
+@media only screen and (min-width: 375px) and (max-width:424px) {
     /* TESTING */
-    .navBarLinks{
+    .navBarLinks {
         display: block;
     }
-
     .headerParagraph {
         font-size: 13px;
     }
@@ -3072,7 +3109,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 18px;
         margin-left: 11px;
     }
-    .navBarLinks{
+    .navBarLinks {
         margin-right: -34px;
     }
     .titleForPages {
@@ -3081,7 +3118,7 @@ input[type=number]::-webkit-outer-spin-button {
         margin-left: 30px;
         margin-bottom: 0px;
     }
-    .centeredContainer .flex-sm-column{
+    .centeredContainer .flex-sm-column {
         width: 177px;
         height: 172px;
     }
@@ -3105,8 +3142,7 @@ input[type=number]::-webkit-outer-spin-button {
         right: 8px;
         top: 49px;
     }
-
-    .modalItem{
+    .modalItem {
         min-width: 300px;
         min-height: 328px;
         padding: 10px;
@@ -3117,7 +3153,7 @@ input[type=number]::-webkit-outer-spin-button {
         margin-left: 9px;
         font-size: 18px;
     }
-    .close{
+    .close {
         margin-top: -23px;
         margin-right: -19px;
     }
@@ -3141,7 +3177,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 13px;
         margin: 0px 2px;
     }
-    #modalFoodItemImage{
+    #modalFoodItemImage {
         width: 146px;
     }
     .foodModalAllergensParagraph {
@@ -3162,7 +3198,7 @@ input[type=number]::-webkit-outer-spin-button {
         margin-left: 40px;
         margin-top: 0px;
     }
-    .modalFooter{
+    .modalFooter {
         width: 335px;
         margin-top: -11px;
         margin-left: -11px;
@@ -3174,13 +3210,13 @@ input[type=number]::-webkit-outer-spin-button {
         margin: 9px 5px 0px 6px;
         height: 23px;
     }
-    .tg-list{
+    .tg-list {
         width: 220px;
         height: 25px;
         margin-bottom: 20px;
         margin-left: 20px;
     }
-    #modalQuantity{
+    #modalQuantity {
         display: none;
     }
     .addAndRemoveModalQuantity {
@@ -3195,7 +3231,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 18px;
         margin-left: 9px;
     }
-    .groupModalQuantity{
+    .groupModalQuantity {
         margin-left: -4px;
         margin-bottom: 10px;
         width: 211px;
@@ -3206,7 +3242,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 22px;
         margin-left: -125px;
     }
-    .card-img-top{
+    .card-img-top {
         height: 87px;
     }
     .foodMenuNavigation {
@@ -3214,13 +3250,13 @@ input[type=number]::-webkit-outer-spin-button {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .dropdown-main-button{
+    .dropdown-main-button {
         display: none;
     }
     .foodMenuButton:first-child {
         margin: 0px 22px 0px 30px !important;
     }
-    .foodMenuButton{
+    .foodMenuButton {
         width: 139px;
         padding: 0px 0px;
         font-size: 18px;
@@ -3234,11 +3270,14 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 12px;
         padding: 0px 12px;
     }
-    #name, #email, #phone, #text {
+    #name,
+    #email,
+    #phone,
+    #text {
         margin-bottom: 5px;
         padding: 3px 9px;
     }
-    #contact-form{
+    #contact-form {
         line-height: 22px;
     }
     #text {
@@ -3253,10 +3292,10 @@ input[type=number]::-webkit-outer-spin-button {
         width: 103px;
         margin-top: -6px;
     }
-    .call_us{
+    .call_us {
         margin-top: 51px;
     }
-    .phone{
+    .phone {
         font-size: 18px;
         margin-top: 11px;
     }
@@ -3273,7 +3312,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-family: Arial, Helvetica, sans-serif;
         margin-bottom: 20px;
     }
-    .productContainer{
+    .productContainer {
         width: 207px;
         height: 190px;
         display: grid;
@@ -3290,18 +3329,18 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 17px;
         margin-left: 8.5px;
     }
-    .quantityParagraph{
+    .quantityParagraph {
         display: none;
     }
     .producCardTitle {
         padding-left: 10px;
         font-size: 23px;
     }
-    .containerCardPrice{
+    .containerCardPrice {
         margin-right: 37px;
         margin-left: 8px;
     }
-    .quantityContainer{
+    .quantityContainer {
         margin-left: -100px;
     }
     .productQuantityNumber {
@@ -3312,9 +3351,7 @@ input[type=number]::-webkit-outer-spin-button {
         height: 24px;
         width: 23px;
     }
-
     /* DRINK MODAL */
-
     /* #drinksModalNote {
         font-size: 12px;
         width: 242px;
@@ -3407,15 +3444,11 @@ input[type=number]::-webkit-outer-spin-button {
     } */
 }
 
-@media only screen and (min-width: 320px) and (max-width:374px){
-     
+@media only screen and (min-width: 320px) and (max-width:374px) {
     /* TESTING */
-    .navBarLinks{
+    .navBarLinks {
         display: block;
     }
-
-
-
     .headerParagraph {
         font-size: 12px;
     }
@@ -3441,7 +3474,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 18px;
         margin-left: 11px;
     }
-    .navBarLinks{
+    .navBarLinks {
         margin-right: -34px;
     }
     .titleForPages {
@@ -3450,7 +3483,7 @@ input[type=number]::-webkit-outer-spin-button {
         margin-left: 30px;
         margin-bottom: 0px;
     }
-    .centeredContainer .flex-sm-column{
+    .centeredContainer .flex-sm-column {
         width: 155px;
         height: 172px;
     }
@@ -3474,8 +3507,7 @@ input[type=number]::-webkit-outer-spin-button {
         right: 8px;
         top: 49px;
     }
-
-    .modalItem{
+    .modalItem {
         min-width: 300px;
         min-height: 328px;
         padding: 10px;
@@ -3486,7 +3518,7 @@ input[type=number]::-webkit-outer-spin-button {
         margin-left: 9px;
         font-size: 18px;
     }
-    .close{
+    .close {
         margin-top: -23px;
         margin-right: -19px;
     }
@@ -3510,7 +3542,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 13px;
         margin: 0px 2px;
     }
-    #modalFoodItemImage{
+    #modalFoodItemImage {
         width: 146px;
     }
     .foodModalAllergensParagraph {
@@ -3531,7 +3563,7 @@ input[type=number]::-webkit-outer-spin-button {
         margin-left: 40px;
         margin-top: 0px;
     }
-    .modalFooter{
+    .modalFooter {
         width: 335px;
         margin-top: -11px;
         margin-left: -11px;
@@ -3543,13 +3575,13 @@ input[type=number]::-webkit-outer-spin-button {
         margin: 9px 5px 0px 6px;
         height: 23px;
     }
-    .tg-list{
+    .tg-list {
         width: 220px;
         height: 25px;
         margin-bottom: 20px;
         margin-left: 20px;
     }
-    #modalQuantity{
+    #modalQuantity {
         display: none;
     }
     .addAndRemoveModalQuantity {
@@ -3564,7 +3596,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 18px;
         margin-left: 9px;
     }
-    .groupModalQuantity{
+    .groupModalQuantity {
         margin-left: -4px;
         margin-bottom: 10px;
         width: 211px;
@@ -3575,7 +3607,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 22px;
         margin-left: -125px;
     }
-    .card-img-top{
+    .card-img-top {
         height: 72px;
     }
     .foodMenuNavigation {
@@ -3583,13 +3615,13 @@ input[type=number]::-webkit-outer-spin-button {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .dropdown-main-button{
+    .dropdown-main-button {
         display: none;
     }
     .foodMenuButton:first-child {
         margin: 0px 22px 0px 30px !important;
     }
-    .foodMenuButton{
+    .foodMenuButton {
         width: 113px;
         padding: 0px 0px;
         font-size: 17px;
@@ -3603,11 +3635,14 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 12px;
         padding: 0px 12px;
     }
-    #name, #email, #phone, #text {
+    #name,
+    #email,
+    #phone,
+    #text {
         margin-bottom: 5px;
         padding: 3px 9px;
     }
-    #contact-form{
+    #contact-form {
         line-height: 22px;
     }
     #text {
@@ -3622,10 +3657,10 @@ input[type=number]::-webkit-outer-spin-button {
         width: 103px;
         margin-top: -6px;
     }
-    .call_us{
+    .call_us {
         margin-top: 51px;
     }
-    .phone{
+    .phone {
         font-size: 18px;
         margin-top: 11px;
     }
@@ -3642,7 +3677,7 @@ input[type=number]::-webkit-outer-spin-button {
         font-family: Arial, Helvetica, sans-serif;
         margin-bottom: 20px;
     }
-    .productContainer{
+    .productContainer {
         width: 207px;
         height: 190px;
         display: grid;
@@ -3659,18 +3694,18 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 17px;
         margin-left: 8.5px;
     }
-    .quantityParagraph{
+    .quantityParagraph {
         display: none;
     }
     .producCardTitle {
         padding-left: 10px;
         font-size: 23px;
     }
-    .containerCardPrice{
+    .containerCardPrice {
         margin-right: 37px;
         margin-left: 8px;
     }
-    .quantityContainer{
+    .quantityContainer {
         margin-left: -100px;
     }
     .productQuantityNumber {
@@ -3684,9 +3719,8 @@ input[type=number]::-webkit-outer-spin-button {
     .phoneHeader {
         margin-left: 32.7px;
     }
-
     /* DRINK MODAL */
-/*     
+    /*     
     #drinksModalNote {
         font-size: 12px;
         width: 242px;
@@ -3779,3 +3813,153 @@ input[type=number]::-webkit-outer-spin-button {
     } */
 }
 
+
+/* Login modal */
+
+.modalFormClose {
+    margin: 31.5px 23px 0px 0px;
+}
+
+.modalFormBody {
+    padding: 0px !important;
+    padding-top: 15px;
+}
+
+.divTitleFormModal {
+    text-align: center;
+    font-family: raleway;
+    font-size: 40px;
+    font-weight: bold;
+    color: #C8B273;
+}
+
+.titleFormModal {
+    margin-top: 10px;
+}
+
+.contentFormModal {
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 44px;
+}
+
+.inputsFormModal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 115px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.userNameFormModal {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid #707070;
+    padding: 0px 20px;
+}
+
+.passwordFormModal {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid #707070;
+    padding: 0px 20px;
+}
+
+.contentInteractionForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 11px;
+}
+
+.buttonFormModal {
+    width: 220px;
+    height: 64px;
+    border-radius: 5px;
+    background-color: #C8B273;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    border: 0px;
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+.footerModalForm {
+    width: 100%;
+    height: 207px;
+    flex-direction: column;
+    display: flex;
+    background-color: #141414;
+    justify-content: space-between;
+    border: 0px;
+}
+
+.modalFormSignUp {
+    font-size: 22px;
+    font-weight: bold;
+    color: #C8B273;
+}
+
+.buttonFormModalSignUp {
+    width: 220px;
+    height: 64px;
+    border-radius: 5px;
+    background-color: #141414;
+    color: #C8B273;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    align-self: flex-end;
+    margin-top: 20px;
+    border: 3px solid #C8B273;
+}
+
+.modal-content {
+    border: 0px !important;
+}
+
+
+/*  sign up modal */
+
+.inputsSignUpFormModal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 250px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fullNameFormModal {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid #707070;
+    padding: 0px 20px;
+}
+
+.emailFormModal {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid #707070;
+    padding: 0px 20px;
+}
+
+#signUpFormModal {
+    padding-left: 0px !important;
+}
+
+.phoneFormModal {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid #707070;
+    padding: 0px 20px;
+}
