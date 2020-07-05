@@ -3966,4 +3966,5 @@ footer {
 .modal-open .modal {
 	overflow-x: hidden;
 	overflow-y: scroll;
+	padding-right: 0px
 }
