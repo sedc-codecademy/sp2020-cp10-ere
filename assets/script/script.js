@@ -60,7 +60,7 @@ const newestFoodModal = `
                             </ul>
                         </div>
                         <div class="modalImageAndAllergensDiv">
-                            <img src="./assets/images/Screenshot_2.png" id="modalFoodItemImage" onerror="this.src = '../assets/images/no-image.png', this.classList.add('onerrorImageModal')" class="foodModalItemImage">
+                            <img src="./assets/images/Screenshot_2.png" alt="image for food" id="modalFoodItemImage" onerror="this.src = '../assets/images/no-image.png', this.classList.add('onerrorImageModal')" class="foodModalItemImage">
                             <p class="foodModalAllergensParagraph">*Allergens:<span id="foodModalAllergens"></span></p>
                         </div>
                     </div>
@@ -83,7 +83,7 @@ const newestFoodModal = `
                     <p class="modalFullPrice" id="modalFullPrice">70 MKD</p>
                     </div>`;
 const drinkModal = `<div class="drinksModalAdds">
-<img src="./assets/images/Screenshot_2.png" id="modalDrinkItemImage" onerror="this.src = '../assets/images/no-image.png', this.classList.add('onerrorImageModalDrinks')" class="drinksModalItemImage">
+<img src="./assets/images/Screenshot_2.png" alt="image for drink" id="modalDrinkItemImage" onerror="this.src = '../assets/images/no-image.png', this.classList.add('onerrorImageModalDrinks')" class="drinksModalItemImage">
 </div>
 <textarea name="note" id="drinkModalNote" cols="30" rows="20" placeholder="Add a note, for example: room temperature drink"></textarea>
 <hr class="drinksModalDivider">
@@ -159,7 +159,7 @@ function printCard(element, array, column) {
 	element.innerHTML = ``;
 	for (let i = 0; i < array.length; i++) {
 		if (column != 13) {
-			var cardForEverywere = `<span class="itemImageText"><img src="./assets/images/giphyo.gif" width="150px"></span>
+			var cardForEverywere = `<span class="itemImageText"><img src="./assets/images/giphyo.gif" alt="click me" width="150px"></span>
             <img class="${column === 12
 				? 'card-img-top imageListSize'
 				: 'card-img-top'}" src="./assets/images/Screenshot_2.png" onerror="this.src = '../assets/images/no-image.png', this.classList.add('onerrorImage')" alt="Card image cap">

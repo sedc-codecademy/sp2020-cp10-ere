@@ -2,14 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
-/* colors
-
-    price-bg: #CC1149;
-    item-name: #383434;
-    header-footer: #C8B273;
-
-*/
-
 html {
 	overflow-x: hidden;
 }
@@ -155,18 +147,8 @@ p {
 
 /* START MAINPAGE */
 
-/* .main {
-	display: flex;
-	width: 100%;
-	justify-content: center;
-	align-items: center;
-} */
-
 .main-container {
 	margin-bottom: 110px;
-	/* display: flex;
-	width: 80%;
-	flex-direction: column; */
 }
 
 .titleForPages {
@@ -1143,12 +1125,6 @@ abbr[title] {
 	height: 550px;
 }
 
-/* .map {
-    height: 200px;
-    margin-bottom: 0;
-    margin-left: 0;
-} */
-
 .contact {
 	margin-left: 30px;
 	text-align: center;
@@ -1204,7 +1180,6 @@ abbr[title] {
 
 .phone {
 	color: black;
-	/* background-color:rgb(201, 178, 115); */
 	background-color: #cc1149;
 	border-radius: 5px;
 	font-size: 20px;
